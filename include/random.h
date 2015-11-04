@@ -1,0 +1,2 @@
+int randCase();
+void initRand();
