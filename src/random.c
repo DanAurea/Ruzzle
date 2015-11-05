@@ -1,3 +1,11 @@
+/**
+ \file random.c
+ \brief Fonctions aléatoires
+ \author Cousin Brandon Ngatchou Junior
+ \version v0.32
+ \date 05/11/2015
+ */
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
@@ -6,13 +14,14 @@ void initRand(){
 	srand(time(NULL));
 }
 
+/**	Tire une lettre au hasard en prenant en 
+	compte leur fréquence d'apparition
+	dans la langue française.
+	@return e par défaut
+*/
 char randChar(){
 	int iCase = rand() % 1486387;
 
-	/*	Tire une lettre au hasard en prenant en 
-		compte leur fréquence d'apparition
-		dans la langue française.
-	*/
 	if(iCase < 745) return 'k';
 	if(iCase < 2492) return 'w';
 	if(iCase < 4585) return 'z';
@@ -38,40 +47,20 @@ char randChar(){
 	if(iCase < 1021435) return 'i';
 	if(iCase < 1138545) return 'a';
 	if(iCase < 1260440) return 's';
-	if(iCase < 1486387) return 'e';
-	return '?';
+	return 'e';
 }
 
+/**	Permet de récupérer l'indice dans la matrice 
+	de la lettre tirée au hasard.
+	@param c Caractère à convertir en indice
+*/
 int getIChar(char c){
-	if(c == 'a') return 0;
-	if(c == 'b') return 1;
-	if(c == 'c') return 2;
-	if(c == 'd') return 3;
-	if(c == 'e') return 4;
-	if(c == 'f') return 5;
-	if(c == 'g') return 6;
-	if(c == 'h') return 7;
-	if(c == 'i') return 8;
-	if(c == 'j') return 9;
-	if(c == 'k') return 10;
-	if(c == 'l') return 11;
-	if(c == 'm') return 12;
-	if(c == 'n') return 13;
-	if(c == 'o') return 14;
-	if(c == 'p') return 15;
-	if(c == 'q') return 16;
-	if(c == 'r') return 17;
-	if(c == 's') return 18;
-	if(c == 't') return 19;
-	if(c == 'u') return 20;
-	if(c == 'v') return 21;
-	if(c == 'w') return 22;
-	if(c == 'x') return 23;
-	if(c == 'y') return 24;
-	if(c == 'z') return 25;
-	return -1;
+	return c - 97;
 }
 
+/** Permet de tirer une lettre aléatoirement
+ 	@return Renvoie l'indice de la lettre tirée
+ */
 int randCase(){
 	return getIChar(randChar());
 }

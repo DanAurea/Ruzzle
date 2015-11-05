@@ -1,3 +1,11 @@
+/**
+ \file display.c
+ \brief Affiche la grille
+ \author Cousin Brandon Ngatchou Junior
+ \version v0.32
+ \date 05/11/2015
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -5,8 +13,21 @@
 
 #define N 4
 
+/** 
+ * \struct Définis une case par 4 caractéristiques
+ * @param let Lettre à afficher
+ * @param pts Nombre de points associé
+ * @param boL Bonus sur la lettre
+ * @param boM Bonus sur le mot
+ */
 typedef struct {char let; int pts; char boL[3]; char boM[3];}t_Case;
 
+/** Représente une case aléatoirement
+ * 
+ * @param grid Grille à remplir
+ * @param line Ligne de la case à remplir
+ * @param col Colonne de la case à remplir
+ */
 void Case(t_Case grid[N][N], int line, int col){
     int randLet;
     t_Case alpha[27]= {
@@ -28,6 +49,9 @@ void Case(t_Case grid[N][N], int line, int col){
 
 }
 
+/** Représente une grille
+ * @param grid Grille à remplir
+ */
 void Grille(t_Case grid[N][N]){
     int i, j;
 

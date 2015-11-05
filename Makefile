@@ -9,11 +9,13 @@ all: $(EXEC)
 ruzzleSolver: $(OBJ)
 	$(CC) -o bin/$@ $^
 
+ruzzle.o: ../include/display.h
+
 %.o: %.c 
 	$(CC) -o $@ -c $< $(CFLAGS)
 
 clean:
-	rm -rf *.o
+	@rm -rf src/$(OBJ)
 
 mrproper: clean
-	rm -rf $(EXEC)
+	rm -rf bin/$(EXEC)
