@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
+ #include <string.h>
 
 void initRand(){
 	srand(time(NULL));
@@ -63,4 +64,40 @@ int getIChar(char c){
  */
 int randCase(){
 	return getIChar(randChar());
+}
+
+/** Attribue un bonus
+ * @param boCharL[] Bonus lettre de la case courante
+ * @param boCharM[] Bonus mot de la case courante
+ * @param nb_boL Nombre de bonus lettre dans la grille
+ * @param nb_bom Nombre de bonus mot dans la grille
+ */
+void getBonus(char boCharL[], char boCharM[], int *nb_boL, int *nb_boM){
+	int randBonus = rand() % 30;
+
+	if(randBonus <= 8 && *nb_boL != 2){
+		strcpy(boCharL, "LD");
+		*nb_boL = *nb_boL + 1;
+	}
+
+	if(randBonus <= 11 && *nb_boL != 2){
+		strcpy(boCharL, "LT");
+		*nb_boL = *nb_boL + 1;
+	}
+
+	if(strcmp(boCharL,"  ") == 0){
+		randBonus = rand() % 30;
+		
+		if(randBonus <= 5 && *nb_boM !=2){
+			strcpy(boCharM, "MD");
+			*nb_boM = *nb_boM + 1;
+		}
+
+		if(randBonus <= 8 && strcmp(boCharM,"  ") == 0 && *nb_boM !=2){
+			strcpy(boCharM, "MT");
+			*nb_boM = *nb_boM + 1;
+		}
+	}
+
+
 }

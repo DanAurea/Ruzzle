@@ -15,7 +15,7 @@ ruzzle.o: ../include/display.h
 	$(CC) -o $@ -c $< $(CFLAGS)
 
 clean:
-	@rm -rf src/$(OBJ)
+	@rm -rf ./$(OBJ)
 
 mrproper: clean
-	rm -rf bin/$(EXEC)
+	@rm -rf bin/$(EXEC)
