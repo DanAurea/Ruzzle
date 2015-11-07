@@ -10,8 +10,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "../include/random.h"
-
-#define N 4
+#include "../include/display.h"
 
 /** 
  * \struct Définis une case par 4 caractéristiques
@@ -20,7 +19,6 @@
  * @param boL Bonus sur la lettre
  * @param boM Bonus sur le mot
  */
-typedef struct {char let; int pts; char boL[3]; char boM[3];}t_Case;
 t_Case alpha[26]= {
         {'A',1}, {'B',3}, {'C',2}, {'D',2},
         {'E',1}, {'F',3}, {'G',3}, {'H',3},
@@ -54,7 +52,7 @@ void initGrid(t_Case grid[N][N]){
  * @param col Colonne de la case à remplir
  * @param nb_bonus Nombre de bonus lettre et mot dans la grille 
  */
-void Case(t_Case grid[N][N], int line, int col, int nb_bonus[]){
+void getCase(t_Case grid[N][N], int line, int col, int nb_bonus[]){
     int randLet;
 
     randLet = randCase();
@@ -84,7 +82,7 @@ void Grille(t_Case grid[N][N]){
     {
         for (j = 0; j < N; j++)
         {   
-            Case(grid, i, j, nb_bonus);
+            getCase(grid, i, j, nb_bonus);
         }
         printf("\n\n\n\n");
     }

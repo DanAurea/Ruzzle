@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
- #include <string.h>
+#include <string.h>
 
 void initRand(){
 	srand(time(NULL));
@@ -73,7 +73,7 @@ int randCase(){
  * @param nb_bom Nombre de bonus mot dans la grille
  */
 void getBonus(char boCharL[], char boCharM[], int *nb_boL, int *nb_boM){
-	int randBonus = rand() % 30;
+	int randBonus = rand() % 70;
 
 	if(randBonus <= 8 && *nb_boL != 2){
 		strcpy(boCharL, "LD");
@@ -86,7 +86,7 @@ void getBonus(char boCharL[], char boCharM[], int *nb_boL, int *nb_boM){
 	}
 
 	if(strcmp(boCharL,"  ") == 0){
-		randBonus = rand() % 30;
+		randBonus = rand() % 70;
 		
 		if(randBonus <= 5 && *nb_boM !=2){
 			strcpy(boCharM, "MD");
