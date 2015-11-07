@@ -68,6 +68,7 @@ void getCase(t_Case grid[N][N], int line, int col, int nb_bonus[]){
 
 }
 
+
 /** Représente une grille
  * @param grid Grille à remplir
  */
