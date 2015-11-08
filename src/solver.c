@@ -60,6 +60,7 @@ int searchWord(char word[]){
 		    if(cChar != '\n'){
 		        tmpWord[i] = cChar;
 		        i++;
+		        tmpWord[i]='\0';
 
 		        /*  On regarde si le mot est possible tout en s'assurant
 					que le mot formé n'est pas un mot complet
@@ -91,5 +92,5 @@ int searchWord(char word[]){
 	}else{
 		printf("Le fichier n'a pu être chargé.");
 	}
-	return -1;
+	return 0;
 }
