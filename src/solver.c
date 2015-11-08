@@ -29,22 +29,25 @@ void findWord(t_Case grid[N][N]){
  */
 int searchWord(char word[]){
 	FILE * file;
-	int sizeW = strlen(word);
-	char tmpWord[sizeW+1], cChar, tmp;
-	int i = 0, nbCharLeft = 0;
 	fpos_t position;
 
-	file = fopen("../assets/dico.txt","r");
+	int sizeW = strlen(word);
+	char tmpWord[sizeW+1], cChar;
+	int i = 0;
+
+	char dir[15]= "../assets/";
+	char filename[6] = "";
+	
+	// Définis le dictionnaire à utiliser
+	filename[0] = word[0];
+	strcat(filename, ".txt");
+	strcat(dir, filename);
+
+	file = fopen(dir,"r");
+
 	if(file !=NULL){
 		cChar=fgetc(file);
 		while(cChar != EOF){
-		    
-		    /* 	Si la première lettre ne match plus celle du mot
-		     	formé */
-		    if(tmpWord[0] > word[0]){
-		    	fclose(file);
-		    	return 0;
-		    }
 		    
 		    // Si le mot courant est trop long on passe au suivant
 		    if(i == sizeW){
@@ -61,12 +64,12 @@ int searchWord(char word[]){
 		        /*  On regarde si le mot est possible tout en s'assurant
 					que le mot formé n'est pas un mot complet
 		        */
-		        fgetpos(file, &position);
+		       	fgetpos(file, &position);
 		        cChar = fgetc(file);
 		        if(cChar != '\n' && strcmp(word,tmpWord) == 0){
 		        	fclose(file);
 		        	return 1;
-		        } 
+		        }
 		        fsetpos(file, &position);
 
 		    }else{
@@ -80,6 +83,7 @@ int searchWord(char word[]){
 		        i=0;
 		        
 		    }
+
 		    cChar=fgetc(file);
 		}
 		fclose(file);
@@ -88,9 +92,4 @@ int searchWord(char word[]){
 		printf("Le fichier n'a pu être chargé.");
 	}
 	return -1;
-}
-
-int main(){
-	searchWord("zython");
-	return 0;
 }
