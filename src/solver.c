@@ -32,30 +32,48 @@ int searchWord(char word[]){
 	int sizeW = strlen(word);
 	char tmpWord[sizeW+1], cChar, tmp;
 	int i = 0, nbCharLeft = 0;
+	fpos_t position;
 
 	file = fopen("../assets/dico.txt","r");
 	if(file !=NULL){
 		cChar=fgetc(file);
 		while(cChar != EOF){
-			printf("%c - %i ",cChar, i);
 		    
-		    if(tmpWord[0] > word[0]) return 0;
+		    /* 	Si la première lettre ne match plus celle du mot
+		     	formé */
+		    if(tmpWord[0] > word[0]){
+		    	fclose(file);
+		    	return 0;
+		    }
 		    
+		    // Si le mot courant est trop long on passe au suivant
 		    if(i == sizeW){
 		    	while(cChar != '\n'){
 		    		cChar = fgetc(file);
-		    		//if(cChar != '\n' && strcmp(word,tmpWord) == 0) return 1;
 		    	}
 		    }
 
+		    // Parcours tout les mots
 		    if(cChar != '\n'){
 		        tmpWord[i] = cChar;
-		        i++;     
+		        i++;
+
+		        /*  On regarde si le mot est possible tout en s'assurant
+					que le mot formé n'est pas un mot complet
+		        */
+		        fgetpos(file, &position);
+		        cChar = fgetc(file);
+		        if(cChar != '\n' && strcmp(word,tmpWord) == 0){
+		        	fclose(file);
+		        	return 1;
+		        } 
+		        fsetpos(file, &position);
+
 		    }else{
 
 		        tmpWord[i]='\0';
+		        // Le mot a été trouvé
 		        if(strcmp(word,tmpWord) == 0){
-		        	printf("%s", tmpWord);
 		            fclose(file);
 		            return 2;
 		        }
@@ -65,6 +83,7 @@ int searchWord(char word[]){
 		    cChar=fgetc(file);
 		}
 		fclose(file);
+
 	}else{
 		printf("Le fichier n'a pu être chargé.");
 	}
@@ -72,6 +91,6 @@ int searchWord(char word[]){
 }
 
 int main(){
-	if(searchWord("abaiss")== 2)printf("test");
+	searchWord("zython");
 	return 0;
 }
