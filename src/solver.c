@@ -29,43 +29,49 @@ void findWord(t_Case grid[N][N]){
  */
 int searchWord(char word[]){
 	FILE * file;
-	char tmpWord[strlen(word)], cChar = '?', tmp ='?';
-	int i;
+	int sizeW = strlen(word);
+	char tmpWord[sizeW+1], cChar, tmp;
+	int i = 0, nbCharLeft = 0;
 
 	file = fopen("../assets/dico.txt","r");
 	if(file !=NULL){
-		while(!feof(file)){
-			for (i = 0; i < strlen(word); i++)
-			{
-				// Lecture caractère par caractère du dictionnaire
-				cChar = fgetc(file);
+		cChar=fgetc(file);
+		while(cChar != EOF){
+			printf("%c - %i ",cChar, i);
+		    
+		    if(tmpWord[0] > word[0]) return 0;
+		    
+		    if(i == sizeW){
+		    	while(cChar != '\n'){
+		    		cChar = fgetc(file);
+		    		//if(cChar != '\n' && strcmp(word,tmpWord) == 0) return 1;
+		    	}
+		    }
 
-				/* 	Retourne faux si le premier caractère du mot 
-					temporaire ne match pas la première lettre du 
-					mot.
-				*/
-				if(tmpWord[0] > word[0]) return 0;
-				
-				// Test sur la fin du mot
-				if(cChar != '\n'){
-					tmpWord[i] = cChar;
-					// Mot possible
-					if(strcmp(word, tmpWord) == 0) return 1;
-				}	
-				// Mot trouvé
-				else{ 
-					strcpy(tmpWord, "");
-					if(strcmp(word, tmpWord) == 0) return 2;
-				}
+		    if(cChar != '\n'){
+		        tmpWord[i] = cChar;
+		        i++;     
+		    }else{
 
-			}
-			while(tmp != '\n' && tmp != EOF) tmp = fgetc(file);
-
+		        tmpWord[i]='\0';
+		        if(strcmp(word,tmpWord) == 0){
+		        	printf("%s", tmpWord);
+		            fclose(file);
+		            return 2;
+		        }
+		        i=0;
+		        
+		    }
+		    cChar=fgetc(file);
 		}
 		fclose(file);
-
 	}else{
 		printf("Le fichier n'a pu être chargé.");
 	}
 	return -1;
+}
+
+int main(){
+	if(searchWord("abaiss")== 2)printf("test");
+	return 0;
 }
