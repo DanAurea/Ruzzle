@@ -29,43 +29,43 @@ void findWord(t_Case grid[N][N]){
  */
 int searchWord(char word[]){
 	FILE * file;
-	char tmpWord[17] ="", cChar = '?';
+	char tmpWord[strlen(word)], cChar = '?', tmp ='?';
 	int i;
 
 	file = fopen("../assets/dico.txt","r");
 	if(file !=NULL){
 		while(!feof(file)){
-			for (i = 0; i < strlen(word)+1; i++)
+			for (i = 0; i < strlen(word); i++)
 			{
 				// Lecture caractère par caractère du dictionnaire
 				cChar = fgetc(file);
 
-				/* 	Retourne faux si le caractère actuel ne match pas
-					pas la première lettre du mot;
-				*/ 
+				/* 	Retourne faux si le premier caractère du mot 
+					temporaire ne match pas la première lettre du 
+					mot.
+				*/
 				if(tmpWord[0] > word[0]) return 0;
-
+				
 				// Test sur la fin du mot
 				if(cChar != '\n'){
-					printf("%c",cChar);
 					tmpWord[i] = cChar;
+					// Mot possible
 					if(strcmp(word, tmpWord) == 0) return 1;
-				}
-				else{
+				}	
+				// Mot trouvé
+				else{ 
+					strcpy(tmpWord, "");
 					if(strcmp(word, tmpWord) == 0) return 2;
-					strcpy(tmpWord,"");
-					i--;
-					printf("\n");
-				} 
+				}
+
 			}
+			while(tmp != '\n' && tmp != EOF) tmp = fgetc(file);
+
 		}
+		fclose(file);
+
 	}else{
 		printf("Le fichier n'a pu être chargé.");
 	}
 	return -1;
-}
-
-int main(){
-	searchWord("abaissa");
-	return 0;
 }
