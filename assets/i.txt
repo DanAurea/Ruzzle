@@ -1,4 +1,3 @@
-iambe
 iambes
 iatrogene
 iatrogenes
@@ -8818,6 +8817,7 @@ internerons
 interneront
 internes
 internet
+Internet
 internez
 interniez
 internions
@@ -11148,6 +11148,7 @@ isotope
 isotopes
 isotopique
 isotopiques
+ISPELL
 israelien
 israelienne
 israeliennes

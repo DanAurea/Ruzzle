@@ -1,4 +1,3 @@
-ta
 tabac
 tabacomanie
 tabacomanies
@@ -1937,6 +1936,7 @@ tartarins
 tarte
 tartelette
 tartelettes
+Tartempion
 tartes
 tarti
 tartignolle
@@ -2425,6 +2425,8 @@ taxinomiques
 taxinomiste
 taxinomistes
 taxions
+Taxiphone
+Taxiphones
 taxis
 taxiway
 taxiways
@@ -2539,6 +2541,7 @@ technicisions
 technicisons
 technicite
 technicites
+Technicolor
 technique
 techniquement
 techniques
@@ -2653,6 +2656,8 @@ tectrice
 tectrices
 tee
 tees
+Teflon
+Teflons
 tegenaire
 tegenaires
 tegument
@@ -3954,6 +3959,8 @@ terebrantes
 terebrants
 terebratule
 terebratules
+Tergal
+Tergals
 tergiversa
 tergiversai
 tergiversaient
@@ -8330,6 +8337,7 @@ toussaillez
 toussailliez
 toussaillions
 toussaillons
+Toussaint
 toussais
 toussait
 toussames
@@ -12756,6 +12764,7 @@ tripleront
 triples
 triplette
 triplettes
+Triplex
 triplez
 triplicata
 triplicatas

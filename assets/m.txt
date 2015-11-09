@@ -1,4 +1,3 @@
-ma
 maboul
 maboule
 maboules
@@ -109,6 +108,7 @@ maceron
 macerons
 macfarlane
 macfarlanes
+Mach
 macha
 machai
 machaient
@@ -4487,6 +4487,7 @@ martinet
 martinets
 martingale
 martingales
+Martini
 martre
 martres
 martyr
@@ -6871,6 +6872,7 @@ melassiez
 melassions
 melat
 melates
+Melba
 melchior
 melchiors
 melchite
@@ -9917,6 +9919,8 @@ ministrable
 ministrables
 ministre
 ministres
+Minitel
+Minitels
 minium
 minnesinger
 minnesingers
@@ -12097,6 +12101,8 @@ monotrace
 monotraces
 monotreme
 monotremes
+Monotype
+Monotypes
 monovalent
 monovalente
 monovalentes
@@ -14030,6 +14036,8 @@ mouvriez
 mouvrions
 mouvrons
 mouvront
+Moviola
+Moviolas
 moxa
 moxas
 moye

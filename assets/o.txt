@@ -1,4 +1,3 @@
-oaristys
 oasien
 oasienne
 oasiennes
@@ -3600,6 +3599,7 @@ orle
 orleaniste
 orleanistes
 orles
+Orlon
 ormaie
 ormaies
 orme

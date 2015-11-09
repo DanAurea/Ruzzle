@@ -1,4 +1,3 @@
-pacage
 pacagea
 pacageai
 pacageaient
@@ -6514,7 +6513,9 @@ pedalier
 pedaliers
 pedaliez
 pedalions
+Pedalo
 pedalons
+Pedalos
 pedant
 pedante
 pedanterie
@@ -15712,6 +15713,8 @@ polarisions
 polarisons
 polarite
 polarites
+Polaroid
+Polaroids
 polars
 polatouche
 polatouches

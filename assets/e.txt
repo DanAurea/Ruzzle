@@ -1,4 +1,3 @@
-eau
 eaux
 ebahi
 ebahie
@@ -25321,6 +25320,8 @@ escaladez
 escaladiez
 escaladions
 escaladons
+escalator
+escalators
 escale
 escales
 escalier
@@ -25997,12 +25998,16 @@ esquif
 esquifs
 esquille
 esquilles
+esquimau
 esquimaud
 esquimaude
+esquimaude
+esquimaudes
 esquimaudes
 esquimauds
 esquimautage
 esquimautages
+esquimaux
 esquinta
 esquintai
 esquintaient

@@ -1,4 +1,3 @@
-wading
 wadings
 wagage
 wagages
@@ -14,6 +13,8 @@ wagonnets
 wagonnier
 wagonniers
 wagons
+Walkman
+Walkmans
 walkyrie
 walkyries
 wallabies

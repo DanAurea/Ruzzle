@@ -1,4 +1,3 @@
-sa
 sabayon
 sabayons
 sabbat
@@ -1657,6 +1656,8 @@ sanderling
 sanderlings
 sandjak
 sandjaks
+Sandow
+Sandows
 sandre
 sandres
 sandwich
@@ -4102,6 +4103,7 @@ scorpion
 scorpions
 scorsonere
 scorsoneres
+Scotch
 scotcha
 scotchai
 scotchaient
@@ -4139,6 +4141,7 @@ scotchez
 scotchiez
 scotchions
 scotchons
+Scotchs
 scotie
 scoties
 scotisme
@@ -4194,6 +4197,8 @@ scoutes
 scoutisme
 scoutismes
 scouts
+Scrabble
+Scrabbles
 scramasaxe
 scramasaxes
 scraper
@@ -8200,6 +8205,8 @@ sizain
 sizains
 sizerin
 sizerins
+Skai
+Skais
 skate
 skateboard
 skateboards

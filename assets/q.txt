@@ -1,4 +1,3 @@
-quadragenaire
 quadragenaires
 quadragesimal
 quadragesimale
@@ -436,6 +435,8 @@ quasar
 quasars
 quasi
 quasiment
+Quasimodo
+Quasimodos
 quasis
 quassia
 quassias

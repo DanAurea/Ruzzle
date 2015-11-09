@@ -1,4 +1,3 @@
-na
 nabab
 nababs
 nabot
@@ -212,6 +211,7 @@ naphtes
 naphtol
 naphtols
 napoleon
+Napoleon
 napoleonien
 napoleonienne
 napoleoniennes
@@ -2328,6 +2328,8 @@ nodules
 noduleuse
 noduleuses
 noduleux
+Noel
+Noels
 noetique
 noetiques
 noeud

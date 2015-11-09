@@ -94,3 +94,42 @@ int searchWord(char word[]){
 	}
 	return 0;
 }
+
+void createDict(char dir[], char filename[]){
+	FILE * dirDic;
+	FILE * dest;
+	char let = 97; // Code ASCII de la lettre a
+	char word[70] = "";
+	int sizeFilename = strlen(filename);
+
+	strcat(dir, filename);
+	dirDic = fopen(dir, "r");
+	dir[strlen(dir)-sizeFilename] = '\0'; // Nettoie le chemin
+
+	if(dirDic != NULL){
+		while(!feof(dirDic)){
+			
+			// Change de dictionnaire
+			filename[0] = let;
+			filename[1]='\0';
+			strcat(&filename[1], ".txt");
+			if(let != 97){
+				dir[strlen(dir)-5] = '\0';
+			}
+			strcat(dir, filename);
+
+			
+			dest = fopen(dir,"w");
+
+			fscanf(dirDic, "%s", word);
+			while((word[0] == let || word[0] == let-32) && !feof(dirDic)){
+				fprintf(dest, "%s\n", word);
+				fscanf(dirDic, "%s", word);
+			}
+			fclose(dest);
+			let++;
+		}
+		fclose(dirDic);
+	}else printf("Le fichier n'a pu être chargé !");
+
+}
