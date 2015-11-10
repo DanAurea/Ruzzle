@@ -15,3 +15,30 @@ Permet de compiler l'ensemble des sources, l'exécutable généré peut être re
 >  $ make mrproper
 
 Permet de nettoyer le dossier.
+
+# Utilisation
+
+>  $ ./bin/ruzzleSolver
+
+Permet d'exécuter le programme.
+
+On peut prédéfinir une grille à l'aide d'une chaine de caractère ou générer un grille de façon aléatoire.
+
+Par exemple:
+
+La chaine de caractère "adcksxirmdesuckh" génèrera la grille : 
+
+>	A	D	C	K
+> 
+>	S	X	I	R
+> 
+>	M	D	E	S
+> 
+>	U	C	K	H 
+> 
+
+Pour la génération de la grille de façon aléatoire, les lettres sont tirées au hasard en prenant en compte de leurs fréquences d'apparition.
+
+
+
+
