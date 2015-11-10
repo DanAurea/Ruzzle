@@ -28,16 +28,16 @@ Par exemple:
 
 La chaine de caractère "adcksxirmdesuckh" génèrera la grille : 
 
->	A	D	C	K
+>	A&nbsp;&nbsp;&nbsp;&nbsp;D&nbsp;&nbsp;&nbsp;&nbsp;C&nbsp;&nbsp;&nbsp;&nbsp;K
 > 
->	S	X	I	R
+>	S&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;&nbsp;&nbsp;R
 > 
->	M	D	E	S
+>	M&nbsp;&nbsp;&nbsp;&nbsp;D&nbsp;&nbsp;&nbsp;&nbsp;E&nbsp;&nbsp;&nbsp;&nbsp;S
 > 
->	U	C	K	H 
+>	U&nbsp;&nbsp;&nbsp;&nbsp;C&nbsp;&nbsp;&nbsp;&nbsp;K&nbsp;&nbsp;&nbsp;&nbsp;H 
 > 
 
-Pour la génération de la grille de façon aléatoire, les lettres sont tirées au hasard en prenant en compte de leurs fréquences d'apparition.
+Pour la génération de la grille de façon aléatoire, les lettres sont tirées au hasard en prenant compte de leurs fréquences d'apparition.
 
 
 
