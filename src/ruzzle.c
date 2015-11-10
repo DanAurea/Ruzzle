@@ -9,12 +9,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "../include/display.h"
+#include "../include/solver.h"
 #define N 4
 
 /* Programme principal */
-int main(){
+int main(int argc, char * argv[]){
 	t_Case grid[N][N];
 	
-	Grille(grid);
+	Grille(grid, argc, argv);
+	//Solver(grid);
 	return 0;
 }

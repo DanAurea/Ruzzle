@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "../include/display.h"
+#include "../include/solver.h"
 #include "../include/trie.h"
 
 /**
@@ -18,8 +19,29 @@ int totCase(t_Case Case){
  * Trouve un mot dans la grille
  * @param grid Grille du jeu
  */
-void findWord(t_Case grid[N][N]){
+void findWords(t_Case grid[N][N], int i, int j, char word[]){
+	int dx, dy;
+	grid[i][j].visited = 1;
 
+	word[strlen(word)] = grid[i][j].let;
+	word[strlen(word)+1] = '\0';
+
+			// Parcours des cases voisines
+			for (dx = (i <= 0 ? 0 : -1); dx <= (i >= N-1 ? 0 : 1); dx++) { 
+				for (dy = (j <= 0 ? 0 : -1); dy <= (j >= N-1 ? 0 : 1); dy++) {
+					
+					if (!grid[dx+i][dy+j].visited && searchWord(word) == 1){
+						findWords(grid, i+dx, j+dy, word); 
+					}else if(strlen(word) >= 2 && searchWord(word) == 2){
+						printf("%s\n", word);
+						//findWords(grid, i+dx, j+dy, word);
+					}else{
+						word[strlen(word)-1] = '\0';
+						grid[i+dx][j+dy].visited = 0;
+					}
+
+				} 
+			}
 }
 
 /**
@@ -35,7 +57,7 @@ int searchWord(char word[]){
 	char tmpWord[sizeW+1], cChar;
 	int i = 0;
 
-	char dir[15]= "../assets/";
+	char dir[15]= "assets/";
 	char filename[6] = "";
 	
 	// Définis le dictionnaire à utiliser
@@ -44,6 +66,7 @@ int searchWord(char word[]){
 	strcat(dir, filename);
 
 	file = fopen(dir,"r");
+
 
 	if(file !=NULL){
 		cChar=fgetc(file);
@@ -90,11 +113,16 @@ int searchWord(char word[]){
 		fclose(file);
 
 	}else{
-		printf("Le fichier n'a pu être chargé.");
+		//printf("Le fichier n'a pu être chargé.");
 	}
 	return 0;
 }
 
+/**
+ * Crée les dictionnaires pour optimiser le traitement
+ * @param dir Indique le dossier dans lequel chercher le dictionnaire
+ * @param filename Indique le nom du dictionnaire
+ */
 void createDict(char dir[], char filename[]){
 	FILE * dirDic;
 	FILE * dest;
@@ -132,4 +160,17 @@ void createDict(char dir[], char filename[]){
 		fclose(dirDic);
 	}else printf("Le fichier n'a pu être chargé !");
 
+}
+
+void Solver(t_Case grid[N][N]){
+	int i, j;
+	char word[17];
+
+	for (i = 0; i < N; i++)
+	{
+		for (j = 0; j < N; j++)
+		{	
+			findWords(grid, i, j, word);
+		}
+	}
 }
