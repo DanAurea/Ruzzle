@@ -39,6 +39,8 @@ La chaine de caractère "adcksxirmdesuckh" génèrera la grille :
 
 Pour la génération de la grille de façon aléatoire, les lettres sont tirées au hasard en prenant compte de leurs fréquences d'apparition.
 
+Les bonus lettres et mots sont tirés aléatoirement de manière à ce qu'il n'y ait pas trop de bonus.
+
 
 
 
