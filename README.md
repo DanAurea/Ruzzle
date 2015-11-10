@@ -20,13 +20,15 @@ Permet de nettoyer le dossier.
 
 >  $ ./bin/ruzzleSolver
 
-Permet d'exécuter le programme.
+Permet d'exécuter le programme en générant une grille aléatoire, les lettres sont tirées au hasard en prenant compte de leurs fréquences d'apparition dans la langue française.
 
-On peut prédéfinir une grille à l'aide d'une chaine de caractère ou générer un grille de façon aléatoire.
+On peut prédéfinir une grille à l'aide d'une chaine de 16 caractères.
 
 Par exemple:
 
-La chaine de caractère "adcksxirmdesuckh" génèrera la grille : 
+>  $ ./bin/ruzzleSolver adcksxirmdesuckh
+
+Génèrera la grille : 
 
 >	A&nbsp;&nbsp;&nbsp;&nbsp;D&nbsp;&nbsp;&nbsp;&nbsp;C&nbsp;&nbsp;&nbsp;&nbsp;K
 > 
@@ -37,7 +39,8 @@ La chaine de caractère "adcksxirmdesuckh" génèrera la grille :
 >	U&nbsp;&nbsp;&nbsp;&nbsp;C&nbsp;&nbsp;&nbsp;&nbsp;K&nbsp;&nbsp;&nbsp;&nbsp;H 
 > 
 
-Pour la génération de la grille de façon aléatoire, les lettres sont tirées au hasard en prenant compte de leurs fréquences d'apparition dans la langue française.
+Dans le cas d'une chaîne trop petite un message d'erreur apparaîtra, si la chaîne est trop grande,
+la grille sera composée des 16 premiers caractères.
 
 Les bonus lettres et mots sont tirés aléatoirement de manière à ce qu'il n'y ait pas trop de bonus.
 
