@@ -37,7 +37,7 @@ La chaine de caractère "adcksxirmdesuckh" génèrera la grille :
 >	U&nbsp;&nbsp;&nbsp;&nbsp;C&nbsp;&nbsp;&nbsp;&nbsp;K&nbsp;&nbsp;&nbsp;&nbsp;H 
 > 
 
-Pour la génération de la grille de façon aléatoire, les lettres sont tirées au hasard en prenant compte de leurs fréquences d'apparition.
+Pour la génération de la grille de façon aléatoire, les lettres sont tirées au hasard en prenant compte de leurs fréquences d'apparition dans la langue française.
 
 Les bonus lettres et mots sont tirés aléatoirement de manière à ce qu'il n'y ait pas trop de bonus.
 
