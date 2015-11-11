@@ -671,7 +671,7 @@ zootaxie
 zootaxies
 zootechnicien
 zootechnicienne
-zootechniciennes
+[a-z]
 zootechniciens
 zootechnie
 zootechnies

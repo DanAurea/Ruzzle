@@ -2116,8 +2116,8 @@ jureurs
 jurez
 juridiction
 juridictionnel
-juridictionnelle
-juridictionnelles
+[a-z]
+[a-z]
 juridictionnels
 juridictions
 juridique
@@ -2132,9 +2132,9 @@ jurisconsultes
 jurisprudence
 jurisprudences
 jurisprudentiel
-jurisprudentielle
-jurisprudentielles
-jurisprudentiels
+[a-z]
+[a-z]
+[a-z]
 juriste
 juristes
 juron
