@@ -757,8 +757,6 @@ galvanometre
 galvanometres
 galvanoplastie
 galvanoplasties
-[a-z]
-[a-z]
 galvanos
 galvanotype
 galvanotypes
@@ -1433,7 +1431,6 @@ gargouillasse
 gargouillassent
 gargouillasses
 gargouillassiez
-[a-z]
 gargouillat
 gargouillates
 gargouille
@@ -1443,7 +1440,6 @@ gargouillent
 gargouiller
 gargouillera
 gargouillerai
-[a-z]
 gargouillerais
 gargouillerait
 gargouilleras
@@ -2334,7 +2330,6 @@ gelatinisasse
 gelatinisassent
 gelatinisasses
 gelatinisassiez
-[a-z]
 gelatinisat
 gelatinisates
 gelatinise
@@ -2344,7 +2339,6 @@ gelatinisent
 gelatiniser
 gelatinisera
 gelatiniserai
-[a-z]
 gelatiniserais
 gelatiniserait
 gelatiniseras
@@ -2645,7 +2639,6 @@ gene
 genealogie
 genealogies
 genealogique
-[a-z]
 genealogiques
 genealogiste
 genealogistes
@@ -2683,7 +2676,6 @@ generalisasse
 generalisassent
 generalisasses
 generalisassiez
-[a-z]
 generalisat
 generalisates
 generalisateur
@@ -2691,7 +2683,6 @@ generalisateurs
 generalisation
 generalisations
 generalisatrice
-[a-z]
 generalise
 generalisee
 generalisees
@@ -2699,7 +2690,6 @@ generalisent
 generaliser
 generalisera
 generaliserai
-[a-z]
 generaliserais
 generaliserait
 generaliseras
@@ -2889,7 +2879,6 @@ geographes
 geographie
 geographies
 geographique
-[a-z]
 geographiques
 geoide
 geoides
@@ -2932,7 +2921,6 @@ geometrisasse
 geometrisassent
 geometrisasses
 geometrisassiez
-[a-z]
 geometrisat
 geometrisates
 geometrise
@@ -2942,7 +2930,6 @@ geometrisent
 geometriser
 geometrisera
 geometriserai
-[a-z]
 geometriserais
 geometriserait
 geometriseras
@@ -4014,10 +4001,7 @@ glandouillames
 glandouillant
 glandouillas
 glandouillasse
-[a-z]
 glandouillasses
-[a-z]
-[a-z]
 glandouillat
 glandouillates
 glandouille
@@ -4025,14 +4009,12 @@ glandouillent
 glandouiller
 glandouillera
 glandouillerai
-[a-z]
 glandouillerais
 glandouillerait
 glandouilleras
 glandouillerent
 glandouillerez
 glandouilleriez
-[a-z]
 glandouillerons
 glandouilleront
 glandouilles
@@ -4487,7 +4469,6 @@ glougloutasse
 glougloutassent
 glougloutasses
 glougloutassiez
-[a-z]
 glougloutat
 glougloutates
 glougloute
@@ -4495,7 +4476,6 @@ glougloutent
 glouglouter
 glougloutera
 glouglouterai
-[a-z]
 glouglouterais
 glouglouterait
 glouglouteras
@@ -5018,7 +4998,6 @@ goguenardasse
 goguenardassent
 goguenardasses
 goguenardassiez
-[a-z]
 goguenardat
 goguenardates
 goguenarde
@@ -5026,7 +5005,6 @@ goguenardent
 goguenarder
 goguenardera
 goguenarderai
-[a-z]
 goguenarderais
 goguenarderait
 goguenarderas
@@ -5202,7 +5180,6 @@ gonades
 gonadique
 gonadiques
 gonadostimuline
-[a-z]
 gonadotrope
 gonadotropes
 gonadotrophine
@@ -5709,10 +5686,7 @@ goupillonnames
 goupillonnant
 goupillonnas
 goupillonnasse
-[a-z]
 goupillonnasses
-[a-z]
-[a-z]
 goupillonnat
 goupillonnates
 goupillonne
@@ -5722,14 +5696,12 @@ goupillonnent
 goupillonner
 goupillonnera
 goupillonnerai
-[a-z]
 goupillonnerais
 goupillonnerait
 goupillonneras
 goupillonnerent
 goupillonnerez
 goupillonneriez
-[a-z]
 goupillonnerons
 goupillonneront
 goupillonnes
@@ -5961,9 +5933,6 @@ gouvernees
 gouvernement
 gouvernemental
 gouvernementale
-[a-z]
-[a-z]
-[a-z]
 gouvernementaux
 gouvernements
 gouvernent
@@ -6160,7 +6129,6 @@ graillonnasse
 graillonnassent
 graillonnasses
 graillonnassiez
-[a-z]
 graillonnat
 graillonnates
 graillonne
@@ -6168,7 +6136,6 @@ graillonnent
 graillonner
 graillonnera
 graillonnerai
-[a-z]
 graillonnerais
 graillonnerait
 graillonneras
@@ -6294,36 +6261,12 @@ grammairiennes
 grammairiens
 grammatical
 grammaticale
-[a-z]
-[a-z]
 grammaticales
-[a-z]
-[a-z]
-[a-z]
-[a-z]
-[a-z]
-[a-z]
 grammaticalise
 grammaticalisee
-[a-z]
-[a-z]
 grammaticaliser
-[a-z]
-[a-z]
-[a-z]
-[a-z]
-[a-z]
-[a-z]
-[a-z]
-[a-z]
-[a-z]
-[a-z]
-[a-z]
 grammaticalises
 grammaticalisez
-[a-z]
-[a-z]
-[a-z]
 grammaticalite
 grammaticalites
 grammaticaux
@@ -7373,7 +7316,6 @@ grenouillasse
 grenouillassent
 grenouillasses
 grenouillassiez
-[a-z]
 grenouillat
 grenouillates
 grenouille
@@ -7381,7 +7323,6 @@ grenouillent
 grenouiller
 grenouillera
 grenouillerai
-[a-z]
 grenouillerais
 grenouillerait
 grenouilleras
@@ -7512,7 +7453,6 @@ gribouillasse
 gribouillassent
 gribouillasses
 gribouillassiez
-[a-z]
 gribouillat
 gribouillates
 gribouille
@@ -7522,7 +7462,6 @@ gribouillent
 gribouiller
 gribouillera
 gribouillerai
-[a-z]
 gribouillerais
 gribouillerait
 gribouilleras
@@ -9151,10 +9090,7 @@ gueuletonnames
 gueuletonnant
 gueuletonnas
 gueuletonnasse
-[a-z]
 gueuletonnasses
-[a-z]
-[a-z]
 gueuletonnat
 gueuletonnates
 gueuletonne
@@ -9162,14 +9098,12 @@ gueuletonnent
 gueuletonner
 gueuletonnera
 gueuletonnerai
-[a-z]
 gueuletonnerais
 gueuletonnerait
 gueuletonneras
 gueuletonnerent
 gueuletonnerez
 gueuletonneriez
-[a-z]
 gueuletonnerons
 gueuletonneront
 gueuletonnes
@@ -9349,7 +9283,6 @@ guillemetasse
 guillemetassent
 guillemetasses
 guillemetassiez
-[a-z]
 guillemetat
 guillemetates
 guillemete
@@ -9367,13 +9300,11 @@ guillemette
 guillemettent
 guillemettera
 guillemetterai
-[a-z]
 guillemetterais
 guillemetterait
 guillemetteras
 guillemetterez
 guillemetteriez
-[a-z]
 guillemetterons
 guillemetteront
 guillemettes
@@ -9439,7 +9370,6 @@ guillotinasse
 guillotinassent
 guillotinasses
 guillotinassiez
-[a-z]
 guillotinat
 guillotinates
 guillotine
@@ -9449,7 +9379,6 @@ guillotinent
 guillotiner
 guillotinera
 guillotinerai
-[a-z]
 guillotinerais
 guillotinerait
 guillotineras
@@ -9661,8 +9590,6 @@ gymnospermes
 gymnote
 gymnotes
 gyms
-[a-z]
-[a-z]
 gynecologie
 gynecologies
 gynecologique

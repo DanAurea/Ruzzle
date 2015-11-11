@@ -81,7 +81,6 @@ vaccinons
 vaccinostyle
 vaccinostyles
 vaccinotherapie
-[a-z]
 vaccins
 vachard
 vacharde
@@ -204,7 +203,6 @@ vadrouillasse
 vadrouillassent
 vadrouillasses
 vadrouillassiez
-[a-z]
 vadrouillat
 vadrouillates
 vadrouille
@@ -214,7 +212,6 @@ vadrouillent
 vadrouiller
 vadrouillera
 vadrouillerai
-[a-z]
 vadrouillerais
 vadrouillerait
 vadrouilleras
@@ -228,7 +225,6 @@ vadrouilles
 vadrouilleueur
 vadrouilleueurs
 vadrouilleueuse
-[a-z]
 vadrouillez
 vadrouilliez
 vadrouillions
@@ -1384,7 +1380,6 @@ vasards
 vasculaire
 vasculaires
 vascularisation
-[a-z]
 vascularise
 vascularisee
 vascularisees
@@ -1436,18 +1431,11 @@ vaseux
 vasiere
 vasieres
 vasistas
-[a-z]
-[a-z]
-[a-z]
-[a-z]
-[a-z]
-[a-z]
 vasodilatateur
 vasodilatateurs
 vasodilatation
 vasodilatations
 vasodilatatrice
-[a-z]
 vasomoteur
 vasomoteurs
 vasomotrice
@@ -2932,10 +2920,7 @@ vermillonnames
 vermillonnant
 vermillonnas
 vermillonnasse
-[a-z]
 vermillonnasses
-[a-z]
-[a-z]
 vermillonnat
 vermillonnates
 vermillonne
@@ -2945,14 +2930,12 @@ vermillonnent
 vermillonner
 vermillonnera
 vermillonnerai
-[a-z]
 vermillonnerais
 vermillonnerait
 vermillonneras
 vermillonnerent
 vermillonnerez
 vermillonneriez
-[a-z]
 vermillonnerons
 vermillonneront
 vermillonnes
@@ -3143,7 +3126,6 @@ verrouillasse
 verrouillassent
 verrouillasses
 verrouillassiez
-[a-z]
 verrouillat
 verrouillates
 verrouille
@@ -3153,7 +3135,6 @@ verrouillent
 verrouiller
 verrouillera
 verrouillerai
-[a-z]
 verrouillerais
 verrouillerait
 verrouilleras
@@ -3310,7 +3291,6 @@ verticilles
 vertige
 vertiges
 vertigineuse
-[a-z]
 vertigineuses
 vertigineux
 vertigo
@@ -4255,17 +4235,12 @@ villegiateur
 villegiateurs
 villegiatura
 villegiaturai
-[a-z]
 villegiaturais
 villegiaturait
 villegiaturames
 villegiaturant
 villegiaturas
 villegiaturasse
-[a-z]
-[a-z]
-[a-z]
-[a-z]
 villegiaturat
 villegiaturates
 villegiature
@@ -4273,16 +4248,8 @@ villegiaturent
 villegiaturer
 villegiaturera
 villegiaturerai
-[a-z]
-[a-z]
-[a-z]
 villegiatureras
-[a-z]
 villegiaturerez
-[a-z]
-[a-z]
-[a-z]
-[a-z]
 villegiatures
 villegiaturez
 villegiaturiez
@@ -5927,7 +5894,6 @@ volatilisasse
 volatilisassent
 volatilisasses
 volatilisassiez
-[a-z]
 volatilisat
 volatilisates
 volatilisation
@@ -5939,7 +5905,6 @@ volatilisent
 volatiliser
 volatilisera
 volatiliserai
-[a-z]
 volatiliserais
 volatiliserait
 volatiliseras
@@ -6698,7 +6663,6 @@ vraies
 vraiment
 vrais
 vraisemblable
-[a-z]
 vraisemblables
 vraisemblance
 vraisemblances

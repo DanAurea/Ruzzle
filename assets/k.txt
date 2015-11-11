@@ -24,7 +24,6 @@ kakis
 kaleidoscope
 kaleidoscopes
 kaleidoscopique
-[a-z]
 kali
 kalicytie
 kalicyties
@@ -316,8 +315,6 @@ kinase
 kinases
 kinescope
 kinescopes
-[a-z]
-[a-z]
 kinesitherapie
 kinesitherapies
 kinesthesie

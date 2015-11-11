@@ -128,7 +128,6 @@ labyrinthiques
 labyrinthodon
 labyrinthodons
 labyrinthodonte
-[a-z]
 lac
 laca
 lacage
@@ -305,7 +304,6 @@ lactiferes
 lactique
 lactiques
 lactodensimetre
-[a-z]
 lactoflavine
 lactoflavines
 lactometre
@@ -2828,7 +2826,6 @@ lexicalisasse
 lexicalisassent
 lexicalisasses
 lexicalisassiez
-[a-z]
 lexicalisat
 lexicalisates
 lexicalisation
@@ -2840,7 +2837,6 @@ lexicalisent
 lexicaliser
 lexicalisera
 lexicaliserai
-[a-z]
 lexicaliserais
 lexicaliserait
 lexicaliseras
@@ -2861,7 +2857,6 @@ lexicographes
 lexicographie
 lexicographies
 lexicographique
-[a-z]
 lexicologie
 lexicologies
 lexicologique
@@ -3088,7 +3083,6 @@ liberalisasse
 liberalisassent
 liberalisasses
 liberalisassiez
-[a-z]
 liberalisat
 liberalisates
 liberalisation
@@ -3100,7 +3094,6 @@ liberalisent
 liberaliser
 liberalisera
 liberaliserai
-[a-z]
 liberaliserais
 liberaliserait
 liberaliseras
@@ -4123,7 +4116,6 @@ linguiformes
 linguiste
 linguistes
 linguistique
-[a-z]
 linguistiques
 linier
 liniere
@@ -4566,17 +4558,12 @@ lithographe
 lithographes
 lithographia
 lithographiai
-[a-z]
 lithographiais
 lithographiait
 lithographiames
 lithographiant
 lithographias
 lithographiasse
-[a-z]
-[a-z]
-[a-z]
-[a-z]
 lithographiat
 lithographiates
 lithographie
@@ -4586,16 +4573,8 @@ lithographient
 lithographier
 lithographiera
 lithographierai
-[a-z]
-[a-z]
-[a-z]
 lithographieras
-[a-z]
 lithographierez
-[a-z]
-[a-z]
-[a-z]
-[a-z]
 lithographies
 lithographiez
 lithographiiez
@@ -4618,8 +4597,6 @@ lithothamnium
 lithothamniums
 lithotriteur
 lithotriteurs
-[a-z]
-[a-z]
 litiere
 litieres
 litiez
@@ -5158,7 +5135,6 @@ longitude
 longitudes
 longitudinal
 longitudinale
-[a-z]
 longitudinales
 longitudinaux
 longotte
@@ -6528,8 +6504,6 @@ lymphocyte
 lymphocytes
 lymphocytose
 lymphocytoses
-[a-z]
-[a-z]
 lymphographie
 lymphographies
 lymphoide
@@ -6600,7 +6574,6 @@ lyophilisasse
 lyophilisassent
 lyophilisasses
 lyophilisassiez
-[a-z]
 lyophilisat
 lyophilisates
 lyophilisation
@@ -6612,7 +6585,6 @@ lyophilisent
 lyophiliser
 lyophilisera
 lyophiliserai
-[a-z]
 lyophiliserais
 lyophiliserait
 lyophiliseras
