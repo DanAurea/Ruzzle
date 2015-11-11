@@ -5,6 +5,10 @@
 
 element *root = NULL;
 
+/**
+ * Ajoute un élément dans la liste chaînée
+ * @param elem Elément à ajouter
+ */
 void addElement(element * elem){
     element* new, * tmp, * tmpInsert;
     
@@ -47,6 +51,9 @@ void addElement(element * elem){
     }
 }
 
+/**
+ * Affiche la liste entière de la racine jusqu'à la fin
+ */
 void printList(){
     element* tmp;
     //On se place en début de liste
@@ -62,6 +69,9 @@ void printList(){
     free(tmp);
 }
 
+/**
+ * Supprime la liste
+ */
 void clearList(){
     element* tmp;
     

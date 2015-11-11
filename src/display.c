@@ -131,6 +131,7 @@ void Grille(t_Case grid[N][N],int argc, char * gridStr[]){
 
     // Affichage grille aléatoire ou définis par l'utilisateur
     printf("----------------------------------------------------\n");
+    printf("|");
     if(argc == 1){
     
         for (i = 0; i < N; i++)
@@ -140,20 +141,26 @@ void Grille(t_Case grid[N][N],int argc, char * gridStr[]){
                 getCase(grid, i, j, nb_bonus);
             }
             printf("\n----------------------------------------------------\n");
+            if(i < N-1 )printf("|");
         }
     }else if(argc == 2){
+
         if(strlen(gridStr[1]) >= 16){
             gridStr[16] = '\0';
             
             for (i = 0; i < 16; i++)
             {   
                 getCaseFromStr(grid, nb_bonus, gridStr[1], i);
-                if((i - 3) % 4 == 0) printf("\n----------------------------------------------------\n");
+                if((i - 3) % 4 == 0){ 
+                    printf("\n----------------------------------------------------\n");
+                     if(i < 12)printf("|");
+                }
             }
 
         }else{
             printf("Chaîne de caractère trop courte.");
         }
+
     }else{
         printf("Erreur nombre d'arguments incorrect !\nNormal usage: ruzzleSolver [a-z]*16\n");
         exit(0);

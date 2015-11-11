@@ -10,13 +10,17 @@
 #include <stdlib.h>
 #include "../include/display.h"
 #include "../include/solver.h"
+#include "../include/trie.h"
 #define N 4
 
 /* Programme principal */
 int main(int argc, char * argv[]){
 	t_Case grid[N][N];
 	
-	Grille(grid, argc, argv);
-	//Solver(grid);
+	Grille(grid, argc, argv); // Affiche la grille
+	Solver(grid); // Résoud la grille
+	printList(); // Affiche les mots trouvés du plus grand au plus petit
+	clearList(); // Libère la liste de la mémoire
+	
 	return 0;
 }

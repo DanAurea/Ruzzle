@@ -16,32 +16,61 @@ int totCase(t_Case Case){
 }
 
 /**
+ * Retourne le coefficient multiplicateur pour le mot entier
+ * @param  Case Case courante
+ * @return 1 si pas de bonus, 2 si bonus double, 3 si bonus triple
+ */
+int mulWord(t_Case Case){
+	if(strcmp(Case.boM, "MD") == 0) return 2;
+	if(strcmp(Case.boM, "MT") == 0) return 3;
+	return 1;
+}
+
+/**
  * Trouve un mot dans la grille
  * @param grid Grille du jeu
+ * @param i Ligne de la case courante
+ * @param j Colonne de la case courante
+ * @param word Mot composé à partir de la grille
+ * @param totalCase Nombre de points total
+ * @param boM Coefficient multiplicateur du mot
  */
-void findWords(t_Case grid[N][N], int i, int j, char word[]){
-	int dx, dy;
+void findWords(t_Case grid[N][N], int i, int j, char word[], int totalW, int boM){
+	int dx, dy, find;
+	element current;
+	
 	grid[i][j].visited = 1;
 
+	// Composition + recherche du mot
 	word[strlen(word)] = grid[i][j].let;
 	word[strlen(word)+1] = '\0';
+	find = searchWord(word);
+	
+	// Calcul des points
+	totalW += totCase(grid[i][j]);
+	boM *= mulWord(grid[i][j]);
+
+	
+	if(find == 2 && strlen(word) >= 2){
+		strcpy(current.word, word);
+		current.pts = totalW * boM;
+		addElement(&current);
+	}
 
 			// Parcours des cases voisines
 			for (dx = (i <= 0 ? 0 : -1); dx <= (i >= N-1 ? 0 : 1); dx++) { 
 				for (dy = (j <= 0 ? 0 : -1); dy <= (j >= N-1 ? 0 : 1); dy++) {
-					
-					if (!grid[dx+i][dy+j].visited && searchWord(word) == 1){
-						findWords(grid, i+dx, j+dy, word); 
-					}else if(strlen(word) >= 2 && searchWord(word) == 2){
-						printf("%s\n", word);
-						//findWords(grid, i+dx, j+dy, word);
-					}else{
-						word[strlen(word)-1] = '\0';
-						grid[i+dx][j+dy].visited = 0;
+					if (grid[dx+i][dy+j].visited == 0 && (find == 1 || find == 2)){
+						findWords(grid, i+dx, j+dy, word, totalW, boM); 
 					}
-
 				} 
 			}
+
+			// On revient en arrière
+			word[strlen(word)-1] = '\0';
+			grid[i][j].visited = 0;
+			totalW -= totCase(grid[i][j]);
+			boM /= mulWord(grid[i][j]);
 }
 
 /**
@@ -66,8 +95,6 @@ int searchWord(char word[]){
 	strcat(dir, filename);
 
 	file = fopen(dir,"r");
-
-
 	if(file !=NULL){
 		cChar=fgetc(file);
 		while(cChar != EOF){
@@ -78,7 +105,7 @@ int searchWord(char word[]){
 		    		cChar = fgetc(file);
 		    	}
 		    }
-
+		 
 		    // Parcours tout les mots
 		    if(cChar != '\n'){
 		        tmpWord[i] = cChar;
@@ -113,7 +140,7 @@ int searchWord(char word[]){
 		fclose(file);
 
 	}else{
-		//printf("Le fichier n'a pu être chargé.");
+		printf("Le fichier %s n'a pu être chargé.", dir);
 	}
 	return 0;
 }
@@ -162,15 +189,19 @@ void createDict(char dir[], char filename[]){
 
 }
 
+/**
+ * 	Résoud la grille
+ * 	@param grid Grille à résoudre
+ */
 void Solver(t_Case grid[N][N]){
 	int i, j;
-	char word[17];
+	char word[17] = "\0";
 
 	for (i = 0; i < N; i++)
 	{
 		for (j = 0; j < N; j++)
 		{	
-			findWords(grid, i, j, word);
+			findWords(grid, i, j, word, 0, 1);
 		}
 	}
 }
