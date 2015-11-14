@@ -2,7 +2,7 @@
  \file random.c
  \brief Fonctions aléatoires
  \author Cousin Brandon Ngatchou Junior
- \version v0.32
+ \version v1.00
  \date 05/11/2015
  */
 

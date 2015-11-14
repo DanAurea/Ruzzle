@@ -1,3 +1,11 @@
+/**
+ \file trie.c
+ \brief Met au point une liste chaînée d'ordre décroissant
+ \author Cousin Brandon Ngatchou Junior
+ \version v1.00
+ \date 08/11/2015
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

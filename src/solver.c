@@ -1,3 +1,11 @@
+/**
+ \file solver.c
+ \brief Résoud la grille
+ \author Cousin Brandon Ngatchou Junior
+ \version v1.00
+ \date 08/11/2015
+ */
+
 #include <stdio.h>
 #include <string.h>
 #include "../include/display.h"
@@ -80,7 +88,6 @@ void findWords(t_Case grid[N][N], int i, int j, char word[], int totalW, int boM
  */
 int searchWord(char word[]){
 	FILE * file;
-	fpos_t position;
 
 	int sizeW = strlen(word);
 	char tmpWord[sizeW+1], cChar;

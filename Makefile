@@ -3,17 +3,16 @@ CFLAGS=-g -Wall
 EXEC=ruzzleSolver
 SRC= $(wildcard src/*.c)
 OBJ= $(SRC:.c=.o)
-INC= ../include/
+INC= include/
 
-all: $(EXEC)
+bin/ruzzleSolver: $(OBJ)
+	$(CC) -o $@ $^
+	@echo "\nOn reconstruit $@ a cause de $?"
 
-ruzzleSolver: $(OBJ)
-	$(CC) -o bin/$@ $^
-
-ruzzle.o: $(INC)display.h
-display.o: $(INC)display.h $(INC)random.h
-trie.o: $(INC)trie.h
-solver.o: $(INC)trie.h $(INC)display.h
+src/ruzzle.o: $(INC)*.h
+src/display.o: $(INC)display.h $(INC)random.h
+src/trie.o: $(INC)trie.h
+src/solver.o: $(INC)trie.h $(INC)display.h $(INC)solver.h
 
 %.o: %.c 
 	$(CC) -o $@ -c $< $(CFLAGS)

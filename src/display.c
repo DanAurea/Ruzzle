@@ -2,7 +2,7 @@
  \file display.c
  \brief Affiche la grille
  \author Cousin Brandon Ngatchou Junior
- \version v0.32
+ \version v1.00
  \date 05/11/2015
  */
 
@@ -162,7 +162,7 @@ void Grille(t_Case grid[N][N],int argc, char * gridStr[]){
         }
 
     }else{
-        printf("Erreur nombre d'arguments incorrect !\nNormal usage: ruzzleSolver [a-z]*16\n");
+        printf("Erreur nombre d'arguments incorrect !\nNormal usage: ./bin/ruzzleSolver [a-z]*16\n");
         exit(0);
     }
 }
