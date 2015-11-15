@@ -44,17 +44,21 @@ Pour le moment le solver vérifiant toutes les combinaisons en ouvrant le dictio
 ## Instructions de compilation
 
 
->  $ make
+>  $ **make**
 
 Permet de compiler l'ensemble des sources, l'exécutable généré peut être retrouvé dans **./bin** .
 
->  $ make mrproper
+>  $ **make clean**
 
-Permet de nettoyer le dossier.
+Permet de supprimer les fichiers objets.
+
+>  $ **make mrproper**
+
+Permet de nettoyer le dossier de tout ce qui peut être régénéré.
 
 ## Utilisation
 
->  $ ./bin/ruzzleSolver
+>  $ **./bin/ruzzleSolver**
 
 Permet d'exécuter le programme en générant une grille aléatoire, les lettres sont tirées au hasard en prenant compte de leurs fréquences d'apparition dans la langue française.
 
@@ -62,7 +66,7 @@ On peut prédéfinir une grille à l'aide d'une chaine de 16 caractères.
 
 Par exemple:
 
->  $ ./bin/ruzzleSolver adcksxirmdesuckh
+>  $ **./bin/ruzzleSolver adcksxirmdesuckh**
 
 Génèrera la grille : 
 
@@ -82,13 +86,13 @@ Les bonus lettres et mots sont tirés aléatoirement de manière à ce qu'il n'y
 
 Le résultat du solver se retrouve dans :
 
-> assets/listWords.txt
+> **assets/listWords.txt**
 
 ## Documentation
 
 Il est possible de se documenter sur la structure du solver grâce à une documentation générée par doxygen.
 Le fichier de configuration pour la documentation est fournie et permet donc de régénérer la documentation en cas de soucis, une page html sera crée reprenant toute la documentation :
 
-> doc/html/index.html
+> **doc/html/index.html**
 
 
