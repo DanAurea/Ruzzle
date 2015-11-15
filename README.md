@@ -6,6 +6,14 @@ d'une grille de lettres générée aléatoirement.
 Le but étant de marquer le plus de points possible pour celà des bonus lettre et mot double/triple sont répartis sur la grille
 mais il n'est pas permis de réutiliser deux fois la même case.
 
+## Sommaire
+ >  **Ruzzle**
+ >  1. **[Optimisation](#optimisation)**
+ >  2. **[Instructions de compilation](#instructions-de-compilation)**
+ >  3. **[Utilisation](#utilisation)**
+ >  4. **[Documentation](#documentation)**
+
+
 ## Optimisation
 
 Pour le moment le solver vérifiant toutes les combinaisons en ouvrant le dictionnaire correspondant et en vérifiant toutes les possibilités, les temps d'accés rendent l'exécution un peu lente (~ 25s max ). Il reste néanmoins quelques modifications à apporter pour réduire au maximum ce temps.
