@@ -13,6 +13,12 @@ mais il n'est pas permis de réutiliser deux fois la même case.
  >  3. **[Utilisation](#utilisation)**
  >  4. **[Documentation](#documentation)**
 
+## A faire
+ 
+ - [x] Documentation
+ - [ ] CUnit
+ - [ ] Compte rendu
+ - [ ] Optimisation
 
 ## Optimisation
 
