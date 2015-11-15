@@ -1,5 +1,5 @@
 # Ruzzle
---------
+
 
 Le Ruzzle est un jeu originaire du monde mobile, ce jeu consiste à former le plus de mots en un temps imparti à partir
 d'une grille de lettres générée aléatoirement.
