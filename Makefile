@@ -1,11 +1,11 @@
 CC=gcc
 CFLAGS=-g -Wall
-EXEC=ruzzleSolver
+EXEC=bin/ruzzleSolver
 SRC= $(wildcard src/*.c)
 OBJ= $(SRC:.c=.o)
 INC= include/
 
-bin/ruzzleSolver: $(OBJ)
+$(EXEC): $(OBJ)
 	$(CC) -o $@ $^
 	@echo "\nOn reconstruit $@ a cause de $?"
 
@@ -21,4 +21,4 @@ clean:
 	@rm -rf ./$(OBJ)
 
 mrproper: clean
-	@rm -rf bin/$(EXEC)
+	@rm -rf $(EXEC)
