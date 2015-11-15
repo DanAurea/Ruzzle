@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior: Référence du fichier src/display.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior
+   </div>
+   <div id="projectbrief">Permet de résoudre une grille de ruzzle</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier display.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Affiche la grille.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="random_8h_source.html">../include/random.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="display_8h_source.html">../include/display.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de display.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="display_8c__incl.png" border="0" usemap="#src_2display_8c" alt=""/></div>
+<map name="src_2display_8c" id="src_2display_8c">
+<area shape="rect" id="node5" href="random_8h.html" title="Prototype de la partie aléatoire du solver. " alt="" coords="269,80,403,107"/><area shape="rect" id="node6" href="display_8h.html" title="Prototype de la grille. " alt="" coords="427,80,557,107"/></map>
+</div>
+</div>
+<p><a href="display_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:aa10159fb9d4c4dd0d90f094038cb8f16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8c.html#aa10159fb9d4c4dd0d90f094038cb8f16">initGrid</a> (<a class="el" href="structt__Case.html">t_Case</a> grid[<a class="el" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="el" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>])</td></tr>
+<tr class="memdesc:aa10159fb9d4c4dd0d90f094038cb8f16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise les bonus à zéros.  <a href="#aa10159fb9d4c4dd0d90f094038cb8f16">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa10159fb9d4c4dd0d90f094038cb8f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a996285d53053a7448de2cd3e89cc66f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8c.html#a996285d53053a7448de2cd3e89cc66f7">getCase</a> (<a class="el" href="structt__Case.html">t_Case</a> grid[<a class="el" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="el" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>], int line, int col, int nb_bonus[])</td></tr>
+<tr class="memdesc:a996285d53053a7448de2cd3e89cc66f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représente une case aléatoirement.  <a href="#a996285d53053a7448de2cd3e89cc66f7">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a996285d53053a7448de2cd3e89cc66f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a369551137b4051ed8b2fd56838e8c30a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8c.html#a369551137b4051ed8b2fd56838e8c30a">getCaseFromStr</a> (<a class="el" href="structt__Case.html">t_Case</a> grid[<a class="el" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="el" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>], int nb_bonus[], char gridStr[], int strIndex)</td></tr>
+<tr class="memdesc:a369551137b4051ed8b2fd56838e8c30a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représente une case en fonction de la chaîne tapée en paramètre de main.  <a href="#a369551137b4051ed8b2fd56838e8c30a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a369551137b4051ed8b2fd56838e8c30a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b5a31f5bfcefe241188eca44c65834a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8c.html#a8b5a31f5bfcefe241188eca44c65834a">Grille</a> (<a class="el" href="structt__Case.html">t_Case</a> grid[<a class="el" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="el" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>], int argc, char *gridStr[])</td></tr>
+<tr class="memdesc:a8b5a31f5bfcefe241188eca44c65834a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représente une grille.  <a href="#a8b5a31f5bfcefe241188eca44c65834a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a8b5a31f5bfcefe241188eca44c65834a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:adc2d3888a0c89764f0fb62c303df9f6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__Case.html">t_Case</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8c.html#adc2d3888a0c89764f0fb62c303df9f6b">alpha</a> [26]</td></tr>
+<tr class="memdesc:adc2d3888a0c89764f0fb62c303df9f6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Définis l'alphabet et le poids de chaque lettre.  <a href="#adc2d3888a0c89764f0fb62c303df9f6b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:adc2d3888a0c89764f0fb62c303df9f6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Affiche la grille. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Cousin Brandon Ngatchou Junior </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>v1.00 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>05/11/2015 </dd></dl>
+
+<p>Définition dans le fichier <a class="el" href="display_8c_source.html">display.c</a>.</p>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a class="anchor" id="a996285d53053a7448de2cd3e89cc66f7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void getCase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__Case.html">t_Case</a>&#160;</td>
+          <td class="paramname"><em>grid</em>[N][N], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nb_bonus</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Représente une case aléatoirement. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">grid</td><td>Grille à remplir </td></tr>
+    <tr><td class="paramname">line</td><td>Ligne de la case à remplir </td></tr>
+    <tr><td class="paramname">col</td><td>Colonne de la case à remplir </td></tr>
+    <tr><td class="paramname">nb_bonus</td><td>Nombre de bonus lettre et mot dans la grille </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="display_8c_source.html#l00054">54</a> du fichier <a class="el" href="display_8c_source.html">display.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a369551137b4051ed8b2fd56838e8c30a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void getCaseFromStr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__Case.html">t_Case</a>&#160;</td>
+          <td class="paramname"><em>grid</em>[N][N], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nb_bonus</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>gridStr</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>strIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Représente une case en fonction de la chaîne tapée en paramètre de main. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">grid</td><td>Grille à remplir </td></tr>
+    <tr><td class="paramname">nb_bonus</td><td>Nombre de bonus lettre et mot dans la grille </td></tr>
+    <tr><td class="paramname">gridStr</td><td>Chaîne de caractère passé en paramètre </td></tr>
+    <tr><td class="paramname">strIndex</td><td>Indice courant de la chaîne passée en paramètre </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="display_8c_source.html#l00083">83</a> du fichier <a class="el" href="display_8c_source.html">display.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8b5a31f5bfcefe241188eca44c65834a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Grille </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__Case.html">t_Case</a>&#160;</td>
+          <td class="paramname"><em>grid</em>[N][N], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>gridStr</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Représente une grille. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">grid</td><td>Grille à remplir </td></tr>
+    <tr><td class="paramname">argc</td><td>Nombres d'arguments du main </td></tr>
+    <tr><td class="paramname">gridStr</td><td>Grille sous forme de chaîne </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="display_8c_source.html#l00123">123</a> du fichier <a class="el" href="display_8c_source.html">display.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa10159fb9d4c4dd0d90f094038cb8f16"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initGrid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__Case.html">t_Case</a>&#160;</td>
+          <td class="paramname"><em>grid</em>[N][N]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialise les bonus à zéros. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">grid</td><td>Grille à initialiser </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="display_8c_source.html#l00032">32</a> du fichier <a class="el" href="display_8c_source.html">display.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a class="anchor" id="adc2d3888a0c89764f0fb62c303df9f6b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structt__Case.html">t_Case</a> alpha[26]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">= {</div>
+<div class="line">        {<span class="charliteral">&#39;a&#39;</span>,1}, {<span class="charliteral">&#39;b&#39;</span>,3}, {<span class="charliteral">&#39;c&#39;</span>,2}, {<span class="charliteral">&#39;d&#39;</span>,2},</div>
+<div class="line">        {<span class="charliteral">&#39;e&#39;</span>,1}, {<span class="charliteral">&#39;f&#39;</span>,3}, {<span class="charliteral">&#39;g&#39;</span>,3}, {<span class="charliteral">&#39;h&#39;</span>,3},</div>
+<div class="line">        {<span class="charliteral">&#39;i&#39;</span>,1}, {<span class="charliteral">&#39;j&#39;</span>,10}, {<span class="charliteral">&#39;k&#39;</span>,12}, {<span class="charliteral">&#39;l&#39;</span>,2}, </div>
+<div class="line">        {<span class="charliteral">&#39;m&#39;</span>,2}, {<span class="charliteral">&#39;n&#39;</span>,1}, {<span class="charliteral">&#39;o&#39;</span>,2}, {<span class="charliteral">&#39;p&#39;</span>,2}, </div>
+<div class="line">        {<span class="charliteral">&#39;q&#39;</span>,6}, {<span class="charliteral">&#39;r&#39;</span>,1},{<span class="charliteral">&#39;s&#39;</span>,1}, {<span class="charliteral">&#39;t&#39;</span>,1},</div>
+<div class="line">        {<span class="charliteral">&#39;u&#39;</span>,2}, {<span class="charliteral">&#39;v&#39;</span>,4}, {<span class="charliteral">&#39;w&#39;</span>,15}, {<span class="charliteral">&#39;x&#39;</span>,10},</div>
+<div class="line">        {<span class="charliteral">&#39;y&#39;</span>,10}, {<span class="charliteral">&#39;z&#39;</span>,4}</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p>Définis l'alphabet et le poids de chaque lettre. </p>
+
+<p>Définition à la ligne <a class="el" href="display_8c_source.html#l00018">18</a> du fichier <a class="el" href="display_8c_source.html">display.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Dimanche 15 Novembre 2015 01:27:20 pour Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

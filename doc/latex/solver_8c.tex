@@ -1,0 +1,203 @@
+\hypertarget{solver_8c}{\section{Référence du fichier src/solver.c}
+\label{solver_8c}\index{src/solver.\+c@{src/solver.\+c}}
+}
+
+
+Résoud la grille.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../include/display.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/solver.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/trie.\+h\char`\"{}}\\*
+Graphe des dépendances par inclusion de solver.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{solver_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{solver_8c_a07d68aeb0b5ed32ab93e34e1a8a2be44}{tot\+Case} (\hyperlink{structt__Case}{t\+\_\+\+Case} Case)
+\begin{DoxyCompactList}\small\item\em Calcule le total de points de la case courante. \end{DoxyCompactList}\item 
+int \hyperlink{solver_8c_a0b23cdd3365d624985e5123a2c0f9034}{mul\+Word} (\hyperlink{structt__Case}{t\+\_\+\+Case} Case)
+\begin{DoxyCompactList}\small\item\em Retourne le coefficient multiplicateur pour le mot entier. \end{DoxyCompactList}\item 
+void \hyperlink{solver_8c_ac940966280e6d405c6df1049e0993fb1}{find\+Words} (\hyperlink{structt__Case}{t\+\_\+\+Case} grid\mbox{[}\hyperlink{display_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]}\mbox{[}\hyperlink{display_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]}, int i, int j, char word\mbox{[}$\,$\mbox{]}, int total\+W, int bo\+M)
+\begin{DoxyCompactList}\small\item\em Trouve un mot dans la grille. \end{DoxyCompactList}\item 
+int \hyperlink{solver_8c_aa4a35a7d0751f527f91ebcb12a74baf1}{search\+Word} (char word\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Cherche un mot dans le dictionnaire. \end{DoxyCompactList}\item 
+void \hyperlink{solver_8c_ae7d30ebfe1f48ab57593b710e94889e7}{create\+Dict} (char dir\mbox{[}$\,$\mbox{]}, char filename\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Crée les dictionnaires pour optimiser le traitement. \end{DoxyCompactList}\item 
+void \hyperlink{solver_8c_acb26ab357db8918adfe55385af56ba11}{Solver} (\hyperlink{structt__Case}{t\+\_\+\+Case} grid\mbox{[}\hyperlink{display_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]}\mbox{[}\hyperlink{display_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]})
+\begin{DoxyCompactList}\small\item\em Résoud la grille. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Résoud la grille. 
+
+\begin{DoxyAuthor}{Auteur}
+Cousin Brandon Ngatchou Junior 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+v1.\+00 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+08/11/2015 
+\end{DoxyDate}
+
+
+Définition dans le fichier \hyperlink{solver_8c_source}{solver.\+c}.
+
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{solver_8c_ae7d30ebfe1f48ab57593b710e94889e7}{\index{solver.\+c@{solver.\+c}!create\+Dict@{create\+Dict}}
+\index{create\+Dict@{create\+Dict}!solver.\+c@{solver.\+c}}
+\subsubsection[{create\+Dict}]{\setlength{\rightskip}{0pt plus 5cm}void create\+Dict (
+\begin{DoxyParamCaption}
+\item[{char}]{dir\mbox{[}$\,$\mbox{]}, }
+\item[{char}]{filename\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{solver_8c_ae7d30ebfe1f48ab57593b710e94889e7}
+
+
+Crée les dictionnaires pour optimiser le traitement. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em dir} & Indique le dossier dans lequel chercher le dictionnaire \\
+\hline
+{\em filename} & Indique le nom du dictionnaire \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 166 du fichier solver.\+c.
+
+\hypertarget{solver_8c_ac940966280e6d405c6df1049e0993fb1}{\index{solver.\+c@{solver.\+c}!find\+Words@{find\+Words}}
+\index{find\+Words@{find\+Words}!solver.\+c@{solver.\+c}}
+\subsubsection[{find\+Words}]{\setlength{\rightskip}{0pt plus 5cm}void find\+Words (
+\begin{DoxyParamCaption}
+\item[{{\bf t\+\_\+\+Case}}]{grid\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]}, }
+\item[{int}]{i, }
+\item[{int}]{j, }
+\item[{char}]{word\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{total\+W, }
+\item[{int}]{bo\+M}
+\end{DoxyParamCaption}
+)}}\label{solver_8c_ac940966280e6d405c6df1049e0993fb1}
+
+
+Trouve un mot dans la grille. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em grid} & Grille du jeu \\
+\hline
+{\em i} & Ligne de la case courante \\
+\hline
+{\em j} & Colonne de la case courante \\
+\hline
+{\em word} & Mot composé à partir de la grille \\
+\hline
+{\em total\+W} & Nombre de points total \\
+\hline
+{\em bo\+M} & Coefficient multiplicateur du mot \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 46 du fichier solver.\+c.
+
+\hypertarget{solver_8c_a0b23cdd3365d624985e5123a2c0f9034}{\index{solver.\+c@{solver.\+c}!mul\+Word@{mul\+Word}}
+\index{mul\+Word@{mul\+Word}!solver.\+c@{solver.\+c}}
+\subsubsection[{mul\+Word}]{\setlength{\rightskip}{0pt plus 5cm}int mul\+Word (
+\begin{DoxyParamCaption}
+\item[{{\bf t\+\_\+\+Case}}]{Case}
+\end{DoxyParamCaption}
+)}}\label{solver_8c_a0b23cdd3365d624985e5123a2c0f9034}
+
+
+Retourne le coefficient multiplicateur pour le mot entier. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em Case} & Case courante \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 si pas de bonus, 2 si bonus double, 3 si bonus triple 
+\end{DoxyReturn}
+
+
+Définition à la ligne 31 du fichier solver.\+c.
+
+\hypertarget{solver_8c_aa4a35a7d0751f527f91ebcb12a74baf1}{\index{solver.\+c@{solver.\+c}!search\+Word@{search\+Word}}
+\index{search\+Word@{search\+Word}!solver.\+c@{solver.\+c}}
+\subsubsection[{search\+Word}]{\setlength{\rightskip}{0pt plus 5cm}int search\+Word (
+\begin{DoxyParamCaption}
+\item[{char}]{word\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{solver_8c_aa4a35a7d0751f527f91ebcb12a74baf1}
+
+
+Cherche un mot dans le dictionnaire. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em word} & Mot à chercher \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Retourne 0 si mot introuvable, 1 si mot possible, 2 si mot trouvé 
+\end{DoxyReturn}
+
+
+Définition à la ligne 89 du fichier solver.\+c.
+
+\hypertarget{solver_8c_acb26ab357db8918adfe55385af56ba11}{\index{solver.\+c@{solver.\+c}!Solver@{Solver}}
+\index{Solver@{Solver}!solver.\+c@{solver.\+c}}
+\subsubsection[{Solver}]{\setlength{\rightskip}{0pt plus 5cm}void Solver (
+\begin{DoxyParamCaption}
+\item[{{\bf t\+\_\+\+Case}}]{grid\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{solver_8c_acb26ab357db8918adfe55385af56ba11}
+
+
+Résoud la grille. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em grid} & Grille à résoudre \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 209 du fichier solver.\+c.
+
+\hypertarget{solver_8c_a07d68aeb0b5ed32ab93e34e1a8a2be44}{\index{solver.\+c@{solver.\+c}!tot\+Case@{tot\+Case}}
+\index{tot\+Case@{tot\+Case}!solver.\+c@{solver.\+c}}
+\subsubsection[{tot\+Case}]{\setlength{\rightskip}{0pt plus 5cm}int tot\+Case (
+\begin{DoxyParamCaption}
+\item[{{\bf t\+\_\+\+Case}}]{Case}
+\end{DoxyParamCaption}
+)}}\label{solver_8c_a07d68aeb0b5ed32ab93e34e1a8a2be44}
+
+
+Calcule le total de points de la case courante. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em Case} & Case courante \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le nombre de points total 
+\end{DoxyReturn}
+
+
+Définition à la ligne 20 du fichier solver.\+c.
+

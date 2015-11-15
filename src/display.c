@@ -1,9 +1,9 @@
 /**
- \file display.c
- \brief Affiche la grille
- \author Cousin Brandon Ngatchou Junior
- \version v1.00
- \date 05/11/2015
+ @file display.c
+ @brief Affiche la grille
+ @author Cousin Brandon Ngatchou Junior
+ @version v1.00
+ @date 05/11/2015
  */
 
 #include <stdio.h>
@@ -12,12 +12,8 @@
 #include "../include/random.h"
 #include "../include/display.h"
 
-/** 
- * \struct Définis une case par 4 caractéristiques
- * @param let Lettre à afficher
- * @param pts Nombre de points associé
- * @param boL Bonus sur la lettre
- * @param boM Bonus sur le mot
+/**
+ * @brief Définis l'alphabet et le poids de chaque lettre.
  */
 t_Case alpha[26]= {
         {'a',1}, {'b',3}, {'c',2}, {'d',2},
@@ -29,7 +25,8 @@ t_Case alpha[26]= {
         {'y',10}, {'z',4}
     };
 
-/** Initialise les bonus à zéros
+/** 
+ * Initialise les bonus à zéros.
  * @param grid Grille à initialiser
  */
 void initGrid(t_Case grid[N][N]){
@@ -47,8 +44,8 @@ void initGrid(t_Case grid[N][N]){
     }
 }
 
-/** Représente une case aléatoirement
- * 
+/** 
+ * Représente une case aléatoirement.
  * @param grid Grille à remplir
  * @param line Ligne de la case à remplir
  * @param col Colonne de la case à remplir
@@ -76,12 +73,12 @@ void getCase(t_Case grid[N][N], int line, int col, int nb_bonus[]){
 
 }
 
-/** Représente une case en fonction de la chaîne tapée en paramètre de main
- * 
+/** 
+ * Représente une case en fonction de la chaîne tapée en paramètre de main.
  * @param grid Grille à remplir
  * @param nb_bonus Nombre de bonus lettre et mot dans la grille
  * @param gridStr Chaîne de caractère passé en paramètre
- * @parama strIndex Indice courant de la chaîne passée en paramètre 
+ * @param strIndex Indice courant de la chaîne passée en paramètre 
  */
 void getCaseFromStr(t_Case grid[N][N], int nb_bonus[], char gridStr[], int strIndex){
     int line = 0, col = 0;
@@ -117,7 +114,8 @@ void getCaseFromStr(t_Case grid[N][N], int nb_bonus[], char gridStr[], int strIn
 }
 
 
-/** Représente une grille
+/** 
+ * Représente une grille.
  * @param grid Grille à remplir
  * @param argc Nombres d'arguments du main
  * @param gridStr Grille sous forme de chaîne

@@ -1,9 +1,9 @@
 /**
- \file random.c
- \brief Fonctions aléatoires
- \author Cousin Brandon Ngatchou Junior
- \version v1.00
- \date 05/11/2015
+ @file random.c
+ @brief Fonctions aléatoires
+ @author Cousin Brandon Ngatchou Junior
+ @version v1.00
+ @date 05/11/2015
  */
 
 #include <stdlib.h>
@@ -11,14 +11,18 @@
 #include <time.h>
 #include <string.h>
 
+/**
+ * Initialise le tirage aléatoire.
+ */
 void initRand(){
 	srand(time(NULL));
 }
 
-/**	Tire une lettre au hasard en prenant en 
-	compte leur fréquence d'apparition
-	dans la langue française.
-	@return e par défaut
+/**	
+ * 	Tire une lettre au hasard en prenant en 
+ *	compte leur fréquence d'apparition
+ *	dans la langue française.
+ *	@return e par défaut
 */
 char randChar(){
 	int iCase = rand() % 1486387;
@@ -51,26 +55,29 @@ char randChar(){
 	return 'e';
 }
 
-/**	Permet de récupérer l'indice dans la matrice 
-	de la lettre tirée au hasard.
-	@param c Caractère à convertir en indice
+/**	
+ * 	Permet de récupérer l'indice dans la matrice 
+ *	de la lettre tirée au hasard.
+ *	@param c Caractère à convertir en indice
 */
 int getIChar(char c){
 	return c - 97;
 }
 
-/** Permet de tirer une lettre aléatoirement
- 	@return Renvoie l'indice de la lettre tirée
+/** 
+ * 	Permet de tirer une lettre aléatoirement.
+ *	@return Renvoie l'indice de la lettre tirée
  */
 int randCase(){
 	return getIChar(randChar());
 }
 
-/** Attribue un bonus
+/** 
+ * Attribue un bonus.
  * @param boCharL[] Bonus lettre de la case courante
  * @param boCharM[] Bonus mot de la case courante
  * @param nb_boL Nombre de bonus lettre dans la grille
- * @param nb_bom Nombre de bonus mot dans la grille
+ * @param nb_boM Nombre de bonus mot dans la grille
  */
 void getBonus(char boCharL[], char boCharM[], int *nb_boL, int *nb_boM){
 	int randBonus = rand() % 70;

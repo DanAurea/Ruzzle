@@ -1,0 +1,49 @@
+Le Ruzzle est un jeu originaire du monde mobile, ce jeu consiste à former le plus de mots en un temps imparti à partir d'une grille de lettres générée aléatoirement. Le but étant de marquer le plus de points possible pour celà des bonus lettre et mot double/triple sont répartis sur la grille mais il n'est pas permis de réutiliser deux fois la même case.
+
+\section*{Instructions de compilation}
+
+\begin{quote}
+\$ make \end{quote}
+
+
+Permet de compiler l'ensemble des sources, l'exécutable généré peut être retrouvé dans $\ast$$\ast$./bin$\ast$$\ast$ .
+
+\begin{quote}
+\$ make mrproper \end{quote}
+
+
+Permet de nettoyer le dossier.
+
+\section*{Utilisation}
+
+\begin{quote}
+\$ ./bin/ruzzle\+Solver \end{quote}
+
+
+Permet d'exécuter le programme en générant une grille aléatoire, les lettres sont tirées au hasard en prenant compte de leurs fréquences d'apparition dans la langue française.
+
+On peut prédéfinir une grille à l'aide d'une chaine de 16 caractères.
+
+Par exemple\+:
+
+\begin{quote}
+\$ ./bin/ruzzle\+Solver adcksxirmdesuckh \end{quote}
+
+
+Génèrera la grille \+:
+
+\begin{quote}
+A~~~~D~~~~C~~~~K
+
+S~~~~X~~~~I~~~~R
+
+M~~~~D~~~~E~~~~S
+
+U~~~~C~~~~K~~~~H
+
+\end{quote}
+
+
+Dans le cas d'une chaîne trop petite un message d'erreur apparaîtra, si la chaîne est trop grande, la grille sera composée des 16 premiers caractères.
+
+Les bonus lettres et mots sont tirés aléatoirement de manière à ce qu'il n'y ait pas trop de bonus. 

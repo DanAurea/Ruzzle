@@ -1,0 +1,106 @@
+\hypertarget{random_8h}{\section{Référence du fichier include/random.h}
+\label{random_8h}\index{include/random.\+h@{include/random.\+h}}
+}
+
+
+Prototype de la partie aléatoire du solver.  
+
+
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{random_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{random_8h_a92316f4f4339b1dd0436637ce9552bb6}{rand\+Case} ()
+\begin{DoxyCompactList}\small\item\em Permet de tirer une lettre aléatoirement. \end{DoxyCompactList}\item 
+\hypertarget{random_8h_affc667f54d3aad05a212a708a1967851}{void \hyperlink{random_8h_affc667f54d3aad05a212a708a1967851}{init\+Rand} ()}\label{random_8h_affc667f54d3aad05a212a708a1967851}
+
+\begin{DoxyCompactList}\small\item\em Initialise le tirage aléatoire. \end{DoxyCompactList}\item 
+void \hyperlink{random_8h_a9b2c6b2bb8b813fc92d7f8be99e5d47d}{get\+Bonus} (char bo\+Char\+L\mbox{[}$\,$\mbox{]}, char bo\+Char\+M\mbox{[}$\,$\mbox{]}, int $\ast$nb\+\_\+bo\+L, int $\ast$nb\+\_\+bo\+M)
+\begin{DoxyCompactList}\small\item\em Attribue un bonus. \end{DoxyCompactList}\item 
+int \hyperlink{random_8h_a8de3f80b9cac15b21aee0c7d56ae0f5a}{get\+I\+Char} (char c)
+\begin{DoxyCompactList}\small\item\em Permet de récupérer l'indice dans la matrice de la lettre tirée au hasard. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Prototype de la partie aléatoire du solver. 
+
+
+
+Définition dans le fichier \hyperlink{random_8h_source}{random.\+h}.
+
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{random_8h_a9b2c6b2bb8b813fc92d7f8be99e5d47d}{\index{random.\+h@{random.\+h}!get\+Bonus@{get\+Bonus}}
+\index{get\+Bonus@{get\+Bonus}!random.\+h@{random.\+h}}
+\subsubsection[{get\+Bonus}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Bonus (
+\begin{DoxyParamCaption}
+\item[{char}]{bo\+Char\+L\mbox{[}$\,$\mbox{]}, }
+\item[{char}]{bo\+Char\+M\mbox{[}$\,$\mbox{]}, }
+\item[{int $\ast$}]{nb\+\_\+bo\+L, }
+\item[{int $\ast$}]{nb\+\_\+bo\+M}
+\end{DoxyParamCaption}
+)}}\label{random_8h_a9b2c6b2bb8b813fc92d7f8be99e5d47d}
+
+
+Attribue un bonus. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em bo\+Char\+L\mbox{[}$\,$\mbox{]}} & Bonus lettre de la case courante \\
+\hline
+{\em bo\+Char\+M\mbox{[}$\,$\mbox{]}} & Bonus mot de la case courante \\
+\hline
+{\em nb\+\_\+bo\+L} & Nombre de bonus lettre dans la grille \\
+\hline
+{\em nb\+\_\+bo\+M} & Nombre de bonus mot dans la grille \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 82 du fichier random.\+c.
+
+\hypertarget{random_8h_a8de3f80b9cac15b21aee0c7d56ae0f5a}{\index{random.\+h@{random.\+h}!get\+I\+Char@{get\+I\+Char}}
+\index{get\+I\+Char@{get\+I\+Char}!random.\+h@{random.\+h}}
+\subsubsection[{get\+I\+Char}]{\setlength{\rightskip}{0pt plus 5cm}int get\+I\+Char (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)}}\label{random_8h_a8de3f80b9cac15b21aee0c7d56ae0f5a}
+
+
+Permet de récupérer l'indice dans la matrice de la lettre tirée au hasard. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em c} & Caractère à convertir en indice \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 63 du fichier random.\+c.
+
+\hypertarget{random_8h_a92316f4f4339b1dd0436637ce9552bb6}{\index{random.\+h@{random.\+h}!rand\+Case@{rand\+Case}}
+\index{rand\+Case@{rand\+Case}!random.\+h@{random.\+h}}
+\subsubsection[{rand\+Case}]{\setlength{\rightskip}{0pt plus 5cm}int rand\+Case (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{random_8h_a92316f4f4339b1dd0436637ce9552bb6}
+
+
+Permet de tirer une lettre aléatoirement. 
+
+\begin{DoxyReturn}{Renvoie}
+Renvoie l'indice de la lettre tirée 
+\end{DoxyReturn}
+
+
+Définition à la ligne 71 du fichier random.\+c.
+

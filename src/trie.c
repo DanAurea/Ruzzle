@@ -1,9 +1,9 @@
 /**
- \file trie.c
- \brief Met au point une liste chaînée d'ordre décroissant
- \author Cousin Brandon Ngatchou Junior
- \version v1.00
- \date 08/11/2015
+ @file trie.c
+ @brief Met au point une liste chaînée d'ordre décroissant
+ @author Cousin Brandon Ngatchou Junior
+ @version v1.00
+ @date 08/11/2015
  */
 
 #include <stdio.h>
@@ -11,10 +11,10 @@
 #include <string.h>
 #include "../include/trie.h"
 
-element *root = NULL;
+element *root = NULL; /**< Définis la racine de la liste chaînée */
 
 /**
- * Ajoute un élément dans la liste chaînée
+ * Ajoute un élément dans la liste chaînée.
  * @param elem Elément à ajouter
  */
 void addElement(element * elem){
@@ -60,7 +60,7 @@ void addElement(element * elem){
 }
 
 /**
- * Affiche la liste entière de la racine jusqu'à la fin
+ * Affiche la liste entière de la racine jusqu'à la fin.
  */
 void printList(){
     element* tmp;
@@ -78,7 +78,7 @@ void printList(){
 }
 
 /**
- * Supprime la liste
+ * Supprime la liste.
  */
 void clearList(){
     element* tmp;

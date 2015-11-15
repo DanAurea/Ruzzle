@@ -1,9 +1,9 @@
 /**
- \file solver.c
- \brief Résoud la grille
- \author Cousin Brandon Ngatchou Junior
- \version v1.00
- \date 08/11/2015
+ @file solver.c
+ @brief Résoud la grille
+ @author Cousin Brandon Ngatchou Junior
+ @version v1.00
+ @date 08/11/2015
  */
 
 #include <stdio.h>
@@ -13,7 +13,7 @@
 #include "../include/trie.h"
 
 /**
- * Calcule le total de points de la case courante
+ * Calcule le total de points de la case courante.
  * @param  Case Case courante
  * @return Le nombre de points total
  */
@@ -24,7 +24,7 @@ int totCase(t_Case Case){
 }
 
 /**
- * Retourne le coefficient multiplicateur pour le mot entier
+ * Retourne le coefficient multiplicateur pour le mot entier.
  * @param  Case Case courante
  * @return 1 si pas de bonus, 2 si bonus double, 3 si bonus triple
  */
@@ -35,12 +35,12 @@ int mulWord(t_Case Case){
 }
 
 /**
- * Trouve un mot dans la grille
+ * Trouve un mot dans la grille.
  * @param grid Grille du jeu
  * @param i Ligne de la case courante
  * @param j Colonne de la case courante
  * @param word Mot composé à partir de la grille
- * @param totalCase Nombre de points total
+ * @param totalW Nombre de points total
  * @param boM Coefficient multiplicateur du mot
  */
 void findWords(t_Case grid[N][N], int i, int j, char word[], int totalW, int boM){
@@ -82,7 +82,7 @@ void findWords(t_Case grid[N][N], int i, int j, char word[], int totalW, int boM
 }
 
 /**
- * Cherche un mot dans le dictionnaire
+ * Cherche un mot dans le dictionnaire.
  * @param word Mot à chercher 
  * @return Retourne 0 si mot introuvable, 1 si mot possible, 2 si mot trouvé
  */
@@ -159,7 +159,7 @@ int searchWord(char word[]){
 }
 
 /**
- * Crée les dictionnaires pour optimiser le traitement
+ * Crée les dictionnaires pour optimiser le traitement.
  * @param dir Indique le dossier dans lequel chercher le dictionnaire
  * @param filename Indique le nom du dictionnaire
  */
@@ -203,7 +203,7 @@ void createDict(char dir[], char filename[]){
 }
 
 /**
- * 	Résoud la grille
+ * 	Résoud la grille.
  * 	@param grid Grille à résoudre
  */
 void Solver(t_Case grid[N][N]){

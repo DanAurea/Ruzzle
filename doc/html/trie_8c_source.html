@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior:  Fichier source de src/trie.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior
+   </div>
+   <div id="projectbrief">Permet de résoudre une grille de ruzzle</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">trie.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="trie_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../include/trie.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="trie_8c.html#a400fc15964edd9c35132913b24b25ded">   14</a></span>&#160;<a class="code" href="structelement.html">element</a> *<a class="code" href="trie_8c.html#a400fc15964edd9c35132913b24b25ded">root</a> = NULL; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="trie_8h.html#adac30872b2982daea2a38df6f042065d">   20</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="trie_8c.html#adac30872b2982daea2a38df6f042065d">addElement</a>(<a class="code" href="structelement.html">element</a> * elem){</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="structelement.html">element</a>* <span class="keyword">new</span>, * tmp, * tmpInsert;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">new</span> = (<a class="code" href="structelement.html">element</a>*)malloc(<span class="keyword">sizeof</span>(<a class="code" href="structelement.html">element</a>));</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    strcpy(new-&gt;word, elem-&gt;<a class="code" href="structelement.html#af607a92824fa5d32abd559d6fefda79a">word</a>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">new</span>-&gt;pts = elem-&gt;<a class="code" href="structelement.html#afa46df5a6444396565aa685782411b44">pts</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span>(!root){</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">/* La liste commence au nouvel élément </span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">        si aucun élément présent*/</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        root = <span class="keyword">new</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        tmp = (<a class="code" href="structelement.html">element</a>*)malloc(<span class="keyword">sizeof</span>(<a class="code" href="structelement.html">element</a>));</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">/*  Si la racine a un nombre de points </span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">            inférieur à l&#39;élément on change la</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">            racine.</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">        */</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">if</span>(root-&gt;<a class="code" href="structelement.html#afa46df5a6444396565aa685782411b44">pts</a> &lt; new-&gt;pts){</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keyword">new</span>-&gt;<a class="code" href="structelement.html#a37542facf22f1fffc9843c9f00be9216">right</a> = <a class="code" href="trie_8c.html#a400fc15964edd9c35132913b24b25ded">root</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            root = <span class="keyword">new</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        tmp = <a class="code" href="trie_8c.html#a400fc15964edd9c35132913b24b25ded">root</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">// On parcourt la liste en triant à la volée</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">while</span>(tmp-&gt;<a class="code" href="structelement.html#a37542facf22f1fffc9843c9f00be9216">right</a> &amp;&amp; tmp-&gt;<a class="code" href="structelement.html#a37542facf22f1fffc9843c9f00be9216">right</a>-&gt;<a class="code" href="structelement.html#afa46df5a6444396565aa685782411b44">pts</a> &gt; new-&gt;pts){</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            tmp = tmp-&gt;<a class="code" href="structelement.html#a37542facf22f1fffc9843c9f00be9216">right</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">if</span>(tmp-&gt;<a class="code" href="structelement.html#a37542facf22f1fffc9843c9f00be9216">right</a>){</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="comment">// On insère l&#39;élément à la bonne place</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            tmpInsert  = (<a class="code" href="structelement.html">element</a>*)malloc(<span class="keyword">sizeof</span>(<a class="code" href="structelement.html">element</a>));</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            tmpInsert  = tmp-&gt;<a class="code" href="structelement.html#a37542facf22f1fffc9843c9f00be9216">right</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            tmp-&gt;<a class="code" href="structelement.html#a37542facf22f1fffc9843c9f00be9216">right</a> = <span class="keyword">new</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keyword">new</span>-&gt;<a class="code" href="structelement.html#a37542facf22f1fffc9843c9f00be9216">right</a> = tmpInsert;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="comment">// On ajoute l&#39;élément à la fin</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            tmp-&gt;<a class="code" href="structelement.html#a37542facf22f1fffc9843c9f00be9216">right</a> = <span class="keyword">new</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="trie_8h.html#a2f736094bbaa598f70c3e241bad4a1cc">   65</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="trie_8c.html#a2f736094bbaa598f70c3e241bad4a1cc">printList</a>(){</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="structelement.html">element</a>* tmp;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">//On se place en début de liste</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    tmp = (<a class="code" href="structelement.html">element</a>*)malloc(<span class="keyword">sizeof</span>(<a class="code" href="structelement.html">element</a>));</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    tmp = <a class="code" href="trie_8c.html#a400fc15964edd9c35132913b24b25ded">root</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">// On parcourt la liste</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">while</span>(tmp){</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        printf(<span class="stringliteral">&quot;%s : %i\n&quot;</span>,tmp-&gt;<a class="code" href="structelement.html#af607a92824fa5d32abd559d6fefda79a">word</a>, tmp-&gt;<a class="code" href="structelement.html#afa46df5a6444396565aa685782411b44">pts</a>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        tmp = tmp-&gt;<a class="code" href="structelement.html#a37542facf22f1fffc9843c9f00be9216">right</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    free(tmp);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="trie_8h.html#a612285c5b9d603a0abb0feab44b8412f">   83</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="trie_8c.html#a612285c5b9d603a0abb0feab44b8412f">clearList</a>(){</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="structelement.html">element</a>* tmp;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">//On se place en début de liste</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    tmp = (<a class="code" href="structelement.html">element</a>*)malloc(<span class="keyword">sizeof</span>(<a class="code" href="structelement.html">element</a>));</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    tmp = <a class="code" href="trie_8c.html#a400fc15964edd9c35132913b24b25ded">root</a>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">// On parcourt la liste</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">while</span>(tmp-&gt;<a class="code" href="structelement.html#a37542facf22f1fffc9843c9f00be9216">right</a>){</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        tmp = tmp-&gt;<a class="code" href="structelement.html#a37542facf22f1fffc9843c9f00be9216">right</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        free(root);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        root = tmp;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    free(tmp);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+<div class="ttc" id="trie_8c_html_a612285c5b9d603a0abb0feab44b8412f"><div class="ttname"><a href="trie_8c.html#a612285c5b9d603a0abb0feab44b8412f">clearList</a></div><div class="ttdeci">void clearList()</div><div class="ttdoc">Supprime la liste. </div><div class="ttdef"><b>Definition:</b> <a href="trie_8c_source.html#l00083">trie.c:83</a></div></div>
+<div class="ttc" id="structelement_html"><div class="ttname"><a href="structelement.html">element</a></div><div class="ttdoc">Définis un élément de la liste. </div><div class="ttdef"><b>Definition:</b> <a href="trie_8h_source.html#l00010">trie.h:10</a></div></div>
+<div class="ttc" id="structelement_html_afa46df5a6444396565aa685782411b44"><div class="ttname"><a href="structelement.html#afa46df5a6444396565aa685782411b44">element::pts</a></div><div class="ttdeci">int pts</div><div class="ttdoc">Nombre de points associé </div><div class="ttdef"><b>Definition:</b> <a href="trie_8h_source.html#l00012">trie.h:12</a></div></div>
+<div class="ttc" id="trie_8c_html_a2f736094bbaa598f70c3e241bad4a1cc"><div class="ttname"><a href="trie_8c.html#a2f736094bbaa598f70c3e241bad4a1cc">printList</a></div><div class="ttdeci">void printList()</div><div class="ttdoc">Affiche la liste entière de la racine jusqu&#39;à la fin. </div><div class="ttdef"><b>Definition:</b> <a href="trie_8c_source.html#l00065">trie.c:65</a></div></div>
+<div class="ttc" id="trie_8c_html_adac30872b2982daea2a38df6f042065d"><div class="ttname"><a href="trie_8c.html#adac30872b2982daea2a38df6f042065d">addElement</a></div><div class="ttdeci">void addElement(element *elem)</div><div class="ttdoc">Ajoute un élément dans la liste chaînée. </div><div class="ttdef"><b>Definition:</b> <a href="trie_8c_source.html#l00020">trie.c:20</a></div></div>
+<div class="ttc" id="trie_8c_html_a400fc15964edd9c35132913b24b25ded"><div class="ttname"><a href="trie_8c.html#a400fc15964edd9c35132913b24b25ded">root</a></div><div class="ttdeci">element * root</div><div class="ttdoc">Définis la racine de la liste chaînée. </div><div class="ttdef"><b>Definition:</b> <a href="trie_8c_source.html#l00014">trie.c:14</a></div></div>
+<div class="ttc" id="structelement_html_a37542facf22f1fffc9843c9f00be9216"><div class="ttname"><a href="structelement.html#a37542facf22f1fffc9843c9f00be9216">element::right</a></div><div class="ttdeci">struct element * right</div><div class="ttdoc">*right Pointeur sur l&#39;élément suivant </div><div class="ttdef"><b>Definition:</b> <a href="trie_8h_source.html#l00013">trie.h:13</a></div></div>
+<div class="ttc" id="structelement_html_af607a92824fa5d32abd559d6fefda79a"><div class="ttname"><a href="structelement.html#af607a92824fa5d32abd559d6fefda79a">element::word</a></div><div class="ttdeci">char word[17]</div><div class="ttdoc">Mot à stocker. </div><div class="ttdef"><b>Definition:</b> <a href="trie_8h_source.html#l00011">trie.h:11</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Dimanche 15 Novembre 2015 01:27:20 pour Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>
