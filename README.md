@@ -8,10 +8,13 @@ mais il n'est pas permis de réutiliser deux fois la même case.
 
 ## Sommaire
  >  **Ruzzle**
- >  1. **[Optimisation](#optimisation)**
- >  2. **[Instructions de compilation](#instructions-de-compilation)**
- >  3. **[Utilisation](#utilisation)**
- >  4. **[Documentation](#documentation)**
+ >  1. **[Changelog](#changelog)**
+ >    - **[Version 1.0](#version-10)**
+ >    - **[Version 1.01](#version-101-à-venir)**
+ >  2. **[Optimisation](#optimisation)**
+ >  3. **[Instructions de compilation](#instructions-de-compilation)**
+ >  4. **[Utilisation](#utilisation)**
+ >  5. **[Documentation](#documentation)**
 
 ## A faire
  
@@ -19,6 +22,19 @@ mais il n'est pas permis de réutiliser deux fois la même case.
  - [ ] CUnit
  - [ ] Compte rendu
  - [ ] Optimisation
+
+## Changelog
+
+### Version 1.0
+ - Solver complet permettant la résolution d'une grille saisie ou générée aléatoirement
+ - Documentation complète
+ - Instructions utilisateur
+
+### Version 1.01 (à venir)
+ - Optimisations diverses sur le traitement
+ - Test unitaires
+
+
 
 ## Optimisation
 
