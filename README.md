@@ -7,14 +7,15 @@ Le but étant de marquer le plus de points possible pour celà des bonus lettre 
 mais il n'est pas permis de réutiliser deux fois la même case.
 
 ## Sommaire
- >  **Ruzzle**
- >  1. **[Changelog](#changelog)**
- >    - **[Version 1.0](#version-10)**
- >    - **[Version 1.01](#version-101-à-venir)**
- >  2. **[Optimisation](#optimisation)**
- >  3. **[Instructions de compilation](#instructions-de-compilation)**
- >  4. **[Utilisation](#utilisation)**
- >  5. **[Documentation](#documentation)**
+   **Ruzzle**
+   1. **[Changelog](#changelog)**
+     - **[Version 1.0](#version-10)**
+     - **[Version 1.01](#version-101-à-venir)**
+   2. **[A faire](#a-faire)**
+   3. **[Optimisation](#optimisation)**
+   3. **[Instructions de compilation](#instructions-de-compilation)**
+   4. **[Utilisation](#utilisation)**
+   5. **[Documentation](#documentation)**
 
 ## A faire
  
