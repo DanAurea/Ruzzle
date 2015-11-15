@@ -5,7 +5,11 @@ d'une grille de lettres générée aléatoirement.
 Le but étant de marquer le plus de points possible pour celà des bonus lettre et mot double/triple sont répartis sur la grille
 mais il n'est pas permis de réutiliser deux fois la même case.
 
-# Instructions de compilation
+## Optimisation
+
+Pour le moment le solver vérifiant toutes les combinaisons en ouvrant le dictionnaire correspondant et en vérifiant toutes les possibilités, les temps d'accés rendent l'exécution un peu lente (~ 25s max ). Il reste néanmoins quelques modifications à apporter pour réduire au maximum ce temps.
+
+## Instructions de compilation
 
 
 >  $ make
@@ -16,7 +20,7 @@ Permet de compiler l'ensemble des sources, l'exécutable généré peut être re
 
 Permet de nettoyer le dossier.
 
-# Utilisation
+## Utilisation
 
 >  $ ./bin/ruzzleSolver
 
@@ -44,6 +48,15 @@ la grille sera composée des 16 premiers caractères.
 
 Les bonus lettres et mots sont tirés aléatoirement de manière à ce qu'il n'y ait pas trop de bonus.
 
+Le résultat du solver se retrouve dans :
 
+> assets/listWords.txt
+
+## Documentation
+
+Il est possible de se documenter sur la structure du solver grâce à une documentation générée par doxygen.
+Le fichier de configuration pour la documentation est fournie et permet donc de régénérer la documentation en cas de soucis, une page html sera crée reprenant toute la documentation :
+
+> doc/html/index.html
 
 
