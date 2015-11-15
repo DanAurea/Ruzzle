@@ -79,7 +79,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Le Ruzzle est un jeu originaire du monde mobile, ce jeu consiste à former le plus de mots en un temps imparti à partir d'une grille de lettres générée aléatoirement. Le but étant de marquer le plus de points possible pour celà des bonus lettre et mot double/triple sont répartis sur la grille mais il n'est pas permis de réutiliser deux fois la même case.</p>
-<h1>Instructions de compilation</h1>
+<h2>Optimisation</h2>
+<p>Pour le moment le solver vérifiant toutes les combinaisons en ouvrant le dictionnaire correspondant et en vérifiant toutes les possibilités, les temps d'accés rendent l'exécution un peu lente (~ 25s max ). Il reste néanmoins quelques modifications à apporter pour réduire au maximum ce temps.</p>
+<h2>Instructions de compilation</h2>
 <blockquote class="doxtable">
 <p>$ make </p>
 </blockquote>
@@ -88,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <p>$ make mrproper </p>
 </blockquote>
 <p>Permet de nettoyer le dossier.</p>
-<h1>Utilisation</h1>
+<h2>Utilisation</h2>
 <blockquote class="doxtable">
 <p>$ ./bin/ruzzleSolver </p>
 </blockquote>
@@ -107,11 +109,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <p></p>
 </blockquote>
 <p>Dans le cas d'une chaîne trop petite un message d'erreur apparaîtra, si la chaîne est trop grande, la grille sera composée des 16 premiers caractères.</p>
-<p>Les bonus lettres et mots sont tirés aléatoirement de manière à ce qu'il n'y ait pas trop de bonus. </p>
+<p>Les bonus lettres et mots sont tirés aléatoirement de manière à ce qu'il n'y ait pas trop de bonus.</p>
+<p>Le résultat du solver se retrouve dans :</p>
+<blockquote class="doxtable">
+<p>assets/listWords.txt </p>
+</blockquote>
+<h2>Documentation</h2>
+<p>Il est possible de se documenter sur la structure du solver grâce à une documentation générée par doxygen. Le fichier de configuration pour la documentation est fournie et permet donc de régénérer la documentation en cas de soucis, une page html sera crée reprenant toute la documentation :</p>
+<blockquote class="doxtable">
+<p>doc/html/index.html</p>
+</blockquote>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Dimanche 15 Novembre 2015 01:27:20 pour Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche 15 Novembre 2015 14:40:33 pour Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
