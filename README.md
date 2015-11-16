@@ -95,4 +95,6 @@ Le fichier de configuration pour la documentation est fournie et permet donc de 
 
 > **doc/html/index.html**
 
+Pour recréer la documentation :
 
+> $ **make doc**
