@@ -1,5 +1,5 @@
 <map id="include/display.h" name="include/display.h">
-<area shape="rect" id="node2" href="$display_8c.html" title="Affiche la grille. " alt="" coords="5,80,101,107"/>
-<area shape="rect" id="node3" href="$ruzzle_8c.html" title="Solver de Ruzzle. " alt="" coords="125,80,216,107"/>
-<area shape="rect" id="node4" href="$solver_8c.html" title="Résoud la grille. " alt="" coords="240,80,331,107"/>
+<area shape="rect" id="node3" href="$display_8c.html" title="Affiche la grille." alt="" coords="5,80,101,107"/>
+<area shape="rect" id="node5" href="$ruzzle_8c.html" title="Solver de Ruzzle." alt="" coords="125,80,216,107"/>
+<area shape="rect" id="node7" href="$solver_8c.html" title="Résoud la grille." alt="" coords="240,80,331,107"/>
 </map>

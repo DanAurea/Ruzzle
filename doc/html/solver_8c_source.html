@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.8"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
 <title>Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior:  Fichier source de src/solver.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -31,7 +31,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.8 -->
+<!-- Généré par Doxygen 1.8.3.1 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -95,45 +95,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../include/solver.h&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../include/trie.h&quot;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="solver_8c.html#a07d68aeb0b5ed32ab93e34e1a8a2be44">   20</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="solver_8c.html#a07d68aeb0b5ed32ab93e34e1a8a2be44">totCase</a>(<a class="code" href="structt__Case.html">t_Case</a> Case){</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">if</span>(strcmp(Case.<a class="code" href="structt__Case.html#ac6a23400b09f5d278e5fa52bca741391">boL</a>, <span class="stringliteral">&quot;LD&quot;</span>) == 0) <span class="keywordflow">return</span> Case.<a class="code" href="structt__Case.html#a0ca7fb3ede63f530b081a9ba25dd0c42">pts</a> * 2;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">if</span>(strcmp(Case.<a class="code" href="structt__Case.html#ac6a23400b09f5d278e5fa52bca741391">boL</a>, <span class="stringliteral">&quot;LT&quot;</span>) == 0) <span class="keywordflow">return</span> Case.<a class="code" href="structt__Case.html#a0ca7fb3ede63f530b081a9ba25dd0c42">pts</a> * 3;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> Case.<a class="code" href="structt__Case.html#a0ca7fb3ede63f530b081a9ba25dd0c42">pts</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="solver_8c.html#a07d68aeb0b5ed32ab93e34e1a8a2be44">   20</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="solver_8c.html#a07d68aeb0b5ed32ab93e34e1a8a2be44" title="Calcule le total de points de la case courante.">totCase</a>(<a class="code" href="structt__Case.html" title="Définis une case par 4 caractéristiques.">t_Case</a> Case){</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">if</span>(strcmp(Case.<a class="code" href="structt__Case.html#ac6a23400b09f5d278e5fa52bca741391" title="Bonus sur la lettre.">boL</a>, <span class="stringliteral">&quot;LD&quot;</span>) == 0) <span class="keywordflow">return</span> Case.<a class="code" href="structt__Case.html#a0ca7fb3ede63f530b081a9ba25dd0c42" title="Nombre de points associé">pts</a> * 2;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">if</span>(strcmp(Case.<a class="code" href="structt__Case.html#ac6a23400b09f5d278e5fa52bca741391" title="Bonus sur la lettre.">boL</a>, <span class="stringliteral">&quot;LT&quot;</span>) == 0) <span class="keywordflow">return</span> Case.<a class="code" href="structt__Case.html#a0ca7fb3ede63f530b081a9ba25dd0c42" title="Nombre de points associé">pts</a> * 3;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> Case.<a class="code" href="structt__Case.html#a0ca7fb3ede63f530b081a9ba25dd0c42" title="Nombre de points associé">pts</a>;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="solver_8c.html#a0b23cdd3365d624985e5123a2c0f9034">   31</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="solver_8c.html#a0b23cdd3365d624985e5123a2c0f9034">mulWord</a>(<a class="code" href="structt__Case.html">t_Case</a> Case){</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">if</span>(strcmp(Case.<a class="code" href="structt__Case.html#a5eede5d51107927662912a5b307fe6ee">boM</a>, <span class="stringliteral">&quot;MD&quot;</span>) == 0) <span class="keywordflow">return</span> 2;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span>(strcmp(Case.<a class="code" href="structt__Case.html#a5eede5d51107927662912a5b307fe6ee">boM</a>, <span class="stringliteral">&quot;MT&quot;</span>) == 0) <span class="keywordflow">return</span> 3;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="solver_8c.html#a0b23cdd3365d624985e5123a2c0f9034">   31</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="solver_8c.html#a0b23cdd3365d624985e5123a2c0f9034" title="Retourne le coefficient multiplicateur pour le mot entier.">mulWord</a>(<a class="code" href="structt__Case.html" title="Définis une case par 4 caractéristiques.">t_Case</a> Case){</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">if</span>(strcmp(Case.<a class="code" href="structt__Case.html#a5eede5d51107927662912a5b307fe6ee" title="Bonus sur le mot.">boM</a>, <span class="stringliteral">&quot;MD&quot;</span>) == 0) <span class="keywordflow">return</span> 2;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span>(strcmp(Case.<a class="code" href="structt__Case.html#a5eede5d51107927662912a5b307fe6ee" title="Bonus sur le mot.">boM</a>, <span class="stringliteral">&quot;MT&quot;</span>) == 0) <span class="keywordflow">return</span> 3;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="solver_8c.html#ac940966280e6d405c6df1049e0993fb1">   46</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="solver_8c.html#ac940966280e6d405c6df1049e0993fb1">findWords</a>(<a class="code" href="structt__Case.html">t_Case</a> grid[<a class="code" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="code" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>], <span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">char</span> <a class="code" href="structelement.html#af607a92824fa5d32abd559d6fefda79a">word</a>[], <span class="keywordtype">int</span> totalW, <span class="keywordtype">int</span> boM){</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="solver_8c.html#ac940966280e6d405c6df1049e0993fb1">   46</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="solver_8c.html#ac940966280e6d405c6df1049e0993fb1" title="Trouve un mot dans la grille.">findWords</a>(<a class="code" href="structt__Case.html" title="Définis une case par 4 caractéristiques.">t_Case</a> grid[<a class="code" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4" title="Constante du nombre de lignes / colonnes.">N</a>][<a class="code" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4" title="Constante du nombre de lignes / colonnes.">N</a>], <span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">char</span> <a class="code" href="structelement.html#af607a92824fa5d32abd559d6fefda79a" title="Mot à stocker.">word</a>[], <span class="keywordtype">int</span> totalW, <span class="keywordtype">int</span> boM){</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span> dx, dy, find;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="structelement.html">element</a> current;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="structelement.html" title="Définis un élément de la liste.">element</a> current;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    grid[i][j].visited = 1;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">// Composition + recherche du mot</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    word[strlen(word)] = grid[i][j].let;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    word[strlen(word)+1] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    find = <a class="code" href="solver_8c.html#aa4a35a7d0751f527f91ebcb12a74baf1">searchWord</a>(word);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    find = <a class="code" href="solver_8c.html#aa4a35a7d0751f527f91ebcb12a74baf1" title="Cherche un mot dans le dictionnaire.">searchWord</a>(word);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    </div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">// Calcul des points</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    totalW += <a class="code" href="solver_8c.html#a07d68aeb0b5ed32ab93e34e1a8a2be44">totCase</a>(grid[i][j]);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    boM *= <a class="code" href="solver_8c.html#a0b23cdd3365d624985e5123a2c0f9034">mulWord</a>(grid[i][j]);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    totalW += <a class="code" href="solver_8c.html#a07d68aeb0b5ed32ab93e34e1a8a2be44" title="Calcule le total de points de la case courante.">totCase</a>(grid[i][j]);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    boM *= <a class="code" href="solver_8c.html#a0b23cdd3365d624985e5123a2c0f9034" title="Retourne le coefficient multiplicateur pour le mot entier.">mulWord</a>(grid[i][j]);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span>(find == 2 &amp;&amp; strlen(word) &gt;= 2){</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        strcpy(current.<a class="code" href="structelement.html#af607a92824fa5d32abd559d6fefda79a">word</a>, word);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        current.<a class="code" href="structelement.html#afa46df5a6444396565aa685782411b44">pts</a> = totalW * boM;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="trie_8c.html#adac30872b2982daea2a38df6f042065d">addElement</a>(&amp;current);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        strcpy(current.<a class="code" href="structelement.html#af607a92824fa5d32abd559d6fefda79a" title="Mot à stocker.">word</a>, word);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        current.<a class="code" href="structelement.html#afa46df5a6444396565aa685782411b44" title="Nombre de points associé">pts</a> = totalW * boM;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="trie_8c.html#adac30872b2982daea2a38df6f042065d" title="Ajoute un élément dans la liste chaînée.">addElement</a>(&amp;current);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="comment">// Parcours des cases voisines</span></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">for</span> (dx = (i &lt;= 0 ? 0 : -1); dx &lt;= (i &gt;= N-1 ? 0 : 1); dx++) { </div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">for</span> (dy = (j &lt;= 0 ? 0 : -1); dy &lt;= (j &gt;= N-1 ? 0 : 1); dy++) {</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                    <span class="keywordflow">if</span> (grid[dx+i][dy+j].visited == 0 &amp;&amp; (find == 1 || find == 2)){</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                        <a class="code" href="solver_8c.html#ac940966280e6d405c6df1049e0993fb1">findWords</a>(grid, i+dx, j+dy, word, totalW, boM); </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                        <a class="code" href="solver_8c.html#ac940966280e6d405c6df1049e0993fb1" title="Trouve un mot dans la grille.">findWords</a>(grid, i+dx, j+dy, word, totalW, boM); </div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    }</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                } </div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            }</div>
@@ -141,11 +141,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="comment">// On revient en arrière</span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            word[strlen(word)-1] = <span class="charliteral">&#39;\0&#39;</span>;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            grid[i][j].visited = 0;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            totalW -= <a class="code" href="solver_8c.html#a07d68aeb0b5ed32ab93e34e1a8a2be44">totCase</a>(grid[i][j]);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            boM /= <a class="code" href="solver_8c.html#a0b23cdd3365d624985e5123a2c0f9034">mulWord</a>(grid[i][j]);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            totalW -= <a class="code" href="solver_8c.html#a07d68aeb0b5ed32ab93e34e1a8a2be44" title="Calcule le total de points de la case courante.">totCase</a>(grid[i][j]);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            boM /= <a class="code" href="solver_8c.html#a0b23cdd3365d624985e5123a2c0f9034" title="Retourne le coefficient multiplicateur pour le mot entier.">mulWord</a>(grid[i][j]);</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="solver_8h.html#aa4a35a7d0751f527f91ebcb12a74baf1">   89</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="solver_8c.html#aa4a35a7d0751f527f91ebcb12a74baf1">searchWord</a>(<span class="keywordtype">char</span> <a class="code" href="structelement.html#af607a92824fa5d32abd559d6fefda79a">word</a>[]){</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="code" href="solver_8h.html#aa4a35a7d0751f527f91ebcb12a74baf1">   89</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="solver_8c.html#aa4a35a7d0751f527f91ebcb12a74baf1" title="Cherche un mot dans le dictionnaire.">searchWord</a>(<span class="keywordtype">char</span> <a class="code" href="structelement.html#af607a92824fa5d32abd559d6fefda79a" title="Mot à stocker.">word</a>[]){</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    FILE * file;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">int</span> sizeW = strlen(word);</div>
@@ -217,11 +217,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="solver_8c.html#ae7d30ebfe1f48ab57593b710e94889e7">  166</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="solver_8c.html#ae7d30ebfe1f48ab57593b710e94889e7">createDict</a>(<span class="keywordtype">char</span> dir[], <span class="keywordtype">char</span> filename[]){</div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="code" href="solver_8c.html#ae7d30ebfe1f48ab57593b710e94889e7">  166</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="solver_8c.html#ae7d30ebfe1f48ab57593b710e94889e7" title="Crée les dictionnaires pour optimiser le traitement.">createDict</a>(<span class="keywordtype">char</span> dir[], <span class="keywordtype">char</span> filename[]){</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    FILE * dirDic;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    FILE * dest;</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">char</span> let = 97; <span class="comment">// Code ASCII de la lettre a</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">char</span> <a class="code" href="structelement.html#af607a92824fa5d32abd559d6fefda79a">word</a>[70] = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">char</span> <a class="code" href="structelement.html#af607a92824fa5d32abd559d6fefda79a" title="Mot à stocker.">word</a>[70] = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordtype">int</span> sizeFilename = strlen(filename);</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    strcat(dir, filename);</div>
@@ -256,39 +256,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;}</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
-<div class="line"><a name="l00209"></a><span class="lineno"><a class="line" href="solver_8h.html#acb26ab357db8918adfe55385af56ba11">  209</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="solver_8c.html#acb26ab357db8918adfe55385af56ba11">Solver</a>(<a class="code" href="structt__Case.html">t_Case</a> grid[<a class="code" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="code" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>]){</div>
+<div class="line"><a name="l00209"></a><span class="lineno"><a class="code" href="solver_8h.html#acb26ab357db8918adfe55385af56ba11">  209</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="solver_8c.html#acb26ab357db8918adfe55385af56ba11" title="Résoud la grille.">Solver</a>(<a class="code" href="structt__Case.html" title="Définis une case par 4 caractéristiques.">t_Case</a> grid[<a class="code" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4" title="Constante du nombre de lignes / colonnes.">N</a>][<a class="code" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4" title="Constante du nombre de lignes / colonnes.">N</a>]){</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordtype">int</span> i, j;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordtype">char</span> <a class="code" href="structelement.html#af607a92824fa5d32abd559d6fefda79a">word</a>[17] = <span class="stringliteral">&quot;\0&quot;</span>;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordtype">char</span> <a class="code" href="structelement.html#af607a92824fa5d32abd559d6fefda79a" title="Mot à stocker.">word</a>[17] = <span class="stringliteral">&quot;\0&quot;</span>;</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>; i++)</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4" title="Constante du nombre de lignes / colonnes.">N</a>; i++)</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    {</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">for</span> (j = 0; j &lt; <a class="code" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>; j++)</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">for</span> (j = 0; j &lt; <a class="code" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4" title="Constante du nombre de lignes / colonnes.">N</a>; j++)</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        {   </div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            <a class="code" href="solver_8c.html#ac940966280e6d405c6df1049e0993fb1">findWords</a>(grid, i, j, word, 0, 1);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            <a class="code" href="solver_8c.html#ac940966280e6d405c6df1049e0993fb1" title="Trouve un mot dans la grille.">findWords</a>(grid, i, j, word, 0, 1);</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        }</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    }</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;}</div>
-<div class="ttc" id="solver_8c_html_a07d68aeb0b5ed32ab93e34e1a8a2be44"><div class="ttname"><a href="solver_8c.html#a07d68aeb0b5ed32ab93e34e1a8a2be44">totCase</a></div><div class="ttdeci">int totCase(t_Case Case)</div><div class="ttdoc">Calcule le total de points de la case courante. </div><div class="ttdef"><b>Definition:</b> <a href="solver_8c_source.html#l00020">solver.c:20</a></div></div>
-<div class="ttc" id="solver_8c_html_ac940966280e6d405c6df1049e0993fb1"><div class="ttname"><a href="solver_8c.html#ac940966280e6d405c6df1049e0993fb1">findWords</a></div><div class="ttdeci">void findWords(t_Case grid[N][N], int i, int j, char word[], int totalW, int boM)</div><div class="ttdoc">Trouve un mot dans la grille. </div><div class="ttdef"><b>Definition:</b> <a href="solver_8c_source.html#l00046">solver.c:46</a></div></div>
-<div class="ttc" id="structt__Case_html"><div class="ttname"><a href="structt__Case.html">t_Case</a></div><div class="ttdoc">Définis une case par 4 caractéristiques. </div><div class="ttdef"><b>Definition:</b> <a href="display_8h_source.html#l00012">display.h:12</a></div></div>
-<div class="ttc" id="structelement_html"><div class="ttname"><a href="structelement.html">element</a></div><div class="ttdoc">Définis un élément de la liste. </div><div class="ttdef"><b>Definition:</b> <a href="trie_8h_source.html#l00010">trie.h:10</a></div></div>
-<div class="ttc" id="structelement_html_afa46df5a6444396565aa685782411b44"><div class="ttname"><a href="structelement.html#afa46df5a6444396565aa685782411b44">element::pts</a></div><div class="ttdeci">int pts</div><div class="ttdoc">Nombre de points associé </div><div class="ttdef"><b>Definition:</b> <a href="trie_8h_source.html#l00012">trie.h:12</a></div></div>
-<div class="ttc" id="solver_8c_html_acb26ab357db8918adfe55385af56ba11"><div class="ttname"><a href="solver_8c.html#acb26ab357db8918adfe55385af56ba11">Solver</a></div><div class="ttdeci">void Solver(t_Case grid[N][N])</div><div class="ttdoc">Résoud la grille. </div><div class="ttdef"><b>Definition:</b> <a href="solver_8c_source.html#l00209">solver.c:209</a></div></div>
-<div class="ttc" id="display_8h_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdoc">Constante du nombre de lignes / colonnes. </div><div class="ttdef"><b>Definition:</b> <a href="display_8h_source.html#l00006">display.h:6</a></div></div>
-<div class="ttc" id="structt__Case_html_a5eede5d51107927662912a5b307fe6ee"><div class="ttname"><a href="structt__Case.html#a5eede5d51107927662912a5b307fe6ee">t_Case::boM</a></div><div class="ttdeci">char boM[3]</div><div class="ttdoc">Bonus sur le mot. </div><div class="ttdef"><b>Definition:</b> <a href="display_8h_source.html#l00016">display.h:16</a></div></div>
-<div class="ttc" id="trie_8c_html_adac30872b2982daea2a38df6f042065d"><div class="ttname"><a href="trie_8c.html#adac30872b2982daea2a38df6f042065d">addElement</a></div><div class="ttdeci">void addElement(element *elem)</div><div class="ttdoc">Ajoute un élément dans la liste chaînée. </div><div class="ttdef"><b>Definition:</b> <a href="trie_8c_source.html#l00020">trie.c:20</a></div></div>
-<div class="ttc" id="solver_8c_html_ae7d30ebfe1f48ab57593b710e94889e7"><div class="ttname"><a href="solver_8c.html#ae7d30ebfe1f48ab57593b710e94889e7">createDict</a></div><div class="ttdeci">void createDict(char dir[], char filename[])</div><div class="ttdoc">Crée les dictionnaires pour optimiser le traitement. </div><div class="ttdef"><b>Definition:</b> <a href="solver_8c_source.html#l00166">solver.c:166</a></div></div>
-<div class="ttc" id="structt__Case_html_a0ca7fb3ede63f530b081a9ba25dd0c42"><div class="ttname"><a href="structt__Case.html#a0ca7fb3ede63f530b081a9ba25dd0c42">t_Case::pts</a></div><div class="ttdeci">int pts</div><div class="ttdoc">Nombre de points associé </div><div class="ttdef"><b>Definition:</b> <a href="display_8h_source.html#l00014">display.h:14</a></div></div>
-<div class="ttc" id="structelement_html_af607a92824fa5d32abd559d6fefda79a"><div class="ttname"><a href="structelement.html#af607a92824fa5d32abd559d6fefda79a">element::word</a></div><div class="ttdeci">char word[17]</div><div class="ttdoc">Mot à stocker. </div><div class="ttdef"><b>Definition:</b> <a href="trie_8h_source.html#l00011">trie.h:11</a></div></div>
-<div class="ttc" id="solver_8c_html_aa4a35a7d0751f527f91ebcb12a74baf1"><div class="ttname"><a href="solver_8c.html#aa4a35a7d0751f527f91ebcb12a74baf1">searchWord</a></div><div class="ttdeci">int searchWord(char word[])</div><div class="ttdoc">Cherche un mot dans le dictionnaire. </div><div class="ttdef"><b>Definition:</b> <a href="solver_8c_source.html#l00089">solver.c:89</a></div></div>
-<div class="ttc" id="structt__Case_html_ac6a23400b09f5d278e5fa52bca741391"><div class="ttname"><a href="structt__Case.html#ac6a23400b09f5d278e5fa52bca741391">t_Case::boL</a></div><div class="ttdeci">char boL[3]</div><div class="ttdoc">Bonus sur la lettre. </div><div class="ttdef"><b>Definition:</b> <a href="display_8h_source.html#l00015">display.h:15</a></div></div>
-<div class="ttc" id="solver_8c_html_a0b23cdd3365d624985e5123a2c0f9034"><div class="ttname"><a href="solver_8c.html#a0b23cdd3365d624985e5123a2c0f9034">mulWord</a></div><div class="ttdeci">int mulWord(t_Case Case)</div><div class="ttdoc">Retourne le coefficient multiplicateur pour le mot entier. </div><div class="ttdef"><b>Definition:</b> <a href="solver_8c_source.html#l00031">solver.c:31</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Dimanche 15 Novembre 2015 14:40:32 pour Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Lundi Novembre 16 2015 08:30:58 pour Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.8
+</a> 1.8.3.1
 </small></address>
 </body>
 </html>

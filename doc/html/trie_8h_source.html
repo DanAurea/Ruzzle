@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.8"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
 <title>Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior:  Fichier source de include/trie.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -31,7 +31,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.8 -->
+<!-- Généré par Doxygen 1.8.3.1 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -89,28 +89,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </div><!--header-->
 <div class="contents">
 <a href="trie_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="structelement.html">   10</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structelement.html">element</a></div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="structelement.html#af607a92824fa5d32abd559d6fefda79a">   11</a></span>&#160;{   <span class="keywordtype">char</span> <a class="code" href="structelement.html#af607a92824fa5d32abd559d6fefda79a">word</a>[17]; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structelement.html#afa46df5a6444396565aa685782411b44">   12</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structelement.html#afa46df5a6444396565aa685782411b44">pts</a>; </div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structelement.html#a37542facf22f1fffc9843c9f00be9216">   13</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structelement.html">element</a> *<a class="code" href="structelement.html#a37542facf22f1fffc9843c9f00be9216">right</a>; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;} <a class="code" href="trie_8h.html#aac687df386c3a390580b9fbc6fec9133">element</a>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> <a class="code" href="trie_8h.html#adac30872b2982daea2a38df6f042065d">addElement</a>(<a class="code" href="structelement.html">element</a> * elem);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> <a class="code" href="trie_8h.html#a2f736094bbaa598f70c3e241bad4a1cc">printList</a>();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">void</span> <a class="code" href="trie_8h.html#a612285c5b9d603a0abb0feab44b8412f">clearList</a>();</div>
-<div class="ttc" id="trie_8h_html_a2f736094bbaa598f70c3e241bad4a1cc"><div class="ttname"><a href="trie_8h.html#a2f736094bbaa598f70c3e241bad4a1cc">printList</a></div><div class="ttdeci">void printList()</div><div class="ttdoc">Affiche la liste entière de la racine jusqu&#39;à la fin. </div><div class="ttdef"><b>Definition:</b> <a href="trie_8c_source.html#l00065">trie.c:65</a></div></div>
-<div class="ttc" id="trie_8h_html_aac687df386c3a390580b9fbc6fec9133"><div class="ttname"><a href="trie_8h.html#aac687df386c3a390580b9fbc6fec9133">element</a></div><div class="ttdeci">struct element element</div><div class="ttdoc">Définis un élément de la liste. </div></div>
-<div class="ttc" id="structelement_html"><div class="ttname"><a href="structelement.html">element</a></div><div class="ttdoc">Définis un élément de la liste. </div><div class="ttdef"><b>Definition:</b> <a href="trie_8h_source.html#l00010">trie.h:10</a></div></div>
-<div class="ttc" id="structelement_html_afa46df5a6444396565aa685782411b44"><div class="ttname"><a href="structelement.html#afa46df5a6444396565aa685782411b44">element::pts</a></div><div class="ttdeci">int pts</div><div class="ttdoc">Nombre de points associé </div><div class="ttdef"><b>Definition:</b> <a href="trie_8h_source.html#l00012">trie.h:12</a></div></div>
-<div class="ttc" id="trie_8h_html_a612285c5b9d603a0abb0feab44b8412f"><div class="ttname"><a href="trie_8h.html#a612285c5b9d603a0abb0feab44b8412f">clearList</a></div><div class="ttdeci">void clearList()</div><div class="ttdoc">Supprime la liste. </div><div class="ttdef"><b>Definition:</b> <a href="trie_8c_source.html#l00083">trie.c:83</a></div></div>
-<div class="ttc" id="structelement_html_a37542facf22f1fffc9843c9f00be9216"><div class="ttname"><a href="structelement.html#a37542facf22f1fffc9843c9f00be9216">element::right</a></div><div class="ttdeci">struct element * right</div><div class="ttdoc">*right Pointeur sur l&#39;élément suivant </div><div class="ttdef"><b>Definition:</b> <a href="trie_8h_source.html#l00013">trie.h:13</a></div></div>
-<div class="ttc" id="structelement_html_af607a92824fa5d32abd559d6fefda79a"><div class="ttname"><a href="structelement.html#af607a92824fa5d32abd559d6fefda79a">element::word</a></div><div class="ttdeci">char word[17]</div><div class="ttdoc">Mot à stocker. </div><div class="ttdef"><b>Definition:</b> <a href="trie_8h_source.html#l00011">trie.h:11</a></div></div>
-<div class="ttc" id="trie_8h_html_adac30872b2982daea2a38df6f042065d"><div class="ttname"><a href="trie_8h.html#adac30872b2982daea2a38df6f042065d">addElement</a></div><div class="ttdeci">void addElement(element *elem)</div><div class="ttdoc">Ajoute un élément dans la liste chaînée. </div><div class="ttdef"><b>Definition:</b> <a href="trie_8c_source.html#l00020">trie.c:20</a></div></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="structelement.html">   10</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structelement.html" title="Définis un élément de la liste.">element</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="structelement.html#af607a92824fa5d32abd559d6fefda79a">   11</a></span>&#160;{   <span class="keywordtype">char</span> <a class="code" href="structelement.html#af607a92824fa5d32abd559d6fefda79a" title="Mot à stocker.">word</a>[17]; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="structelement.html#afa46df5a6444396565aa685782411b44">   12</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structelement.html#afa46df5a6444396565aa685782411b44" title="Nombre de points associé">pts</a>; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="structelement.html#a37542facf22f1fffc9843c9f00be9216">   13</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structelement.html" title="Définis un élément de la liste.">element</a> *<a class="code" href="structelement.html#a37542facf22f1fffc9843c9f00be9216" title="*right Pointeur sur l&#39;élément suivant">right</a>; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;} <a class="code" href="trie_8h.html#aac687df386c3a390580b9fbc6fec9133" title="Définis un élément de la liste.">element</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> <a class="code" href="trie_8c.html#adac30872b2982daea2a38df6f042065d" title="Ajoute un élément dans la liste chaînée.">addElement</a>(<a class="code" href="structelement.html" title="Définis un élément de la liste.">element</a> * elem);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> <a class="code" href="trie_8c.html#a2f736094bbaa598f70c3e241bad4a1cc" title="Affiche la liste entière de la racine jusqu&#39;à la fin.">printList</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">void</span> <a class="code" href="trie_8c.html#a612285c5b9d603a0abb0feab44b8412f" title="Supprime la liste.">clearList</a>();</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Dimanche 15 Novembre 2015 14:40:32 pour Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Lundi Novembre 16 2015 08:30:57 pour Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.8
+</a> 1.8.3.1
 </small></address>
 </body>
 </html>

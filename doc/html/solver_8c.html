@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.8"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
 <title>Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior: Référence du fichier src/solver.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -31,7 +31,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.8 -->
+<!-- Généré par Doxygen 1.8.3.1 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -93,17 +93,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 <p>Résoud la grille.  
 <a href="#details">Plus de détails...</a></p>
-<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &lt;string.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="display_8h_source.html">../include/display.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="solver_8h_source.html">../include/solver.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="trie_8h_source.html">../include/trie.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br/>
+<code>#include &lt;string.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="display_8h_source.html">../include/display.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="solver_8h_source.html">../include/solver.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="trie_8h_source.html">../include/trie.h</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Graphe des dépendances par inclusion de solver.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="solver_8c__incl.png" border="0" usemap="#src_2solver_8c" alt=""/></div>
 <map name="src_2solver_8c" id="src_2solver_8c">
-<area shape="rect" id="node4" href="display_8h.html" title="Prototype de la grille. " alt="" coords="180,80,311,107"/><area shape="rect" id="node5" href="solver_8h.html" title="Prototype du solver. " alt="" coords="335,80,460,107"/><area shape="rect" id="node6" href="trie_8h.html" title="Prototype de la liste chaînée. " alt="" coords="485,80,593,107"/></map>
+<area shape="rect" id="node7" href="display_8h.html" title="Prototype de la grille." alt="" coords="181,80,312,107"/><area shape="rect" id="node9" href="solver_8h.html" title="Prototype du solver." alt="" coords="336,80,461,107"/><area shape="rect" id="node11" href="trie_8h.html" title="Prototype de la liste chaînée." alt="" coords="486,80,593,107"/></map>
 </div>
 </div>
 <p><a href="solver_8c_source.html">Aller au code source de ce fichier.</a></p>
@@ -111,22 +111,22 @@ Graphe des dépendances par inclusion de solver.c:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
 <tr class="memitem:a07d68aeb0b5ed32ab93e34e1a8a2be44"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8c.html#a07d68aeb0b5ed32ab93e34e1a8a2be44">totCase</a> (<a class="el" href="structt__Case.html">t_Case</a> Case)</td></tr>
-<tr class="memdesc:a07d68aeb0b5ed32ab93e34e1a8a2be44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcule le total de points de la case courante.  <a href="#a07d68aeb0b5ed32ab93e34e1a8a2be44">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a07d68aeb0b5ed32ab93e34e1a8a2be44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcule le total de points de la case courante.  <a href="#a07d68aeb0b5ed32ab93e34e1a8a2be44">Plus de détails...</a><br/></td></tr>
 <tr class="separator:a07d68aeb0b5ed32ab93e34e1a8a2be44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b23cdd3365d624985e5123a2c0f9034"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8c.html#a0b23cdd3365d624985e5123a2c0f9034">mulWord</a> (<a class="el" href="structt__Case.html">t_Case</a> Case)</td></tr>
-<tr class="memdesc:a0b23cdd3365d624985e5123a2c0f9034"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne le coefficient multiplicateur pour le mot entier.  <a href="#a0b23cdd3365d624985e5123a2c0f9034">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a0b23cdd3365d624985e5123a2c0f9034"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne le coefficient multiplicateur pour le mot entier.  <a href="#a0b23cdd3365d624985e5123a2c0f9034">Plus de détails...</a><br/></td></tr>
 <tr class="separator:a0b23cdd3365d624985e5123a2c0f9034"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac940966280e6d405c6df1049e0993fb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8c.html#ac940966280e6d405c6df1049e0993fb1">findWords</a> (<a class="el" href="structt__Case.html">t_Case</a> grid[<a class="el" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="el" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>], int i, int j, char word[], int totalW, int boM)</td></tr>
-<tr class="memdesc:ac940966280e6d405c6df1049e0993fb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trouve un mot dans la grille.  <a href="#ac940966280e6d405c6df1049e0993fb1">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:ac940966280e6d405c6df1049e0993fb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trouve un mot dans la grille.  <a href="#ac940966280e6d405c6df1049e0993fb1">Plus de détails...</a><br/></td></tr>
 <tr class="separator:ac940966280e6d405c6df1049e0993fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4a35a7d0751f527f91ebcb12a74baf1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8c.html#aa4a35a7d0751f527f91ebcb12a74baf1">searchWord</a> (char word[])</td></tr>
-<tr class="memdesc:aa4a35a7d0751f527f91ebcb12a74baf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cherche un mot dans le dictionnaire.  <a href="#aa4a35a7d0751f527f91ebcb12a74baf1">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:aa4a35a7d0751f527f91ebcb12a74baf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cherche un mot dans le dictionnaire.  <a href="#aa4a35a7d0751f527f91ebcb12a74baf1">Plus de détails...</a><br/></td></tr>
 <tr class="separator:aa4a35a7d0751f527f91ebcb12a74baf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7d30ebfe1f48ab57593b710e94889e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8c.html#ae7d30ebfe1f48ab57593b710e94889e7">createDict</a> (char dir[], char filename[])</td></tr>
-<tr class="memdesc:ae7d30ebfe1f48ab57593b710e94889e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crée les dictionnaires pour optimiser le traitement.  <a href="#ae7d30ebfe1f48ab57593b710e94889e7">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:ae7d30ebfe1f48ab57593b710e94889e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crée les dictionnaires pour optimiser le traitement.  <a href="#ae7d30ebfe1f48ab57593b710e94889e7">Plus de détails...</a><br/></td></tr>
 <tr class="separator:ae7d30ebfe1f48ab57593b710e94889e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb26ab357db8918adfe55385af56ba11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8c.html#acb26ab357db8918adfe55385af56ba11">Solver</a> (<a class="el" href="structt__Case.html">t_Case</a> grid[<a class="el" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="el" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>])</td></tr>
-<tr class="memdesc:acb26ab357db8918adfe55385af56ba11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Résoud la grille.  <a href="#acb26ab357db8918adfe55385af56ba11">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:acb26ab357db8918adfe55385af56ba11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Résoud la grille.  <a href="#acb26ab357db8918adfe55385af56ba11">Plus de détails...</a><br/></td></tr>
 <tr class="separator:acb26ab357db8918adfe55385af56ba11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
@@ -349,9 +349,9 @@ Fonctions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Dimanche 15 Novembre 2015 14:40:33 pour Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Lundi Novembre 16 2015 08:30:58 pour Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.8
+</a> 1.8.3.1
 </small></address>
 </body>
 </html>
