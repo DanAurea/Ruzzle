@@ -7,6 +7,7 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "../include/display.h"
 #include "../include/solver.h"
@@ -158,6 +159,16 @@ int searchWord(char word[]){
 	return 0;
 }
 
+
+char* getWord(FILE * dict) {
+    char* word = NULL;
+    
+    word = malloc(17 * sizeof(char));
+    fscanf(dict, "%s", word);
+    
+    return word;
+}
+
 /**
  * Crée les dictionnaires pour optimiser le traitement.
  * @param dir Indique le dossier dans lequel chercher le dictionnaire
@@ -208,13 +219,14 @@ void createDict(char dir[], char filename[]){
  */
 void Solver(t_Case grid[N][N]){
 	int i, j;
-	char word[17] = "\0";
-
-	for (i = 0; i < N; i++)
-	{
-		for (j = 0; j < N; j++)
-		{	
-			findWords(grid, i, j, word, 0, 1);
-		}
+	FILE * dict;
+	char word[17];
+	
+	dict = fopen("assets/dict.txt","r");
+	strcpy(word, getWord(dict));
+	while(!feof(dict)){
+		strcpy(word, getWord(dict));
 	}
+	
+	fclose(dict);
 }
