@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['findwords',['findWords',['../solver_8c.html#ac940966280e6d405c6df1049e0993fb1',1,'solver.c']]]
+  ['formword',['formWord',['../solver_8c.html#acbb5df3f19b52b649ee3d8ac41c90795',1,'solver.c']]]
 ];

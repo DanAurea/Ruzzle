@@ -13,7 +13,7 @@
 #include "../include/solver.h"
 #include "../include/trie.h"
 
- char gridWord[17] = "\0";
+ char gridWord[17] = "\0"; /**< Mot formé à partir de la grille*/
 
 /**
  * Calcule le total de points de la case courante.
@@ -62,6 +62,24 @@ int searchStart(t_Case Case, char word[]){
 }
 
 /**
+ * Permet de confirmer que les deux mots sont identiques si 
+ * c'est le cas alors on le rajoute dans la liste chaînée
+ * @param gridWord Mot formé à partir de la grille
+ * @param word     Mot tiré du dictionnaire
+ * @param pts 	   Nombre de points total pour le mot formé
+ */
+void confirmWord(char gridWord[], char word[], int pts){
+	element current;
+
+	if(strcmp(word, gridWord) == 0){
+		strcpy(current.word, word);
+		current.pts = 0;
+		addElement(&current);
+	}
+
+}
+
+/**
  * Forme un mot en parcourant la grille
  * @param grid  Grille à résoudre
  * @param i     Point de départ vertical
@@ -71,21 +89,15 @@ int searchStart(t_Case Case, char word[]){
 void formWord(t_Case grid[N][N], int i, int j, char word[]){
 	int row, col;
 	int sizeW;
-	element current;
 
-	grid[i][j].visited = 1;
+	grid[i][j].visited = 1; // Permet de ne pas repasser sur une même case
 	
 
-	gridWord[strlen(gridWord)] = word[strlen(gridWord)];
+	gridWord[strlen(gridWord)] = word[strlen(gridWord)]; // On initialise le mot formé
 	sizeW = strlen(gridWord);
 	gridWord[sizeW+1] = '\0';
 
-
-	if(strcmp(word, gridWord) == 0){
-		strcpy(current.word, word);
-		current.pts = 0;
-		addElement(&current);
-	}
+	confirmWord(gridWord, word, 0);
 
 	for ( row=i-1; row<=i+1 && row<N; row++){
     	for (col=j-1; col<=j+1 && col<N; col++){
@@ -94,7 +106,7 @@ void formWord(t_Case grid[N][N], int i, int j, char word[]){
   		}
   	}
 
-  	gridWord[sizeW-1] = '\0';
+  	gridWord[sizeW-1] = '\0'; // Enlève le dernier caractère en cas d'incompatibiltié
   	grid[i][j].visited = 0;
 
 }
