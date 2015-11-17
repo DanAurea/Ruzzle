@@ -70,6 +70,23 @@ int searchStart(t_Case Case, char word[]){
  * @param word  Mot à chercher
  */
 void formWord(t_Case grid[N][N], int i, int j, char word[]){
+	int dx, dy;
+
+	grid[i][j].visited = 1;
+	gridWord[0] = word[0];
+
+	// A utiliser pour comparer les chaînes au fur et à mesure
+	if(strncmp(word, gridWord, strlen(gridWord)) == 0 )printf("test", gridWord);
+	
+	// Parcours des cases voisines
+	for (dx = (i <= 0 ? 0 : -1); dx <= (i >= N-1 ? 0 : 1); dx++) { 
+		for (dy = (j <= 0 ? 0 : -1); dy <= (j >= N-1 ? 0 : 1); dy++) {
+			if(grid[i][j].let == word[1]){
+				printf("%c", word[0]);
+				formWord(grid, dx+i, dy+j, word);
+			}
+		} 
+	}
 
 }
 
