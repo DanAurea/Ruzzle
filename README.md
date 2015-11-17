@@ -22,7 +22,7 @@ mais il n'est pas permis de réutiliser deux fois la même case.
  - [x] Documentation
  - [ ] CUnit
  - [ ] Compte rendu
- - [ ] Optimisation
+ - [x] Optimisation
 
 ## Changelog
 
