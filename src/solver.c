@@ -58,8 +58,7 @@ char* getWord(FILE * dict) {
  * @return      Retourne 1 si point de départ trouvé sinon 0
  */
 int searchStart(t_Case Case, char word[]){
-	if(Case.let == word[0]) return 1;
-	return 0;
+	return (Case.let == word[0]);
 }
 
 /**
@@ -70,23 +69,33 @@ int searchStart(t_Case Case, char word[]){
  * @param word  Mot à chercher
  */
 void formWord(t_Case grid[N][N], int i, int j, char word[]){
-	int dx, dy;
+	int row, col;
+	int sizeW;
+	element current;
 
 	grid[i][j].visited = 1;
-	gridWord[0] = word[0];
-
-	// A utiliser pour comparer les chaînes au fur et à mesure
-	if(strncmp(word, gridWord, strlen(gridWord)) == 0 )printf("test", gridWord);
 	
-	// Parcours des cases voisines
-	for (dx = (i <= 0 ? 0 : -1); dx <= (i >= N-1 ? 0 : 1); dx++) { 
-		for (dy = (j <= 0 ? 0 : -1); dy <= (j >= N-1 ? 0 : 1); dy++) {
-			if(grid[i][j].let == word[1]){
-				printf("%c", word[0]);
-				formWord(grid, dx+i, dy+j, word);
-			}
-		} 
+
+	gridWord[strlen(gridWord)] = word[strlen(gridWord)];
+	sizeW = strlen(gridWord);
+	gridWord[sizeW+1] = '\0';
+
+
+	if(strcmp(word, gridWord) == 0){
+		strcpy(current.word, word);
+		current.pts = 0;
+		addElement(&current);
 	}
+
+	for ( row=i-1; row<=i+1 && row<N; row++){
+    	for (col=j-1; col<=j+1 && col<N; col++){
+        	if (row>=0 && col>=0 && !grid[row][col].visited && grid[row][col].let == word[sizeW])
+          		formWord(grid,row, col, word);
+  		}
+  	}
+
+  	gridWord[sizeW-1] = '\0';
+  	grid[i][j].visited = 0;
 
 }
 
@@ -102,8 +111,9 @@ void searchWord(t_Case grid[N][N], char word[]){
 	{
 		for (j = 0; j < N; j++)
 		{
-			if(searchStart(grid[i][j], word))
+			if(searchStart(grid[i][j], word)){
 				formWord(grid, i, j, word);
+			}
 		}
 	}
 }
@@ -118,12 +128,14 @@ void Solver(t_Case grid[N][N]){
 	
 	dict = fopen("assets/dict.txt","r");
 	if(dict != NULL){
+		
 		strcpy(word, getWord(dict));
 		while(!feof(dict)){
 			searchWord(grid, word);
 			strcpy(word, getWord(dict));
 		}
 		fclose(dict);
+
 	}else{
 		printf("Erreur fichier introuvable ou droit insuffisant !");
 	}
