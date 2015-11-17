@@ -23,6 +23,8 @@ int main(int argc, char * argv[]){
 	
 	puts("La liste des mots est: \n");
 	Solver(grid); // Résoud la grille
+	//printList();
+	//clearList();
 	fclose(stdout);
 	
 	return 0;
