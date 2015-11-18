@@ -19,7 +19,7 @@ int main(int argc, char * argv[]){
 	Grille(grid, argc, argv); // Affiche la grille
 
 	fprintf(stdout,"La liste a été générée dans assets/listWords.txt\n");
-	//freopen("assets/listWords.txt", "w", stdout); // Redirige la sortie standard
+	freopen("assets/listWords.txt", "w", stdout); // Redirige la sortie standard
 	
 	puts("La liste des mots est: \n");
 	Solver(grid); // Résoud la grille

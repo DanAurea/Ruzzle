@@ -14,6 +14,8 @@
 #include "../include/trie.h"
 
  char gridWord[17] = "\0"; /**< Mot formé à partir de la grille*/
+ int totalW = 0; /**< Total points du mot formé */
+ int boW = 1;	/**< Bonus multiplicateur du mot */
 
 /**
  * Calcule le total de points de la case courante.
@@ -73,7 +75,7 @@ void confirmWord(char gridWord[], char word[], int pts){
 
 	if(strcmp(word, gridWord) == 0){
 		strcpy(current.word, word);
-		current.pts = 0;
+		current.pts = pts;
 		addElement(&current);
 	}
 
@@ -92,13 +94,18 @@ void formWord(t_Case grid[N][N], int i, int j, char word[]){
 
 	grid[i][j].visited = 1; // Permet de ne pas repasser sur une même case
 	
-
 	gridWord[strlen(gridWord)] = word[strlen(gridWord)]; // On initialise le mot formé
 	sizeW = strlen(gridWord);
 	gridWord[sizeW+1] = '\0';
 
-	confirmWord(gridWord, word, 0);
+	totalW += totCase(grid[i][j]); // Calcul des points
+	boW *= mulWord(grid[i][j]);
 
+	confirmWord(gridWord, word, totalW * boW);
+
+	/* On parcourt les cases voisines afin de trouver une correspondance
+	 * entre le mot du dictionnaire et la grille.
+	*/
 	for ( row=i-1; row<=i+1 && row<N; row++){
     	for (col=j-1; col<=j+1 && col<N; col++){
         	if (row>=0 && col>=0 && !grid[row][col].visited && grid[row][col].let == word[sizeW])
@@ -108,6 +115,9 @@ void formWord(t_Case grid[N][N], int i, int j, char word[]){
 
   	gridWord[sizeW-1] = '\0'; // Enlève le dernier caractère en cas d'incompatibiltié
   	grid[i][j].visited = 0;
+
+  	totalW -= totCase(grid[i][j]);
+	boW /= mulWord(grid[i][j]);
 
 }
 
