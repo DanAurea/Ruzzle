@@ -10,7 +10,8 @@ mais il n'est pas permis de réutiliser deux fois la même case.
    **Ruzzle**
    1. **[Changelog](#changelog)**
      - **[Version 1.0](#version-10)**
-     - **[Version 1.01](#version-101-à-venir)**
+     - **[Version 1.01](#version-101)**
+     - **[Version 1.08](#version-108)**
    2. **[A faire](#a-faire)**
    3. **[Optimisation](#optimisation)**
    3. **[Instructions de compilation](#instructions-de-compilation)**
@@ -22,7 +23,7 @@ mais il n'est pas permis de réutiliser deux fois la même case.
  - [x] Documentation
  - [ ] CUnit
  - [ ] Compte rendu
- - [ ] Optimisation
+ - [x] Optimisation
 
 ## Changelog
 
@@ -31,15 +32,16 @@ mais il n'est pas permis de réutiliser deux fois la même case.
  - Documentation complète
  - Instructions utilisateur
 
-### Version 1.01 (à venir)
+### Version 1.01
  - Optimisations diverses sur le traitement
- - Test unitaires
 
-
+### Version 1.08
+ - Comptage points
+ - Tests unitaires
 
 ## Optimisation
 
-Pour le moment le solver vérifiant toutes les combinaisons en ouvrant le dictionnaire correspondant et en vérifiant toutes les possibilités, les temps d'accés rendent l'exécution un peu lente (~ 25s max ). Il reste néanmoins quelques modifications à apporter pour réduire au maximum ce temps.
+Le solver résouds la grille en l'espace de ~100 ms actuellement, le seul moyen d'optimiser le traitement encore plus est de faire un arbre de recherche mais ce serait plus coûteux en mémoire, tout en sachant qu'avec la taille importante du dictionnaire l'arbre de recherche pourrait prendre plus de temps à être simplement conçu qu'ici à résoudre la grille.
 
 ## Instructions de compilation
 
@@ -95,6 +97,5 @@ Le fichier de configuration pour la documentation est fournie et permet donc de 
 
 > **doc/html/index.html**
 
-Pour recréer la documentation :
 
 > $ **make doc**

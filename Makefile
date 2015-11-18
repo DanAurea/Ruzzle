@@ -23,7 +23,7 @@ clean:
 mrproper: clean
 	@rm -rf $(EXEC)
 
-.PHONY:doc
+.PHONY: doc
 
 doc:
 	doxygen configDoc

@@ -6,8 +6,9 @@ Le Ruzzle est un jeu originaire du monde mobile, ce jeu consiste à former le pl
 \begin{DoxyEnumerate}
 \item $\ast$$\ast$\href{#changelog}{\tt Changelog}$\ast$$\ast$
 \begin{DoxyItemize}
-\item $\ast$$\ast$\href{#version-10}{\tt Version 1.\-0}$\ast$$\ast$
-\item $\ast$$\ast$\href{#version-101-à-venir}{\tt Version 1.\-01}$\ast$$\ast$
+\item $\ast$$\ast$\href{#version-10}{\tt Version 1.\+0}$\ast$$\ast$
+\item $\ast$$\ast$\href{#version-101}{\tt Version 1.\+01}$\ast$$\ast$
+\item $\ast$$\ast$\href{#version-108}{\tt Version 1.\+08}$\ast$$\ast$
 \end{DoxyItemize}
 \item $\ast$$\ast$\href{#a-faire}{\tt A faire}$\ast$$\ast$
 \item $\ast$$\ast$\href{#optimisation}{\tt Optimisation}$\ast$$\ast$
@@ -23,14 +24,14 @@ Le Ruzzle est un jeu originaire du monde mobile, ce jeu consiste à former le pl
 
 \begin{DoxyItemize}
 \item \mbox{[}x\mbox{]} Documentation
-\item \mbox{[} \mbox{]} C\-Unit
+\item \mbox{[} \mbox{]} C\+Unit
 \item \mbox{[} \mbox{]} Compte rendu
-\item \mbox{[} \mbox{]} Optimisation
+\item \mbox{[}x\mbox{]} Optimisation
 \end{DoxyItemize}
 
 \subsection*{Changelog}
 
-\subsubsection*{Version 1.\-0}
+\subsubsection*{Version 1.\+0}
 
 
 \begin{DoxyItemize}
@@ -39,67 +40,64 @@ Le Ruzzle est un jeu originaire du monde mobile, ce jeu consiste à former le pl
 \item Instructions utilisateur
 \end{DoxyItemize}
 
-\subsubsection*{Version 1.\-01 (à venir)}
+\subsubsection*{Version 1.\+01}
 
 
 \begin{DoxyItemize}
 \item Optimisations diverses sur le traitement
-\item Test unitaires
+\end{DoxyItemize}
+
+\subsubsection*{Version 1.\+08}
+
+
+\begin{DoxyItemize}
+\item Comptage points
+\item Tests unitaires
 \end{DoxyItemize}
 
 \subsection*{Optimisation}
 
-Pour le moment le solver vérifiant toutes les combinaisons en ouvrant le dictionnaire correspondant et en vérifiant toutes les possibilités, les temps d'accés rendent l'exécution un peu lente ($\sim$ 25s max ). Il reste néanmoins quelques modifications à apporter pour réduire au maximum ce temps.
+Le solver résouds la grille en l'espace de $\sim$100 ms actuellement, le seul moyen d'optimiser le traitement encore plus est de faire un arbre de recherche mais ce serait plus coûteux en mémoire, tout en sachant qu'avec la taille importante du dictionnaire l'arbre de recherche pourrait prendre plus de temps à être simplement conçu qu'ici à résoudre la grille.
 
 \subsection*{Instructions de compilation}
 
-\begin{quotation}
-\$ {\bfseries make}
-
-\end{quotation}
+\begin{quote}
+\$ {\bfseries make} \end{quote}
 
 
 Permet de compiler l'ensemble des sources, l'exécutable généré peut être retrouvé dans $\ast$$\ast$./bin$\ast$$\ast$ .
 
-\begin{quotation}
-\$ {\bfseries make clean}
-
-\end{quotation}
+\begin{quote}
+\$ {\bfseries make clean} \end{quote}
 
 
 Permet de supprimer les fichiers objets.
 
-\begin{quotation}
-\$ {\bfseries make mrproper}
-
-\end{quotation}
+\begin{quote}
+\$ {\bfseries make mrproper} \end{quote}
 
 
 Permet de nettoyer le dossier de tout ce qui peut être régénéré.
 
 \subsection*{Utilisation}
 
-\begin{quotation}
-\$ $\ast$$\ast$./bin/ruzzle\-Solver$\ast$$\ast$
-
-\end{quotation}
+\begin{quote}
+\$ $\ast$$\ast$./bin/ruzzle\+Solver$\ast$$\ast$ \end{quote}
 
 
 Permet d'exécuter le programme en générant une grille aléatoire, les lettres sont tirées au hasard en prenant compte de leurs fréquences d'apparition dans la langue française.
 
 On peut prédéfinir une grille à l'aide d'une chaine de 16 caractères.
 
-Par exemple\-:
+Par exemple\+:
 
-\begin{quotation}
-\$ $\ast$$\ast$./bin/ruzzle\-Solver adcksxirmdesuckh$\ast$$\ast$
-
-\end{quotation}
+\begin{quote}
+\$ $\ast$$\ast$./bin/ruzzle\+Solver adcksxirmdesuckh$\ast$$\ast$ \end{quote}
 
 
-Génèrera la grille \-:
+Génèrera la grille \+:
 
-\begin{quotation}
+\begin{quote}
 A~~~~D~~~~C~~~~K
 
 S~~~~X~~~~I~~~~R
@@ -108,24 +106,26 @@ M~~~~D~~~~E~~~~S
 
 U~~~~C~~~~K~~~~H
 
-\end{quotation}
+\end{quote}
 
 
 Dans le cas d'une chaîne trop petite un message d'erreur apparaîtra, si la chaîne est trop grande, la grille sera composée des 16 premiers caractères.
 
 Les bonus lettres et mots sont tirés aléatoirement de manière à ce qu'il n'y ait pas trop de bonus.
 
-Le résultat du solver se retrouve dans \-:
+Le résultat du solver se retrouve dans \+:
 
-\begin{quotation}
-{\bfseries assets/list\-Words.\-txt}
-
-\end{quotation}
+\begin{quote}
+{\bfseries assets/list\+Words.\+txt} \end{quote}
 
 
 \subsection*{Documentation}
 
-Il est possible de se documenter sur la structure du solver grâce à une documentation générée par doxygen. Le fichier de configuration pour la documentation est fournie et permet donc de régénérer la documentation en cas de soucis, une page html sera crée reprenant toute la documentation \-:
+Il est possible de se documenter sur la structure du solver grâce à une documentation générée par doxygen. Le fichier de configuration pour la documentation est fournie et permet donc de régénérer la documentation en cas de soucis, une page html sera crée reprenant toute la documentation \+:
 
-\begin{quotation}
-{\bfseries doc/html/index.\-html} \end{quotation}
+\begin{quote}
+{\bfseries doc/html/index.\+html} \end{quote}
+
+
+\begin{quote}
+\$ {\bfseries make doc}\end{quote}

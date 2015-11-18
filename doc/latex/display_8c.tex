@@ -1,17 +1,17 @@
 \hypertarget{display_8c}{\section{Référence du fichier src/display.c}
-\label{display_8c}\index{src/display.\-c@{src/display.\-c}}
+\label{display_8c}\index{src/display.\+c@{src/display.\+c}}
 }
 
 
 Affiche la grille.  
 
 
-{\ttfamily \#include $<$stdio.\-h$>$}\\*
-{\ttfamily \#include $<$stdlib.\-h$>$}\\*
-{\ttfamily \#include $<$string.\-h$>$}\\*
-{\ttfamily \#include \char`\"{}../include/random.\-h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}../include/display.\-h\char`\"{}}\\*
-Graphe des dépendances par inclusion de display.\-c\-:
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../include/random.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/display.\+h\char`\"{}}\\*
+Graphe des dépendances par inclusion de display.\+c\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -22,46 +22,48 @@ Graphe des dépendances par inclusion de display.\-c\-:
 \subsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{display_8c_aa10159fb9d4c4dd0d90f094038cb8f16}{init\-Grid} (\hyperlink{structt__Case}{t\-\_\-\-Case} grid\mbox{[}\hyperlink{display_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]}\mbox{[}\hyperlink{display_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]})
+void \hyperlink{display_8c_aa10159fb9d4c4dd0d90f094038cb8f16}{init\+Grid} (\hyperlink{structt__Case}{t\+\_\+\+Case} grid\mbox{[}\hyperlink{display_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]}\mbox{[}\hyperlink{display_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]})
 \begin{DoxyCompactList}\small\item\em Initialise les bonus à zéros. \end{DoxyCompactList}\item 
-void \hyperlink{display_8c_a996285d53053a7448de2cd3e89cc66f7}{get\-Case} (\hyperlink{structt__Case}{t\-\_\-\-Case} grid\mbox{[}\hyperlink{display_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]}\mbox{[}\hyperlink{display_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]}, int line, int col, int nb\-\_\-bonus\mbox{[}$\,$\mbox{]})
+void \hyperlink{display_8c_a996285d53053a7448de2cd3e89cc66f7}{get\+Case} (\hyperlink{structt__Case}{t\+\_\+\+Case} grid\mbox{[}\hyperlink{display_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]}\mbox{[}\hyperlink{display_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]}, int line, int col, int nb\+\_\+bonus\mbox{[}$\,$\mbox{]})
 \begin{DoxyCompactList}\small\item\em Représente une case aléatoirement. \end{DoxyCompactList}\item 
-void \hyperlink{display_8c_a369551137b4051ed8b2fd56838e8c30a}{get\-Case\-From\-Str} (\hyperlink{structt__Case}{t\-\_\-\-Case} grid\mbox{[}\hyperlink{display_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]}\mbox{[}\hyperlink{display_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]}, int nb\-\_\-bonus\mbox{[}$\,$\mbox{]}, char grid\-Str\mbox{[}$\,$\mbox{]}, int str\-Index)
+void \hyperlink{display_8c_a369551137b4051ed8b2fd56838e8c30a}{get\+Case\+From\+Str} (\hyperlink{structt__Case}{t\+\_\+\+Case} grid\mbox{[}\hyperlink{display_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]}\mbox{[}\hyperlink{display_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]}, int nb\+\_\+bonus\mbox{[}$\,$\mbox{]}, char grid\+Str\mbox{[}$\,$\mbox{]}, int str\+Index)
 \begin{DoxyCompactList}\small\item\em Représente une case en fonction de la chaîne tapée en paramètre de main. \end{DoxyCompactList}\item 
-void \hyperlink{display_8c_a8b5a31f5bfcefe241188eca44c65834a}{Grille} (\hyperlink{structt__Case}{t\-\_\-\-Case} grid\mbox{[}\hyperlink{display_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]}\mbox{[}\hyperlink{display_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]}, int argc, char $\ast$grid\-Str\mbox{[}$\,$\mbox{]})
+void \hyperlink{display_8c_a8b5a31f5bfcefe241188eca44c65834a}{Grille} (\hyperlink{structt__Case}{t\+\_\+\+Case} grid\mbox{[}\hyperlink{display_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]}\mbox{[}\hyperlink{display_8h_a0240ac851181b84ac374872dc5434ee4}{N}\mbox{]}, int argc, char $\ast$grid\+Str\mbox{[}$\,$\mbox{]})
 \begin{DoxyCompactList}\small\item\em Représente une grille. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{structt__Case}{t\-\_\-\-Case} \hyperlink{display_8c_adc2d3888a0c89764f0fb62c303df9f6b}{alpha} \mbox{[}26\mbox{]}
+\hyperlink{structt__Case}{t\+\_\+\+Case} \hyperlink{display_8c_adc2d3888a0c89764f0fb62c303df9f6b}{alpha} \mbox{[}26\mbox{]}
 \begin{DoxyCompactList}\small\item\em Définis l'alphabet et le poids de chaque lettre. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Description détaillée}
-Affiche la grille. \begin{DoxyAuthor}{Auteur}
+Affiche la grille. 
+
+\begin{DoxyAuthor}{Auteur}
 Cousin Brandon Ngatchou Junior 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-v1.\-00 
+v1.\+00 
 \end{DoxyVersion}
 \begin{DoxyDate}{Date}
 05/11/2015 
 \end{DoxyDate}
 
 
-Définition dans le fichier \hyperlink{display_8c_source}{display.\-c}.
+Définition dans le fichier \hyperlink{display_8c_source}{display.\+c}.
 
 
 
 \subsection{Documentation des fonctions}
-\hypertarget{display_8c_a996285d53053a7448de2cd3e89cc66f7}{\index{display.\-c@{display.\-c}!get\-Case@{get\-Case}}
-\index{get\-Case@{get\-Case}!display.c@{display.\-c}}
-\subsubsection[{get\-Case}]{\setlength{\rightskip}{0pt plus 5cm}void get\-Case (
+\hypertarget{display_8c_a996285d53053a7448de2cd3e89cc66f7}{\index{display.\+c@{display.\+c}!get\+Case@{get\+Case}}
+\index{get\+Case@{get\+Case}!display.\+c@{display.\+c}}
+\subsubsection[{get\+Case}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Case (
 \begin{DoxyParamCaption}
-\item[{{\bf t\-\_\-\-Case}}]{grid\mbox{[}\-N\mbox{]}\mbox{[}\-N\mbox{]}, }
+\item[{{\bf t\+\_\+\+Case}}]{grid\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]}, }
 \item[{int}]{line, }
 \item[{int}]{col, }
-\item[{int}]{nb\-\_\-bonus\mbox{[}$\,$\mbox{]}}
+\item[{int}]{nb\+\_\+bonus\mbox{[}$\,$\mbox{]}}
 \end{DoxyParamCaption}
 )}}\label{display_8c_a996285d53053a7448de2cd3e89cc66f7}
 
@@ -76,21 +78,21 @@ Représente une case aléatoirement.
 \hline
 {\em col} & Colonne de la case à remplir \\
 \hline
-{\em nb\-\_\-bonus} & Nombre de bonus lettre et mot dans la grille \\
+{\em nb\+\_\+bonus} & Nombre de bonus lettre et mot dans la grille \\
 \hline
 \end{DoxyParams}
 
 
-Définition à la ligne 54 du fichier display.\-c.
+Définition à la ligne 54 du fichier display.\+c.
 
-\hypertarget{display_8c_a369551137b4051ed8b2fd56838e8c30a}{\index{display.\-c@{display.\-c}!get\-Case\-From\-Str@{get\-Case\-From\-Str}}
-\index{get\-Case\-From\-Str@{get\-Case\-From\-Str}!display.c@{display.\-c}}
-\subsubsection[{get\-Case\-From\-Str}]{\setlength{\rightskip}{0pt plus 5cm}void get\-Case\-From\-Str (
+\hypertarget{display_8c_a369551137b4051ed8b2fd56838e8c30a}{\index{display.\+c@{display.\+c}!get\+Case\+From\+Str@{get\+Case\+From\+Str}}
+\index{get\+Case\+From\+Str@{get\+Case\+From\+Str}!display.\+c@{display.\+c}}
+\subsubsection[{get\+Case\+From\+Str}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Case\+From\+Str (
 \begin{DoxyParamCaption}
-\item[{{\bf t\-\_\-\-Case}}]{grid\mbox{[}\-N\mbox{]}\mbox{[}\-N\mbox{]}, }
-\item[{int}]{nb\-\_\-bonus\mbox{[}$\,$\mbox{]}, }
-\item[{char}]{grid\-Str\mbox{[}$\,$\mbox{]}, }
-\item[{int}]{str\-Index}
+\item[{{\bf t\+\_\+\+Case}}]{grid\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]}, }
+\item[{int}]{nb\+\_\+bonus\mbox{[}$\,$\mbox{]}, }
+\item[{char}]{grid\+Str\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{str\+Index}
 \end{DoxyParamCaption}
 )}}\label{display_8c_a369551137b4051ed8b2fd56838e8c30a}
 
@@ -101,24 +103,24 @@ Représente une case en fonction de la chaîne tapée en paramètre de main.
 \begin{DoxyParams}{Paramètres}
 {\em grid} & Grille à remplir \\
 \hline
-{\em nb\-\_\-bonus} & Nombre de bonus lettre et mot dans la grille \\
+{\em nb\+\_\+bonus} & Nombre de bonus lettre et mot dans la grille \\
 \hline
-{\em grid\-Str} & Chaîne de caractère passé en paramètre \\
+{\em grid\+Str} & Chaîne de caractère passé en paramètre \\
 \hline
-{\em str\-Index} & Indice courant de la chaîne passée en paramètre \\
+{\em str\+Index} & Indice courant de la chaîne passée en paramètre \\
 \hline
 \end{DoxyParams}
 
 
-Définition à la ligne 83 du fichier display.\-c.
+Définition à la ligne 83 du fichier display.\+c.
 
-\hypertarget{display_8c_a8b5a31f5bfcefe241188eca44c65834a}{\index{display.\-c@{display.\-c}!Grille@{Grille}}
-\index{Grille@{Grille}!display.c@{display.\-c}}
+\hypertarget{display_8c_a8b5a31f5bfcefe241188eca44c65834a}{\index{display.\+c@{display.\+c}!Grille@{Grille}}
+\index{Grille@{Grille}!display.\+c@{display.\+c}}
 \subsubsection[{Grille}]{\setlength{\rightskip}{0pt plus 5cm}void Grille (
 \begin{DoxyParamCaption}
-\item[{{\bf t\-\_\-\-Case}}]{grid\mbox{[}\-N\mbox{]}\mbox{[}\-N\mbox{]}, }
+\item[{{\bf t\+\_\+\+Case}}]{grid\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]}, }
 \item[{int}]{argc, }
-\item[{char $\ast$}]{grid\-Str\mbox{[}$\,$\mbox{]}}
+\item[{char $\ast$}]{grid\+Str\mbox{[}$\,$\mbox{]}}
 \end{DoxyParamCaption}
 )}}\label{display_8c_a8b5a31f5bfcefe241188eca44c65834a}
 
@@ -131,18 +133,18 @@ Représente une grille.
 \hline
 {\em argc} & Nombres d'arguments du main \\
 \hline
-{\em grid\-Str} & Grille sous forme de chaîne \\
+{\em grid\+Str} & Grille sous forme de chaîne \\
 \hline
 \end{DoxyParams}
 
 
-Définition à la ligne 123 du fichier display.\-c.
+Définition à la ligne 123 du fichier display.\+c.
 
-\hypertarget{display_8c_aa10159fb9d4c4dd0d90f094038cb8f16}{\index{display.\-c@{display.\-c}!init\-Grid@{init\-Grid}}
-\index{init\-Grid@{init\-Grid}!display.c@{display.\-c}}
-\subsubsection[{init\-Grid}]{\setlength{\rightskip}{0pt plus 5cm}void init\-Grid (
+\hypertarget{display_8c_aa10159fb9d4c4dd0d90f094038cb8f16}{\index{display.\+c@{display.\+c}!init\+Grid@{init\+Grid}}
+\index{init\+Grid@{init\+Grid}!display.\+c@{display.\+c}}
+\subsubsection[{init\+Grid}]{\setlength{\rightskip}{0pt plus 5cm}void init\+Grid (
 \begin{DoxyParamCaption}
-\item[{{\bf t\-\_\-\-Case}}]{grid\mbox{[}\-N\mbox{]}\mbox{[}\-N\mbox{]}}
+\item[{{\bf t\+\_\+\+Case}}]{grid\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]}}
 \end{DoxyParamCaption}
 )}}\label{display_8c_aa10159fb9d4c4dd0d90f094038cb8f16}
 
@@ -156,15 +158,15 @@ Initialise les bonus à zéros.
 \end{DoxyParams}
 
 
-Définition à la ligne 32 du fichier display.\-c.
+Définition à la ligne 32 du fichier display.\+c.
 
 
 
 \subsection{Documentation des variables}
-\hypertarget{display_8c_adc2d3888a0c89764f0fb62c303df9f6b}{\index{display.\-c@{display.\-c}!alpha@{alpha}}
-\index{alpha@{alpha}!display.c@{display.\-c}}
-\subsubsection[{alpha}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-\-Case} alpha\mbox{[}26\mbox{]}}}\label{display_8c_adc2d3888a0c89764f0fb62c303df9f6b}
-{\bfseries Valeur initiale \-:}
+\hypertarget{display_8c_adc2d3888a0c89764f0fb62c303df9f6b}{\index{display.\+c@{display.\+c}!alpha@{alpha}}
+\index{alpha@{alpha}!display.\+c@{display.\+c}}
+\subsubsection[{alpha}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\+\_\+\+Case} alpha\mbox{[}26\mbox{]}}}\label{display_8c_adc2d3888a0c89764f0fb62c303df9f6b}
+{\bfseries Valeur initiale \+:}
 \begin{DoxyCode}
 = \{
         \{\textcolor{charliteral}{'a'},1\}, \{\textcolor{charliteral}{'b'},3\}, \{\textcolor{charliteral}{'c'},2\}, \{\textcolor{charliteral}{'d'},2\},
@@ -182,5 +184,5 @@ Définis l'alphabet et le poids de chaque lettre.
 
 
 
-Définition à la ligne 18 du fichier display.\-c.
+Définition à la ligne 18 du fichier display.\+c.
 

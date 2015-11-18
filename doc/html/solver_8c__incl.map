@@ -1,5 +1,5 @@
 <map id="src/solver.c" name="src/solver.c">
-<area shape="rect" id="node7" href="$display_8h.html" title="Prototype de la grille." alt="" coords="181,80,312,107"/>
-<area shape="rect" id="node9" href="$solver_8h.html" title="Prototype du solver." alt="" coords="336,80,461,107"/>
-<area shape="rect" id="node11" href="$trie_8h.html" title="Prototype de la liste chaînée." alt="" coords="486,80,593,107"/>
+<area shape="rect" id="node5" href="$display_8h.html" title="Prototype de la grille. " alt="" coords="268,80,399,107"/>
+<area shape="rect" id="node6" href="$solver_8h.html" title="Prototype du solver. " alt="" coords="423,80,548,107"/>
+<area shape="rect" id="node7" href="$trie_8h.html" title="Prototype de la liste chaînée. " alt="" coords="573,80,681,107"/>
 </map>

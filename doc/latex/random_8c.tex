@@ -1,64 +1,66 @@
 \hypertarget{random_8c}{\section{Référence du fichier src/random.c}
-\label{random_8c}\index{src/random.\-c@{src/random.\-c}}
+\label{random_8c}\index{src/random.\+c@{src/random.\+c}}
 }
 
 
 Fonctions aléatoires.  
 
 
-{\ttfamily \#include $<$stdlib.\-h$>$}\\*
-{\ttfamily \#include $<$stdio.\-h$>$}\\*
-{\ttfamily \#include $<$time.\-h$>$}\\*
-{\ttfamily \#include $<$string.\-h$>$}\\*
-Graphe des dépendances par inclusion de random.\-c\-:
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+Graphe des dépendances par inclusion de random.\+c\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=321pt]{random_8c__incl}
+\includegraphics[width=322pt]{random_8c__incl}
 \end{center}
 \end{figure}
 \subsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{random_8c_affc667f54d3aad05a212a708a1967851}{void \hyperlink{random_8c_affc667f54d3aad05a212a708a1967851}{init\-Rand} ()}\label{random_8c_affc667f54d3aad05a212a708a1967851}
+\hypertarget{random_8c_affc667f54d3aad05a212a708a1967851}{void \hyperlink{random_8c_affc667f54d3aad05a212a708a1967851}{init\+Rand} ()}\label{random_8c_affc667f54d3aad05a212a708a1967851}
 
 \begin{DoxyCompactList}\small\item\em Initialise le tirage aléatoire. \end{DoxyCompactList}\item 
-char \hyperlink{random_8c_ab34a3eb028740a3f61ce69c5efaac376}{rand\-Char} ()
+char \hyperlink{random_8c_ab34a3eb028740a3f61ce69c5efaac376}{rand\+Char} ()
 \begin{DoxyCompactList}\small\item\em Tire une lettre au hasard en prenant en compte leur fréquence d'apparition dans la langue française. \end{DoxyCompactList}\item 
-int \hyperlink{random_8c_a8de3f80b9cac15b21aee0c7d56ae0f5a}{get\-I\-Char} (char c)
+int \hyperlink{random_8c_a8de3f80b9cac15b21aee0c7d56ae0f5a}{get\+I\+Char} (char c)
 \begin{DoxyCompactList}\small\item\em Permet de récupérer l'indice dans la matrice de la lettre tirée au hasard. \end{DoxyCompactList}\item 
-int \hyperlink{random_8c_a92316f4f4339b1dd0436637ce9552bb6}{rand\-Case} ()
+int \hyperlink{random_8c_a92316f4f4339b1dd0436637ce9552bb6}{rand\+Case} ()
 \begin{DoxyCompactList}\small\item\em Permet de tirer une lettre aléatoirement. \end{DoxyCompactList}\item 
-void \hyperlink{random_8c_a9b2c6b2bb8b813fc92d7f8be99e5d47d}{get\-Bonus} (char bo\-Char\-L\mbox{[}$\,$\mbox{]}, char bo\-Char\-M\mbox{[}$\,$\mbox{]}, int $\ast$nb\-\_\-bo\-L, int $\ast$nb\-\_\-bo\-M)
+void \hyperlink{random_8c_a9b2c6b2bb8b813fc92d7f8be99e5d47d}{get\+Bonus} (char bo\+Char\+L\mbox{[}$\,$\mbox{]}, char bo\+Char\+M\mbox{[}$\,$\mbox{]}, int $\ast$nb\+\_\+bo\+L, int $\ast$nb\+\_\+bo\+M)
 \begin{DoxyCompactList}\small\item\em Attribue un bonus. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Description détaillée}
-Fonctions aléatoires. \begin{DoxyAuthor}{Auteur}
+Fonctions aléatoires. 
+
+\begin{DoxyAuthor}{Auteur}
 Cousin Brandon Ngatchou Junior 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-v1.\-00 
+v1.\+00 
 \end{DoxyVersion}
 \begin{DoxyDate}{Date}
 05/11/2015 
 \end{DoxyDate}
 
 
-Définition dans le fichier \hyperlink{random_8c_source}{random.\-c}.
+Définition dans le fichier \hyperlink{random_8c_source}{random.\+c}.
 
 
 
 \subsection{Documentation des fonctions}
-\hypertarget{random_8c_a9b2c6b2bb8b813fc92d7f8be99e5d47d}{\index{random.\-c@{random.\-c}!get\-Bonus@{get\-Bonus}}
-\index{get\-Bonus@{get\-Bonus}!random.c@{random.\-c}}
-\subsubsection[{get\-Bonus}]{\setlength{\rightskip}{0pt plus 5cm}void get\-Bonus (
+\hypertarget{random_8c_a9b2c6b2bb8b813fc92d7f8be99e5d47d}{\index{random.\+c@{random.\+c}!get\+Bonus@{get\+Bonus}}
+\index{get\+Bonus@{get\+Bonus}!random.\+c@{random.\+c}}
+\subsubsection[{get\+Bonus}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Bonus (
 \begin{DoxyParamCaption}
-\item[{char}]{bo\-Char\-L\mbox{[}$\,$\mbox{]}, }
-\item[{char}]{bo\-Char\-M\mbox{[}$\,$\mbox{]}, }
-\item[{int $\ast$}]{nb\-\_\-bo\-L, }
-\item[{int $\ast$}]{nb\-\_\-bo\-M}
+\item[{char}]{bo\+Char\+L\mbox{[}$\,$\mbox{]}, }
+\item[{char}]{bo\+Char\+M\mbox{[}$\,$\mbox{]}, }
+\item[{int $\ast$}]{nb\+\_\+bo\+L, }
+\item[{int $\ast$}]{nb\+\_\+bo\+M}
 \end{DoxyParamCaption}
 )}}\label{random_8c_a9b2c6b2bb8b813fc92d7f8be99e5d47d}
 
@@ -67,22 +69,22 @@ Attribue un bonus.
 
 
 \begin{DoxyParams}{Paramètres}
-{\em bo\-Char\-L\mbox{[}$\,$\mbox{]}} & Bonus lettre de la case courante \\
+{\em bo\+Char\+L\mbox{[}$\,$\mbox{]}} & Bonus lettre de la case courante \\
 \hline
-{\em bo\-Char\-M\mbox{[}$\,$\mbox{]}} & Bonus mot de la case courante \\
+{\em bo\+Char\+M\mbox{[}$\,$\mbox{]}} & Bonus mot de la case courante \\
 \hline
-{\em nb\-\_\-bo\-L} & Nombre de bonus lettre dans la grille \\
+{\em nb\+\_\+bo\+L} & Nombre de bonus lettre dans la grille \\
 \hline
-{\em nb\-\_\-bo\-M} & Nombre de bonus mot dans la grille \\
+{\em nb\+\_\+bo\+M} & Nombre de bonus mot dans la grille \\
 \hline
 \end{DoxyParams}
 
 
-Définition à la ligne 82 du fichier random.\-c.
+Définition à la ligne 82 du fichier random.\+c.
 
-\hypertarget{random_8c_a8de3f80b9cac15b21aee0c7d56ae0f5a}{\index{random.\-c@{random.\-c}!get\-I\-Char@{get\-I\-Char}}
-\index{get\-I\-Char@{get\-I\-Char}!random.c@{random.\-c}}
-\subsubsection[{get\-I\-Char}]{\setlength{\rightskip}{0pt plus 5cm}int get\-I\-Char (
+\hypertarget{random_8c_a8de3f80b9cac15b21aee0c7d56ae0f5a}{\index{random.\+c@{random.\+c}!get\+I\+Char@{get\+I\+Char}}
+\index{get\+I\+Char@{get\+I\+Char}!random.\+c@{random.\+c}}
+\subsubsection[{get\+I\+Char}]{\setlength{\rightskip}{0pt plus 5cm}int get\+I\+Char (
 \begin{DoxyParamCaption}
 \item[{char}]{c}
 \end{DoxyParamCaption}
@@ -98,11 +100,11 @@ Permet de récupérer l'indice dans la matrice de la lettre tirée au hasard.
 \end{DoxyParams}
 
 
-Définition à la ligne 63 du fichier random.\-c.
+Définition à la ligne 63 du fichier random.\+c.
 
-\hypertarget{random_8c_a92316f4f4339b1dd0436637ce9552bb6}{\index{random.\-c@{random.\-c}!rand\-Case@{rand\-Case}}
-\index{rand\-Case@{rand\-Case}!random.c@{random.\-c}}
-\subsubsection[{rand\-Case}]{\setlength{\rightskip}{0pt plus 5cm}int rand\-Case (
+\hypertarget{random_8c_a92316f4f4339b1dd0436637ce9552bb6}{\index{random.\+c@{random.\+c}!rand\+Case@{rand\+Case}}
+\index{rand\+Case@{rand\+Case}!random.\+c@{random.\+c}}
+\subsubsection[{rand\+Case}]{\setlength{\rightskip}{0pt plus 5cm}int rand\+Case (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
@@ -116,11 +118,11 @@ Renvoie l'indice de la lettre tirée
 \end{DoxyReturn}
 
 
-Définition à la ligne 71 du fichier random.\-c.
+Définition à la ligne 71 du fichier random.\+c.
 
-\hypertarget{random_8c_ab34a3eb028740a3f61ce69c5efaac376}{\index{random.\-c@{random.\-c}!rand\-Char@{rand\-Char}}
-\index{rand\-Char@{rand\-Char}!random.c@{random.\-c}}
-\subsubsection[{rand\-Char}]{\setlength{\rightskip}{0pt plus 5cm}char rand\-Char (
+\hypertarget{random_8c_ab34a3eb028740a3f61ce69c5efaac376}{\index{random.\+c@{random.\+c}!rand\+Char@{rand\+Char}}
+\index{rand\+Char@{rand\+Char}!random.\+c@{random.\+c}}
+\subsubsection[{rand\+Char}]{\setlength{\rightskip}{0pt plus 5cm}char rand\+Char (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
@@ -134,5 +136,5 @@ e par défaut
 \end{DoxyReturn}
 
 
-Définition à la ligne 27 du fichier random.\-c.
+Définition à la ligne 27 du fichier random.\+c.
 

@@ -7,10 +7,15 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "../include/display.h"
 #include "../include/solver.h"
 #include "../include/trie.h"
+
+ char gridWord[17] = "\0"; /**< Mot formé à partir de la grille*/
+ int totalW = 0; /**< Total points du mot formé */
+ int boW = 1;	/**< Bonus multiplicateur du mot */
 
 /**
  * Calcule le total de points de la case courante.
@@ -35,171 +40,104 @@ int mulWord(t_Case Case){
 }
 
 /**
- * Trouve un mot dans la grille.
- * @param grid Grille du jeu
- * @param i Ligne de la case courante
- * @param j Colonne de la case courante
- * @param word Mot composé à partir de la grille
- * @param totalW Nombre de points total
- * @param boM Coefficient multiplicateur du mot
+ * Récupère un mot dans le dictionnaire
+ * @param  dict Dictionnaire dans lequel regarder
+ * @return 		Retourne un mot dans l'ordre séquentiel
  */
-void findWords(t_Case grid[N][N], int i, int j, char word[], int totalW, int boM){
-	int dx, dy, find;
+char* getWord(FILE * dict) {
+    char* word = NULL;
+    
+    word = malloc(17 * sizeof(char));
+    fscanf(dict, "%s", word);
+    
+    return word;
+}
+
+/**
+ * Cherche un point de départ à partir de la case courante
+ * @param  Case Case courante
+ * @param  word Mot récupéré dans le dictionnaire
+ * @return      Retourne 1 si point de départ trouvé sinon 0
+ */
+int searchStart(t_Case Case, char word[]){
+	return (Case.let == word[0]);
+}
+
+/**
+ * Permet de confirmer que les deux mots sont identiques si 
+ * c'est le cas alors on le rajoute dans la liste chaînée
+ * @param gridWord Mot formé à partir de la grille
+ * @param word     Mot tiré du dictionnaire
+ * @param pts 	   Nombre de points total pour le mot formé
+ */
+void confirmWord(char gridWord[], char word[], int pts){
 	element current;
-	
-	grid[i][j].visited = 1;
 
-	// Composition + recherche du mot
-	word[strlen(word)] = grid[i][j].let;
-	word[strlen(word)+1] = '\0';
-	find = searchWord(word);
-	
-	// Calcul des points
-	totalW += totCase(grid[i][j]);
-	boM *= mulWord(grid[i][j]);
-
-	
-	if(find == 2 && strlen(word) >= 2){
+	if(strcmp(word, gridWord) == 0){
 		strcpy(current.word, word);
-		current.pts = totalW * boM;
+		current.pts = pts;
 		addElement(&current);
 	}
 
-			// Parcours des cases voisines
-			for (dx = (i <= 0 ? 0 : -1); dx <= (i >= N-1 ? 0 : 1); dx++) { 
-				for (dy = (j <= 0 ? 0 : -1); dy <= (j >= N-1 ? 0 : 1); dy++) {
-					if (grid[dx+i][dy+j].visited == 0 && (find == 1 || find == 2)){
-						findWords(grid, i+dx, j+dy, word, totalW, boM); 
-					}
-				} 
-			}
-
-			// On revient en arrière
-			word[strlen(word)-1] = '\0';
-			grid[i][j].visited = 0;
-			totalW -= totCase(grid[i][j]);
-			boM /= mulWord(grid[i][j]);
 }
 
 /**
- * Cherche un mot dans le dictionnaire.
- * @param word Mot à chercher 
- * @return Retourne 0 si mot introuvable, 1 si mot possible, 2 si mot trouvé
+ * Forme un mot en parcourant la grille
+ * @param grid  Grille à résoudre
+ * @param i     Point de départ vertical
+ * @param j     Point de départ horizontal
+ * @param word  Mot à chercher
  */
-int searchWord(char word[]){
-	FILE * file;
+void formWord(t_Case grid[N][N], int i, int j, char word[]){
+	int row, col;
+	int sizeW;
 
-	int sizeW = strlen(word);
-	char tmpWord[sizeW+1], cChar;
-	int i = 0;
-
-	char dir[15]= "assets/";
-	char filename[6] = "";
+	grid[i][j].visited = 1; // Permet de ne pas repasser sur une même case
 	
-	// Définis le dictionnaire à utiliser
-	filename[0] = word[0];
-	strcat(filename, ".txt");
-	strcat(dir, filename);
+	gridWord[strlen(gridWord)] = word[strlen(gridWord)]; // On initialise le mot formé
+	sizeW = strlen(gridWord);
+	gridWord[sizeW+1] = '\0';
 
-	file = fopen(dir,"r");
-	if(file !=NULL){
-		cChar=fgetc(file);
-		while(cChar != EOF){
-		    
-		    // Si le mot courant est trop long on passe au suivant
-		    if(i == sizeW){
-		    	while(cChar != '\n'){
-		    		cChar = fgetc(file);
-		    	}
-		    } 
+	totalW += totCase(grid[i][j]); // Calcul des points
+	boW *= mulWord(grid[i][j]);
 
-		    // Parcours tout les mots
-		    if(cChar != '\n'){
-		        tmpWord[i] = cChar;
-		        i++;
-		        tmpWord[i]='\0';
-		        
+	confirmWord(gridWord, word, totalW * boW);
 
-		        /*  On regarde si le mot est possible tout en s'assurant
-					que le mot formé n'est pas un mot complet
-		        */
-		        cChar = fgetc(file);
-		        if(cChar != '\n' && strcmp(word,tmpWord) == 0){
-		        	fclose(file);
-		        	return 1;
-		        }
-		        fseek(file, -1, SEEK_CUR);
+	/* On parcourt les cases voisines afin de trouver une correspondance
+	 * entre le mot du dictionnaire et la grille.
+	*/
+	for ( row=i-1; row<=i+1 && row<N; row++){
+    	for (col=j-1; col<=j+1 && col<N; col++){
+        	if (row>=0 && col>=0 && !grid[row][col].visited && grid[row][col].let == word[sizeW])
+          		formWord(grid,row, col, word);
+  		}
+  	}
 
-		        // Optimise le traitement
-		 		if(tmpWord[1] > word[1]){
-		 			fclose(file);
-		 			return 0;
-		 		}
+  	gridWord[sizeW-1] = '\0'; // Enlève le dernier caractère en cas d'incompatibiltié
+  	grid[i][j].visited = 0;
 
-		    }else{
+  	totalW -= totCase(grid[i][j]);
+	boW /= mulWord(grid[i][j]);
 
-		        tmpWord[i]='\0';
-		        // Le mot a été trouvé
-		        if(strcmp(word,tmpWord) == 0){
-		            fclose(file);
-		            return 2;
-		        }
-		        i=0;
-		        
-		    }
-
-		    cChar=fgetc(file);
-		}
-		fclose(file);
-
-	}else{
-		printf("Le fichier %s n'a pu être chargé.", dir);
-	}
-	return 0;
 }
 
 /**
- * Crée les dictionnaires pour optimiser le traitement.
- * @param dir Indique le dossier dans lequel chercher le dictionnaire
- * @param filename Indique le nom du dictionnaire
+ * Cherche le mot dans la grille
+ * @param grid Grille à résoudre
+ * @param word Mot récupéré dans le dictionnaire
  */
-void createDict(char dir[], char filename[]){
-	FILE * dirDic;
-	FILE * dest;
-	char let = 97; // Code ASCII de la lettre a
-	char word[70] = "";
-	int sizeFilename = strlen(filename);
+void searchWord(t_Case grid[N][N], char word[]){
+	int i, j;
 
-	strcat(dir, filename);
-	dirDic = fopen(dir, "r");
-	dir[strlen(dir)-sizeFilename] = '\0'; // Nettoie le chemin
-
-	if(dirDic != NULL){
-		while(!feof(dirDic)){
-			
-			// Change de dictionnaire
-			filename[0] = let;
-			filename[1]='\0';
-			strcat(&filename[1], ".txt");
-			if(let != 97){
-				dir[strlen(dir)-5] = '\0';
+	for (i = 0; i < N; i++)
+	{
+		for (j = 0; j < N; j++)
+		{
+			if(searchStart(grid[i][j], word)){
+				formWord(grid, i, j, word);
 			}
-			strcat(dir, filename);
-
-			
-			dest = fopen(dir,"w");
-
-			fscanf(dirDic, "%s", word);
-			while((word[0] == let || word[0] == let-32) && !feof(dirDic)){
-				fprintf(dest, "%s\n", word);
-				fscanf(dirDic, "%s", word);
-			}
-			fclose(dest);
-			let++;
 		}
-		fclose(dirDic);
-	}else printf("Le fichier n'a pu être chargé !");
-
+	}
 }
 
 /**
@@ -207,14 +145,21 @@ void createDict(char dir[], char filename[]){
  * 	@param grid Grille à résoudre
  */
 void Solver(t_Case grid[N][N]){
-	int i, j;
-	char word[17] = "\0";
-
-	for (i = 0; i < N; i++)
-	{
-		for (j = 0; j < N; j++)
-		{	
-			findWords(grid, i, j, word, 0, 1);
+	FILE * dict;
+	char word[17];
+	
+	dict = fopen("assets/dict.txt","r");
+	if(dict != NULL){
+		
+		strcpy(word, getWord(dict));
+		while(!feof(dict)){
+			searchWord(grid, word);
+			strcpy(word, getWord(dict));
 		}
+		fclose(dict);
+
+	}else{
+		printf("Erreur fichier introuvable ou droit insuffisant !");
 	}
+	
 }

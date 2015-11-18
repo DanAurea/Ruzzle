@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['right',['right',['../structelement.html#a37542facf22f1fffc9843c9f00be9216',1,'element']]],
-  ['root',['root',['../trie_8c.html#a400fc15964edd9c35132913b24b25ded',1,'trie.c']]]
+  ['pts',['pts',['../structt__Case.html#a0ca7fb3ede63f530b081a9ba25dd0c42',1,'t_Case::pts()'],['../structelement.html#afa46df5a6444396565aa685782411b44',1,'element::pts()']]]
 ];

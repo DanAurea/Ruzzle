@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.3.1"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
 <title>Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior:  Fichier source de src/random.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -31,7 +31,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.3.1 -->
+<!-- Généré par Doxygen 1.8.8 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -94,11 +94,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;time.h&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="random_8h.html#affc667f54d3aad05a212a708a1967851">   17</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="random_8c.html#affc667f54d3aad05a212a708a1967851" title="Initialise le tirage aléatoire.">initRand</a>(){</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="random_8h.html#affc667f54d3aad05a212a708a1967851">   17</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="random_8c.html#affc667f54d3aad05a212a708a1967851">initRand</a>(){</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    srand(time(NULL));</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="random_8c.html#ab34a3eb028740a3f61ce69c5efaac376">   27</a></span>&#160;<span class="keywordtype">char</span> <a class="code" href="random_8c.html#ab34a3eb028740a3f61ce69c5efaac376" title="Tire une lettre au hasard en prenant en compte leur fréquence d&#39;apparition dans la langue française...">randChar</a>(){</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="random_8c.html#ab34a3eb028740a3f61ce69c5efaac376">   27</a></span>&#160;<span class="keywordtype">char</span> <a class="code" href="random_8c.html#ab34a3eb028740a3f61ce69c5efaac376">randChar</a>(){</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">int</span> iCase = rand() % 1486387;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">if</span>(iCase &lt; 745) <span class="keywordflow">return</span> <span class="charliteral">&#39;k&#39;</span>;</div>
@@ -129,15 +129,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> <span class="charliteral">&#39;e&#39;</span>;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="code" href="random_8h.html#a8de3f80b9cac15b21aee0c7d56ae0f5a">   63</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="random_8c.html#a8de3f80b9cac15b21aee0c7d56ae0f5a" title="Permet de récupérer l&#39;indice dans la matrice de la lettre tirée au hasard.">getIChar</a>(<span class="keywordtype">char</span> c){</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="random_8h.html#a8de3f80b9cac15b21aee0c7d56ae0f5a">   63</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="random_8c.html#a8de3f80b9cac15b21aee0c7d56ae0f5a">getIChar</a>(<span class="keywordtype">char</span> c){</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> c - 97;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="code" href="random_8h.html#a92316f4f4339b1dd0436637ce9552bb6">   71</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="random_8c.html#a92316f4f4339b1dd0436637ce9552bb6" title="Permet de tirer une lettre aléatoirement.">randCase</a>(){</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="random_8c.html#a8de3f80b9cac15b21aee0c7d56ae0f5a" title="Permet de récupérer l&#39;indice dans la matrice de la lettre tirée au hasard.">getIChar</a>(<a class="code" href="random_8c.html#ab34a3eb028740a3f61ce69c5efaac376" title="Tire une lettre au hasard en prenant en compte leur fréquence d&#39;apparition dans la langue française...">randChar</a>());</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="random_8h.html#a92316f4f4339b1dd0436637ce9552bb6">   71</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="random_8c.html#a92316f4f4339b1dd0436637ce9552bb6">randCase</a>(){</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="random_8c.html#a8de3f80b9cac15b21aee0c7d56ae0f5a">getIChar</a>(<a class="code" href="random_8c.html#ab34a3eb028740a3f61ce69c5efaac376">randChar</a>());</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="code" href="random_8h.html#a9b2c6b2bb8b813fc92d7f8be99e5d47d">   82</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="random_8c.html#a9b2c6b2bb8b813fc92d7f8be99e5d47d" title="Attribue un bonus.">getBonus</a>(<span class="keywordtype">char</span> boCharL[], <span class="keywordtype">char</span> boCharM[], <span class="keywordtype">int</span> *nb_boL, <span class="keywordtype">int</span> *nb_boM){</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="random_8h.html#a9b2c6b2bb8b813fc92d7f8be99e5d47d">   82</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="random_8c.html#a9b2c6b2bb8b813fc92d7f8be99e5d47d">getBonus</a>(<span class="keywordtype">char</span> boCharL[], <span class="keywordtype">char</span> boCharM[], <span class="keywordtype">int</span> *nb_boL, <span class="keywordtype">int</span> *nb_boM){</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">int</span> randBonus = rand() % 70;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span>(randBonus &lt;= 8 &amp;&amp; *nb_boL != 2){</div>
@@ -165,12 +165,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="ttc" id="random_8c_html_affc667f54d3aad05a212a708a1967851"><div class="ttname"><a href="random_8c.html#affc667f54d3aad05a212a708a1967851">initRand</a></div><div class="ttdeci">void initRand()</div><div class="ttdoc">Initialise le tirage aléatoire. </div><div class="ttdef"><b>Definition:</b> <a href="random_8c_source.html#l00017">random.c:17</a></div></div>
+<div class="ttc" id="random_8c_html_a92316f4f4339b1dd0436637ce9552bb6"><div class="ttname"><a href="random_8c.html#a92316f4f4339b1dd0436637ce9552bb6">randCase</a></div><div class="ttdeci">int randCase()</div><div class="ttdoc">Permet de tirer une lettre aléatoirement. </div><div class="ttdef"><b>Definition:</b> <a href="random_8c_source.html#l00071">random.c:71</a></div></div>
+<div class="ttc" id="random_8c_html_a8de3f80b9cac15b21aee0c7d56ae0f5a"><div class="ttname"><a href="random_8c.html#a8de3f80b9cac15b21aee0c7d56ae0f5a">getIChar</a></div><div class="ttdeci">int getIChar(char c)</div><div class="ttdoc">Permet de récupérer l&#39;indice dans la matrice de la lettre tirée au hasard. </div><div class="ttdef"><b>Definition:</b> <a href="random_8c_source.html#l00063">random.c:63</a></div></div>
+<div class="ttc" id="random_8c_html_a9b2c6b2bb8b813fc92d7f8be99e5d47d"><div class="ttname"><a href="random_8c.html#a9b2c6b2bb8b813fc92d7f8be99e5d47d">getBonus</a></div><div class="ttdeci">void getBonus(char boCharL[], char boCharM[], int *nb_boL, int *nb_boM)</div><div class="ttdoc">Attribue un bonus. </div><div class="ttdef"><b>Definition:</b> <a href="random_8c_source.html#l00082">random.c:82</a></div></div>
+<div class="ttc" id="random_8c_html_ab34a3eb028740a3f61ce69c5efaac376"><div class="ttname"><a href="random_8c.html#ab34a3eb028740a3f61ce69c5efaac376">randChar</a></div><div class="ttdeci">char randChar()</div><div class="ttdoc">Tire une lettre au hasard en prenant en compte leur fréquence d&#39;apparition dans la langue française...</div><div class="ttdef"><b>Definition:</b> <a href="random_8c_source.html#l00027">random.c:27</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Novembre 16 2015 08:30:58 pour Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Mercredi 18 Novembre 2015 01:13:12 pour Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.3.1
+</a> 1.8.8
 </small></address>
 </body>
 </html>

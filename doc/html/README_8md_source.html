@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.3.1"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
 <title>Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior:  Fichier source de README.md</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -31,7 +31,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.3.1 -->
+<!-- Généré par Doxygen 1.8.8 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -84,110 +84,113 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="title">README.md</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor"># Ruzzle</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;# Ruzzle</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;Le Ruzzle est un jeu originaire du monde mobile, ce jeu consiste à former le plus de mots en un temps imparti à partir</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;d<span class="stringliteral">&#39;une grille de lettres générée aléatoirement.</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="stringliteral">Le but étant de marquer le plus de points possible pour celà des bonus lettre et mot double/triple sont répartis sur la grille</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="stringliteral">mais il n&#39;</span>est pas permis de réutiliser deux fois la même <span class="keywordflow">case</span>.</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;d&#39;une grille de lettres générée aléatoirement.</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;Le but étant de marquer le plus de points possible pour celà des bonus lettre et mot double/triple sont répartis sur la grille</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;mais il n&#39;est pas permis de réutiliser deux fois la même case.</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;## Sommaire</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;   **Ruzzle**</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;   1. **[Changelog](#changelog)**</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;     - **[Version 1.0](#version-10)**</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;     - **[Version 1.01](#version-101-à-venir)**</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;   2. **[A faire](#a-faire)**</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;   3. **[Optimisation](#optimisation)**</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;   3. **[Instructions de compilation](#instructions-de-compilation)**</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;   4. **[Utilisation](#utilisation)**</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;   5. **[Documentation](#documentation)**</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">## A faire</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor"></span> </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; - [x] Documentation</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; - [ ] CUnit</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; - [ ] Compte rendu</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; - [ ] Optimisation</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">## Changelog</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">### Version 1.0</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor"></span> - <a class="code" href="solver_8c.html#acb26ab357db8918adfe55385af56ba11" title="Résoud la grille.">Solver</a> complet permettant la résolution d<span class="stringliteral">&#39;une grille saisie ou générée aléatoirement</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="stringliteral"> - Documentation complète</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="stringliteral"> - Instructions utilisateur</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="stringliteral">### Version 1.01 (à venir)</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="stringliteral"> - Optimisations diverses sur le traitement</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="stringliteral"> - Test unitaires</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="stringliteral">## Optimisation</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="stringliteral">Pour le moment le solver vérifiant toutes les combinaisons en ouvrant le dictionnaire correspondant et en vérifiant toutes les possibilités, les temps d&#39;</span>accés rendent l<span class="stringliteral">&#39;exécution un peu lente (~ 25s max ). Il reste néanmoins quelques modifications à apporter pour réduire au maximum ce temps.</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="stringliteral">## Instructions de compilation</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="stringliteral">&gt;  $ **make**</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="stringliteral">Permet de compiler l&#39;</span>ensemble des sources, l<span class="stringliteral">&#39;exécutable généré peut être retrouvé dans **./bin** .</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="stringliteral">&gt;  $ **make clean**</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="stringliteral">Permet de supprimer les fichiers objets.</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="stringliteral">&gt;  $ **make mrproper**</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="stringliteral">Permet de nettoyer le dossier de tout ce qui peut être régénéré.</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="stringliteral">## Utilisation</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="stringliteral">&gt;  $ **./bin/ruzzleSolver**</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="stringliteral">Permet d&#39;</span>exécuter le programme en générant une grille aléatoire, les lettres sont tirées au hasard en prenant compte de leurs fréquences d<span class="stringliteral">&#39;apparition dans la langue française.</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="stringliteral">On peut prédéfinir une grille à l&#39;</span>aide d<span class="stringliteral">&#39;une chaine de 16 caractères.</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="stringliteral">Par exemple:</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="stringliteral">&gt;  $ **./bin/ruzzleSolver adcksxirmdesuckh**</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="stringliteral">Génèrera la grille : </span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="stringliteral">&gt;   A&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;D&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;C&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;K</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="stringliteral">&gt; </span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="stringliteral">&gt;   S&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;X&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;I&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;R</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="stringliteral">&gt; </span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="stringliteral">&gt;   M&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;D&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;E&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;S</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="stringliteral">&gt; </span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="stringliteral">&gt;   U&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;C&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;K&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;H </span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="stringliteral">&gt; </span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="stringliteral">Dans le cas d&#39;</span>une chaîne trop petite un message d<span class="stringliteral">&#39;erreur apparaîtra, si la chaîne est trop grande,</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="stringliteral">la grille sera composée des 16 premiers caractères.</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="stringliteral">Les bonus lettres et mots sont tirés aléatoirement de manière à ce qu&#39;</span>il n<span class="stringliteral">&#39;y ait pas trop de bonus.</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="stringliteral">Le résultat du solver se retrouve dans :</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="stringliteral">&gt; **assets/listWords.txt**</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="stringliteral">## Documentation</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="stringliteral">Il est possible de se documenter sur la structure du solver grâce à une documentation générée par doxygen.</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="stringliteral">Le fichier de configuration pour la documentation est fournie et permet donc de régénérer la documentation en cas de soucis, une page html sera crée reprenant toute la documentation :</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="stringliteral">&gt; **doc/html/index.html**</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;     - **[Version 1.01](#version-101)**</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;     - **[Version 1.08](#version-108)**</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;   2. **[A faire](#a-faire)**</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;   3. **[Optimisation](#optimisation)**</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;   3. **[Instructions de compilation](#instructions-de-compilation)**</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;   4. **[Utilisation](#utilisation)**</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;   5. **[Documentation](#documentation)**</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;## A faire</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; - [x] Documentation</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; - [ ] CUnit</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; - [ ] Compte rendu</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; - [x] Optimisation</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;## Changelog</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;### Version 1.0</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; - Solver complet permettant la résolution d&#39;une grille saisie ou générée aléatoirement</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; - Documentation complète</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; - Instructions utilisateur</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;### Version 1.01</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; - Optimisations diverses sur le traitement</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;### Version 1.08</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; - Comptage points</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; - Tests unitaires</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;## Optimisation</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;Le solver résouds la grille en l&#39;espace de ~100 ms actuellement, le seul moyen d&#39;optimiser le traitement encore plus est de faire un arbre de recherche mais ce serait plus coûteux en mémoire, tout en sachant qu&#39;avec la taille importante du dictionnaire l&#39;arbre de recherche pourrait prendre plus de temps à être simplement conçu qu&#39;ici à résoudre la grille.</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;## Instructions de compilation</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;&gt;  $ **make**</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;Permet de compiler l&#39;ensemble des sources, l&#39;exécutable généré peut être retrouvé dans **./bin** .</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;&gt;  $ **make clean**</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;Permet de supprimer les fichiers objets.</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;&gt;  $ **make mrproper**</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;Permet de nettoyer le dossier de tout ce qui peut être régénéré.</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;## Utilisation</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;&gt;  $ **./bin/ruzzleSolver**</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;Permet d&#39;exécuter le programme en générant une grille aléatoire, les lettres sont tirées au hasard en prenant compte de leurs fréquences d&#39;apparition dans la langue française.</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;On peut prédéfinir une grille à l&#39;aide d&#39;une chaine de 16 caractères.</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;Par exemple:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;&gt;  $ **./bin/ruzzleSolver adcksxirmdesuckh**</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;Génèrera la grille : </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;&gt;  A&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;D&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;C&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;K</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;&gt; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;&gt;  S&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;X&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;I&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;R</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;&gt; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;&gt;  M&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;D&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;E&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;S</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;&gt; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;&gt;  U&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;C&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;K&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;H </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;&gt; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;Dans le cas d&#39;une chaîne trop petite un message d&#39;erreur apparaîtra, si la chaîne est trop grande,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;la grille sera composée des 16 premiers caractères.</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;Les bonus lettres et mots sont tirés aléatoirement de manière à ce qu&#39;il n&#39;y ait pas trop de bonus.</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;Le résultat du solver se retrouve dans :</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;&gt; **assets/listWords.txt**</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;## Documentation</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;Il est possible de se documenter sur la structure du solver grâce à une documentation générée par doxygen.</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;Le fichier de configuration pour la documentation est fournie et permet donc de régénérer la documentation en cas de soucis, une page html sera crée reprenant toute la documentation :</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;&gt; **doc/html/index.html**</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;&gt; $ **make doc**</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Novembre 16 2015 08:30:58 pour Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Mercredi 18 Novembre 2015 01:13:12 pour Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.3.1
+</a> 1.8.8
 </small></address>
 </body>
 </html>

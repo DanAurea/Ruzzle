@@ -1,5 +1,5 @@
 <map id="include/trie.h" name="include/trie.h">
-<area shape="rect" id="node3" href="$ruzzle_8c.html" title="Solver de Ruzzle." alt="" coords="5,80,96,107"/>
-<area shape="rect" id="node5" href="$solver_8c.html" title="Résoud la grille." alt="" coords="120,80,211,107"/>
-<area shape="rect" id="node7" href="$trie_8c.html" title="Met au point une liste chaînée d&#39;ordre décroissant." alt="" coords="235,80,308,107"/>
+<area shape="rect" id="node2" href="$ruzzle_8c.html" title="Solver de Ruzzle. " alt="" coords="5,80,96,107"/>
+<area shape="rect" id="node3" href="$solver_8c.html" title="Résoud la grille. " alt="" coords="120,80,211,107"/>
+<area shape="rect" id="node4" href="$trie_8c.html" title="Met au point une liste chaînée d&#39;ordre décroissant. " alt="" coords="235,80,309,107"/>
 </map>

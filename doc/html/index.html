@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.3.1"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
 <title>Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior: Page principale</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -31,7 +31,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.3.1 -->
+<!-- Généré par Doxygen 1.8.8 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -80,11 +80,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="contents">
 <div class="textblock"><p>Le Ruzzle est un jeu originaire du monde mobile, ce jeu consiste à former le plus de mots en un temps imparti à partir d'une grille de lettres générée aléatoirement. Le but étant de marquer le plus de points possible pour celà des bonus lettre et mot double/triple sont répartis sur la grille mais il n'est pas permis de réutiliser deux fois la même case.</p>
 <h2>Sommaire</h2>
-<p><b>Ruzzle</b></p>
-<ol type="1">
+<p><b>Ruzzle</b></p><ol type="1">
 <li>**<a href="#changelog">Changelog</a>**<ul>
 <li>**<a href="#version-10">Version 1.0</a>**</li>
-<li>**<a href="#version-101-à-venir">Version 1.01</a>**</li>
+<li>**<a href="#version-101">Version 1.01</a>**</li>
+<li>**<a href="#version-108">Version 1.08</a>**</li>
 </ul>
 </li>
 <li>**<a href="#a-faire">A faire</a>**</li>
@@ -100,7 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>[x] Documentation</li>
 <li>[ ] CUnit</li>
 <li>[ ] Compte rendu</li>
-<li>[ ] Optimisation</li>
+<li>[x] Optimisation</li>
 </ul>
 <h2>Changelog</h2>
 <h3>Version 1.0</h3>
@@ -109,40 +109,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>Documentation complète</li>
 <li>Instructions utilisateur</li>
 </ul>
-<h3>Version 1.01 (à venir)</h3>
+<h3>Version 1.01</h3>
 <ul>
 <li>Optimisations diverses sur le traitement</li>
-<li>Test unitaires</li>
+</ul>
+<h3>Version 1.08</h3>
+<ul>
+<li>Comptage points</li>
+<li>Tests unitaires</li>
 </ul>
 <h2>Optimisation</h2>
-<p>Pour le moment le solver vérifiant toutes les combinaisons en ouvrant le dictionnaire correspondant et en vérifiant toutes les possibilités, les temps d'accés rendent l'exécution un peu lente (~ 25s max ). Il reste néanmoins quelques modifications à apporter pour réduire au maximum ce temps.</p>
+<p>Le solver résouds la grille en l'espace de ~100 ms actuellement, le seul moyen d'optimiser le traitement encore plus est de faire un arbre de recherche mais ce serait plus coûteux en mémoire, tout en sachant qu'avec la taille importante du dictionnaire l'arbre de recherche pourrait prendre plus de temps à être simplement conçu qu'ici à résoudre la grille.</p>
 <h2>Instructions de compilation</h2>
 <blockquote class="doxtable">
-<p>$ <b>make</b></p>
-<p></p>
+<p>$ <b>make</b> </p>
 </blockquote>
 <p>Permet de compiler l'ensemble des sources, l'exécutable généré peut être retrouvé dans **./bin** .</p>
 <blockquote class="doxtable">
-<p>$ <b>make clean</b></p>
-<p></p>
+<p>$ <b>make clean</b> </p>
 </blockquote>
 <p>Permet de supprimer les fichiers objets.</p>
 <blockquote class="doxtable">
-<p>$ <b>make mrproper</b></p>
-<p></p>
+<p>$ <b>make mrproper</b> </p>
 </blockquote>
 <p>Permet de nettoyer le dossier de tout ce qui peut être régénéré.</p>
 <h2>Utilisation</h2>
 <blockquote class="doxtable">
-<p>$ **./bin/ruzzleSolver**</p>
-<p></p>
+<p>$ **./bin/ruzzleSolver** </p>
 </blockquote>
 <p>Permet d'exécuter le programme en générant une grille aléatoire, les lettres sont tirées au hasard en prenant compte de leurs fréquences d'apparition dans la langue française.</p>
 <p>On peut prédéfinir une grille à l'aide d'une chaine de 16 caractères.</p>
 <p>Par exemple:</p>
 <blockquote class="doxtable">
-<p>$ **./bin/ruzzleSolver adcksxirmdesuckh**</p>
-<p></p>
+<p>$ **./bin/ruzzleSolver adcksxirmdesuckh** </p>
 </blockquote>
 <p>Génèrera la grille :</p>
 <blockquote class="doxtable">
@@ -156,20 +155,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <p>Les bonus lettres et mots sont tirés aléatoirement de manière à ce qu'il n'y ait pas trop de bonus.</p>
 <p>Le résultat du solver se retrouve dans :</p>
 <blockquote class="doxtable">
-<p><b>assets/listWords.txt</b></p>
-<p></p>
+<p><b>assets/listWords.txt</b> </p>
 </blockquote>
 <h2>Documentation</h2>
 <p>Il est possible de se documenter sur la structure du solver grâce à une documentation générée par doxygen. Le fichier de configuration pour la documentation est fournie et permet donc de régénérer la documentation en cas de soucis, une page html sera crée reprenant toute la documentation :</p>
 <blockquote class="doxtable">
 <p><b>doc/html/index.html</b> </p>
 </blockquote>
+<blockquote class="doxtable">
+<p>$ <b>make doc</b></p>
+</blockquote>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Novembre 16 2015 08:30:58 pour Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Mercredi 18 Novembre 2015 01:13:12 pour Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.3.1
+</a> 1.8.8
 </small></address>
 </body>
 </html>

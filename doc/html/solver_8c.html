@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.3.1"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
 <title>Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior: Référence du fichier src/solver.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -31,7 +31,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.3.1 -->
+<!-- Généré par Doxygen 1.8.8 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -85,7 +85,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Fonctions</a>  </div>
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">Référence du fichier solver.c</div>  </div>
 </div><!--header-->
@@ -93,17 +94,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 <p>Résoud la grille.  
 <a href="#details">Plus de détails...</a></p>
-<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br/>
-<code>#include &lt;string.h&gt;</code><br/>
-<code>#include &quot;<a class="el" href="display_8h_source.html">../include/display.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="solver_8h_source.html">../include/solver.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="trie_8h_source.html">../include/trie.h</a>&quot;</code><br/>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="display_8h_source.html">../include/display.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="solver_8h_source.html">../include/solver.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="trie_8h_source.html">../include/trie.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Graphe des dépendances par inclusion de solver.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="solver_8c__incl.png" border="0" usemap="#src_2solver_8c" alt=""/></div>
 <map name="src_2solver_8c" id="src_2solver_8c">
-<area shape="rect" id="node7" href="display_8h.html" title="Prototype de la grille." alt="" coords="181,80,312,107"/><area shape="rect" id="node9" href="solver_8h.html" title="Prototype du solver." alt="" coords="336,80,461,107"/><area shape="rect" id="node11" href="trie_8h.html" title="Prototype de la liste chaînée." alt="" coords="486,80,593,107"/></map>
+<area shape="rect" id="node5" href="display_8h.html" title="Prototype de la grille. " alt="" coords="268,80,399,107"/><area shape="rect" id="node6" href="solver_8h.html" title="Prototype du solver. " alt="" coords="423,80,548,107"/><area shape="rect" id="node7" href="trie_8h.html" title="Prototype de la liste chaînée. " alt="" coords="573,80,681,107"/></map>
 </div>
 </div>
 <p><a href="solver_8c_source.html">Aller au code source de ce fichier.</a></p>
@@ -111,23 +113,44 @@ Graphe des dépendances par inclusion de solver.c:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
 <tr class="memitem:a07d68aeb0b5ed32ab93e34e1a8a2be44"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8c.html#a07d68aeb0b5ed32ab93e34e1a8a2be44">totCase</a> (<a class="el" href="structt__Case.html">t_Case</a> Case)</td></tr>
-<tr class="memdesc:a07d68aeb0b5ed32ab93e34e1a8a2be44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcule le total de points de la case courante.  <a href="#a07d68aeb0b5ed32ab93e34e1a8a2be44">Plus de détails...</a><br/></td></tr>
+<tr class="memdesc:a07d68aeb0b5ed32ab93e34e1a8a2be44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcule le total de points de la case courante.  <a href="#a07d68aeb0b5ed32ab93e34e1a8a2be44">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a07d68aeb0b5ed32ab93e34e1a8a2be44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b23cdd3365d624985e5123a2c0f9034"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8c.html#a0b23cdd3365d624985e5123a2c0f9034">mulWord</a> (<a class="el" href="structt__Case.html">t_Case</a> Case)</td></tr>
-<tr class="memdesc:a0b23cdd3365d624985e5123a2c0f9034"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne le coefficient multiplicateur pour le mot entier.  <a href="#a0b23cdd3365d624985e5123a2c0f9034">Plus de détails...</a><br/></td></tr>
+<tr class="memdesc:a0b23cdd3365d624985e5123a2c0f9034"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne le coefficient multiplicateur pour le mot entier.  <a href="#a0b23cdd3365d624985e5123a2c0f9034">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a0b23cdd3365d624985e5123a2c0f9034"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac940966280e6d405c6df1049e0993fb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8c.html#ac940966280e6d405c6df1049e0993fb1">findWords</a> (<a class="el" href="structt__Case.html">t_Case</a> grid[<a class="el" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="el" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>], int i, int j, char word[], int totalW, int boM)</td></tr>
-<tr class="memdesc:ac940966280e6d405c6df1049e0993fb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trouve un mot dans la grille.  <a href="#ac940966280e6d405c6df1049e0993fb1">Plus de détails...</a><br/></td></tr>
-<tr class="separator:ac940966280e6d405c6df1049e0993fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4a35a7d0751f527f91ebcb12a74baf1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8c.html#aa4a35a7d0751f527f91ebcb12a74baf1">searchWord</a> (char word[])</td></tr>
-<tr class="memdesc:aa4a35a7d0751f527f91ebcb12a74baf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cherche un mot dans le dictionnaire.  <a href="#aa4a35a7d0751f527f91ebcb12a74baf1">Plus de détails...</a><br/></td></tr>
-<tr class="separator:aa4a35a7d0751f527f91ebcb12a74baf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7d30ebfe1f48ab57593b710e94889e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8c.html#ae7d30ebfe1f48ab57593b710e94889e7">createDict</a> (char dir[], char filename[])</td></tr>
-<tr class="memdesc:ae7d30ebfe1f48ab57593b710e94889e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crée les dictionnaires pour optimiser le traitement.  <a href="#ae7d30ebfe1f48ab57593b710e94889e7">Plus de détails...</a><br/></td></tr>
-<tr class="separator:ae7d30ebfe1f48ab57593b710e94889e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6f794353350ca765c5176a821b8d0e5"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8c.html#ad6f794353350ca765c5176a821b8d0e5">getWord</a> (FILE *dict)</td></tr>
+<tr class="memdesc:ad6f794353350ca765c5176a821b8d0e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Récupère un mot dans le dictionnaire.  <a href="#ad6f794353350ca765c5176a821b8d0e5">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad6f794353350ca765c5176a821b8d0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c6b017312dc83e7c70a60e8c984438a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8c.html#a9c6b017312dc83e7c70a60e8c984438a">searchStart</a> (<a class="el" href="structt__Case.html">t_Case</a> Case, char word[])</td></tr>
+<tr class="memdesc:a9c6b017312dc83e7c70a60e8c984438a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cherche un point de départ à partir de la case courante.  <a href="#a9c6b017312dc83e7c70a60e8c984438a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9c6b017312dc83e7c70a60e8c984438a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22b87f42380ae5859ffcb636dc0689aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8c.html#a22b87f42380ae5859ffcb636dc0689aa">confirmWord</a> (char <a class="el" href="solver_8c.html#ad03517614669b994d2153c8b5afe637b">gridWord</a>[], char word[], int pts)</td></tr>
+<tr class="memdesc:a22b87f42380ae5859ffcb636dc0689aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de confirmer que les deux mots sont identiques si c'est le cas alors on le rajoute dans la liste chaînée.  <a href="#a22b87f42380ae5859ffcb636dc0689aa">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a22b87f42380ae5859ffcb636dc0689aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbb5df3f19b52b649ee3d8ac41c90795"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8c.html#acbb5df3f19b52b649ee3d8ac41c90795">formWord</a> (<a class="el" href="structt__Case.html">t_Case</a> grid[<a class="el" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="el" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>], int i, int j, char word[])</td></tr>
+<tr class="memdesc:acbb5df3f19b52b649ee3d8ac41c90795"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forme un mot en parcourant la grille.  <a href="#acbb5df3f19b52b649ee3d8ac41c90795">Plus de détails...</a><br /></td></tr>
+<tr class="separator:acbb5df3f19b52b649ee3d8ac41c90795"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a304c6271abc4ca96f7341762845cfb90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8c.html#a304c6271abc4ca96f7341762845cfb90">searchWord</a> (<a class="el" href="structt__Case.html">t_Case</a> grid[<a class="el" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="el" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>], char word[])</td></tr>
+<tr class="memdesc:a304c6271abc4ca96f7341762845cfb90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cherche le mot dans la grille.  <a href="#a304c6271abc4ca96f7341762845cfb90">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a304c6271abc4ca96f7341762845cfb90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb26ab357db8918adfe55385af56ba11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8c.html#acb26ab357db8918adfe55385af56ba11">Solver</a> (<a class="el" href="structt__Case.html">t_Case</a> grid[<a class="el" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>][<a class="el" href="display_8h.html#a0240ac851181b84ac374872dc5434ee4">N</a>])</td></tr>
-<tr class="memdesc:acb26ab357db8918adfe55385af56ba11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Résoud la grille.  <a href="#acb26ab357db8918adfe55385af56ba11">Plus de détails...</a><br/></td></tr>
+<tr class="memdesc:acb26ab357db8918adfe55385af56ba11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Résoud la grille.  <a href="#acb26ab357db8918adfe55385af56ba11">Plus de détails...</a><br /></td></tr>
 <tr class="separator:acb26ab357db8918adfe55385af56ba11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ad03517614669b994d2153c8b5afe637b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad03517614669b994d2153c8b5afe637b"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8c.html#ad03517614669b994d2153c8b5afe637b">gridWord</a> [17] = &quot;\0&quot;</td></tr>
+<tr class="memdesc:ad03517614669b994d2153c8b5afe637b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mot formé à partir de la grille. <br /></td></tr>
+<tr class="separator:ad03517614669b994d2153c8b5afe637b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab44c51dc8f611c449d8b69d2e9f8f1d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab44c51dc8f611c449d8b69d2e9f8f1d5"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8c.html#ab44c51dc8f611c449d8b69d2e9f8f1d5">totalW</a> = 0</td></tr>
+<tr class="memdesc:ab44c51dc8f611c449d8b69d2e9f8f1d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total points du mot formé <br /></td></tr>
+<tr class="separator:ab44c51dc8f611c449d8b69d2e9f8f1d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab43147501c62fb816bb6b5edea66cae1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab43147501c62fb816bb6b5edea66cae1"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8c.html#ab43147501c62fb816bb6b5edea66cae1">boW</a> = 1</td></tr>
+<tr class="memdesc:ab43147501c62fb816bb6b5edea66cae1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bonus multiplicateur du mot. <br /></td></tr>
+<tr class="separator:ab43147501c62fb816bb6b5edea66cae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Résoud la grille. </p>
@@ -137,21 +160,27 @@ Fonctions</h2></td></tr>
 
 <p>Définition dans le fichier <a class="el" href="solver_8c_source.html">solver.c</a>.</p>
 </div><h2 class="groupheader">Documentation des fonctions</h2>
-<a class="anchor" id="ae7d30ebfe1f48ab57593b710e94889e7"></a>
+<a class="anchor" id="a22b87f42380ae5859ffcb636dc0689aa"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void createDict </td>
+          <td class="memname">void confirmWord </td>
           <td>(</td>
           <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>dir</em>[], </td>
+          <td class="paramname"><em>gridWord</em>[], </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>filename</em>[]&#160;</td>
+          <td class="paramname"><em>word</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pts</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -161,25 +190,26 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Crée les dictionnaires pour optimiser le traitement. </p>
+<p>Permet de confirmer que les deux mots sont identiques si c'est le cas alors on le rajoute dans la liste chaînée. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dir</td><td>Indique le dossier dans lequel chercher le dictionnaire </td></tr>
-    <tr><td class="paramname">filename</td><td>Indique le nom du dictionnaire </td></tr>
+    <tr><td class="paramname">gridWord</td><td>Mot formé à partir de la grille </td></tr>
+    <tr><td class="paramname">word</td><td>Mot tiré du dictionnaire </td></tr>
+    <tr><td class="paramname">pts</td><td>Nombre de points total pour le mot formé </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Définition à la ligne <a class="el" href="solver_8c_source.html#l00166">166</a> du fichier <a class="el" href="solver_8c_source.html">solver.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="solver_8c_source.html#l00073">73</a> du fichier <a class="el" href="solver_8c_source.html">solver.c</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac940966280e6d405c6df1049e0993fb1"></a>
+<a class="anchor" id="acbb5df3f19b52b649ee3d8ac41c90795"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void findWords </td>
+          <td class="memname">void formWord </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structt__Case.html">t_Case</a>&#160;</td>
           <td class="paramname"><em>grid</em>[N][N], </td>
@@ -200,19 +230,7 @@ Fonctions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>word</em>[], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>totalW</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>boM</em>&#160;</td>
+          <td class="paramname"><em>word</em>[]&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -222,20 +240,45 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Trouve un mot dans la grille. </p>
+<p>Forme un mot en parcourant la grille. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">grid</td><td>Grille du jeu </td></tr>
-    <tr><td class="paramname">i</td><td>Ligne de la case courante </td></tr>
-    <tr><td class="paramname">j</td><td>Colonne de la case courante </td></tr>
-    <tr><td class="paramname">word</td><td>Mot composé à partir de la grille </td></tr>
-    <tr><td class="paramname">totalW</td><td>Nombre de points total </td></tr>
-    <tr><td class="paramname">boM</td><td>Coefficient multiplicateur du mot </td></tr>
+    <tr><td class="paramname">grid</td><td>Grille à résoudre </td></tr>
+    <tr><td class="paramname">i</td><td>Point de départ vertical </td></tr>
+    <tr><td class="paramname">j</td><td>Point de départ horizontal </td></tr>
+    <tr><td class="paramname">word</td><td>Mot à chercher </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Définition à la ligne <a class="el" href="solver_8c_source.html#l00046">46</a> du fichier <a class="el" href="solver_8c_source.html">solver.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="solver_8c_source.html#l00091">91</a> du fichier <a class="el" href="solver_8c_source.html">solver.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad6f794353350ca765c5176a821b8d0e5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* getWord </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>dict</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Récupère un mot dans le dictionnaire. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dict</td><td>Dictionnaire dans lequel regarder </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Retourne un mot dans l'ordre séquentiel </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="solver_8c_source.html#l00047">47</a> du fichier <a class="el" href="solver_8c_source.html">solver.c</a>.</p>
 
 </div>
 </div>
@@ -262,34 +305,82 @@ Fonctions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>1 si pas de bonus, 2 si bonus double, 3 si bonus triple </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="solver_8c_source.html#l00031">31</a> du fichier <a class="el" href="solver_8c_source.html">solver.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="solver_8c_source.html#l00036">36</a> du fichier <a class="el" href="solver_8c_source.html">solver.c</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa4a35a7d0751f527f91ebcb12a74baf1"></a>
+<a class="anchor" id="a9c6b017312dc83e7c70a60e8c984438a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int searchWord </td>
+          <td class="memname">int searchStart </td>
           <td>(</td>
-          <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>word</em>[]</td><td>)</td>
+          <td class="paramtype"><a class="el" href="structt__Case.html">t_Case</a>&#160;</td>
+          <td class="paramname"><em>Case</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>word</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Cherche un mot dans le dictionnaire. </p>
+<p>Cherche un point de départ à partir de la case courante. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">word</td><td>Mot à chercher </td></tr>
+    <tr><td class="paramname">Case</td><td>Case courante </td></tr>
+    <tr><td class="paramname">word</td><td>Mot récupéré dans le dictionnaire </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Renvoie</dt><dd>Retourne 0 si mot introuvable, 1 si mot possible, 2 si mot trouvé </dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Retourne 1 si point de départ trouvé sinon 0 </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="solver_8c_source.html#l00089">89</a> du fichier <a class="el" href="solver_8c_source.html">solver.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="solver_8c_source.html#l00062">62</a> du fichier <a class="el" href="solver_8c_source.html">solver.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a304c6271abc4ca96f7341762845cfb90"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void searchWord </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__Case.html">t_Case</a>&#160;</td>
+          <td class="paramname"><em>grid</em>[N][N], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>word</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cherche le mot dans la grille. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">grid</td><td>Grille à résoudre </td></tr>
+    <tr><td class="paramname">word</td><td>Mot récupéré dans le dictionnaire </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="solver_8c_source.html#l00129">129</a> du fichier <a class="el" href="solver_8c_source.html">solver.c</a>.</p>
 
 </div>
 </div>
@@ -315,7 +406,7 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Définition à la ligne <a class="el" href="solver_8c_source.html#l00209">209</a> du fichier <a class="el" href="solver_8c_source.html">solver.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="solver_8c_source.html#l00147">147</a> du fichier <a class="el" href="solver_8c_source.html">solver.c</a>.</p>
 
 </div>
 </div>
@@ -342,16 +433,16 @@ Fonctions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>Le nombre de points total </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="solver_8c_source.html#l00020">20</a> du fichier <a class="el" href="solver_8c_source.html">solver.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="solver_8c_source.html#l00025">25</a> du fichier <a class="el" href="solver_8c_source.html">solver.c</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Novembre 16 2015 08:30:58 pour Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Mercredi 18 Novembre 2015 01:13:12 pour Solver de Ruzzle par Cousin Brandon/ Ngatchou Junior par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.3.1
+</a> 1.8.8
 </small></address>
 </body>
 </html>

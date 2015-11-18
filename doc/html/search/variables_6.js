@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['word',['word',['../structelement.html#af607a92824fa5d32abd559d6fefda79a',1,'element']]]
+  ['totalw',['totalW',['../solver_8c.html#ab44c51dc8f611c449d8b69d2e9f8f1d5',1,'solver.c']]]
 ];
