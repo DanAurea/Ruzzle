@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+ #include <ctype.h>
 #include "../include/random.h"
 #include "../include/display.h"
 
@@ -145,9 +146,15 @@ void Grille(t_Case grid[N][N],int argc, char * gridStr[]){
 
         if(strlen(gridStr[1]) >= 16){
             gridStr[16] = '\0';
-            
+
             for (i = 0; i < 16; i++)
             {   
+                // Vérifie que le caractère courant est valide
+                if(!isalpha(gridStr[1][i])){
+                    printf("\nErreur caractère invalide !\n");
+                    exit(0);
+                }
+
                 getCaseFromStr(grid, nb_bonus, gridStr[1], i);
                 if((i - 3) % 4 == 0){ 
                     printf("\n----------------------------------------------------\n");

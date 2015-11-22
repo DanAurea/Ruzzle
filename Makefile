@@ -1,9 +1,9 @@
-CC=gcc
-CFLAGS=-g -Wall
+export CC=gcc
+export CFLAGS=-g -Wall
 EXEC=bin/ruzzleSolver
 SRC= $(wildcard src/*.c)
-OBJ= $(SRC:.c=.o)
-INC= include/
+export OBJ= $(SRC:.c=.o)
+export INC= include/
 
 $(EXEC): $(OBJ)
 	$(CC) -o $@ $^
@@ -18,12 +18,21 @@ src/solver.o: $(INC)trie.h $(INC)display.h $(INC)solver.h
 	$(CC) -o $@ -c $< $(CFLAGS)
 
 clean:
-	@rm -rf ./$(OBJ)
+	@rm -f $(OBJ)
 
 mrproper: clean
-	@rm -rf $(EXEC)
+	@rm -f $(EXEC)
 
 .PHONY: doc
 
 doc:
 	doxygen configDoc
+
+tests:
+	cd src/tests && make
+
+tclean:
+	cd src/tests && make clean
+
+tproper:
+	cd src/tests && make mrproper
