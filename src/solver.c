@@ -47,7 +47,7 @@ int mulWord(t_Case Case){
 char* getWord(FILE * dict) {
     char* word = NULL;
     
-    word = malloc(17 * sizeof(char));
+    word = malloc(17 * sizeof(char)); // Crée une zone mémoire contenant le mot de 16 caractère max au total
     fscanf(dict, "%s", word);
     
     return word;
@@ -107,9 +107,9 @@ void formWord(t_Case grid[N][N], int i, int j, char word[]){
 	 * entre le mot du dictionnaire et la grille.
 	*/
 	for ( row=i-1; row<=i+1 && row<N; row++){
-    		for (col=j-1; col<=j+1 && col<N; col++){
-        		if (row>=0 && col>=0 && !grid[row][col].visited && grid[row][col].let == word[sizeW])
-          			formWord(grid,row, col, word);
+    	for (col=j-1; col<=j+1 && col<N; col++){
+        	if (row>=0 && col>=0 && !grid[row][col].visited && grid[row][col].let == word[sizeW])
+          		formWord(grid,row, col, word);
   		}
   	}
 
@@ -129,8 +129,10 @@ void formWord(t_Case grid[N][N], int i, int j, char word[]){
 void searchWord(t_Case grid[N][N], char word[]){
 	int i, j;
 
-	for (i = 0; i < N; i++){
-		for (j = 0; j < N; j++){
+	for (i = 0; i < N; i++)
+	{
+		for (j = 0; j < N; j++)
+		{
 			if(searchStart(grid[i][j], word)){
 				formWord(grid, i, j, word);
 			}
