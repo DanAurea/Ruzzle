@@ -95,7 +95,7 @@ Le résultat du solver se retrouve dans :
 
 Il est possible de lancer une batterie de tests afin de vérifier l'intégrité du programme.
 
-> **tests/ruzzleTest**
+> **./tests/ruzzleTest**
 
 Permet de recréer l'exécutable pour les tests:
 
