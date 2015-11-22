@@ -2,7 +2,7 @@ export CC=gcc
 export CFLAGS=-g -Wall
 EXEC=bin/ruzzleSolver
 SRC= $(wildcard src/*.c)
-export OBJ= $(SRC:.c=.o)
+OBJ= $(SRC:.c=.o)
 export INC= include/
 
 $(EXEC): $(OBJ)
@@ -23,7 +23,7 @@ clean:
 mrproper: clean
 	@rm -f $(EXEC)
 
-.PHONY: doc
+.PHONY: doc tests
 
 doc:
 	doxygen configDoc
