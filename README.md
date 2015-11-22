@@ -93,10 +93,9 @@ Le résultat du solver se retrouve dans :
 
 ## Tests unitaires
 
-Il est possible de lancer une batterie de tests afin de vérifier l'intégrité du programme avec:
-
 > **./tests/ruzzleTest**
 
+Lance une batterie de tests afin de vérifier l'intégrité du programme avec:
 
 > $ **make tests**
 
