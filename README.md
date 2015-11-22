@@ -93,13 +93,22 @@ Le résultat du solver se retrouve dans :
 
 ## Tests unitaires
 
-Il est possible de lancer une batterie de tests afin de vérifier l'intégrité du programme.
+Il est possible de lancer une batterie de tests afin de vérifier l'intégrité du programme avec:
 
 > **./tests/ruzzleTest**
 
-Permet de recréer l'exécutable pour les tests:
 
 > $ **make tests**
+
+Permet de recréer l'exécutable pour les tests
+
+>  $ **make tclean**
+
+Permet de supprimer les fichiers objets générés pour les tests.
+
+>  $ **make tproper**
+
+Permet de nettoyer les dossiers de tests de tout ce qui peut être régénéré.
 
 ## Documentation
 
