@@ -17,10 +17,10 @@ src/solver.o: $(INC)trie.h $(INC)display.h $(INC)solver.h
 %.o: %.c 
 	$(CC) -o $@ -c $< $(CFLAGS)
 
-clean:
+clean: tclean
 	@rm -f $(OBJ)
 
-mrproper: clean
+mrproper: clean tproper
 	@rm -f $(EXEC)
 
 .PHONY: doc tests

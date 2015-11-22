@@ -1,2 +1,2 @@
-void testRandChar();
-void testGetIChar(char c);
+void testRandChar(void);
+void testGetIChar(void);
