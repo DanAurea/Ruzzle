@@ -16,12 +16,13 @@ mais il n'est pas permis de réutiliser deux fois la même case.
    3. **[Optimisation](#optimisation)**
    3. **[Instructions de compilation](#instructions-de-compilation)**
    4. **[Utilisation](#utilisation)**
-   5. **[Documentation](#documentation)**
+   5. **[Tests unitaires](#tests-unitaires)** 
+   6. **[Documentation](#documentation)**
 
 ## A faire
  
  - [x] Documentation
- - [ ] CUnit
+ - [x] CUnit
  - [ ] Compte rendu
  - [x] Optimisation
 
@@ -89,6 +90,16 @@ Les bonus lettres et mots sont tirés aléatoirement de manière à ce qu'il n'y
 Le résultat du solver se retrouve dans :
 
 > **assets/listWords.txt**
+
+## Tests unitaires
+
+Il est possible de lancer une batterie de tests afin de vérifier l'intégrité du programme.
+
+> **./tests/ruzzleTest**
+
+Permet de recréer l'exécutable pour les tests:
+
+> $ **make tests**
 
 ## Documentation
 
